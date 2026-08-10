@@ -1,0 +1,130 @@
+==========================================================================
+phat_photon_blackbody.sage   --  Williams Ch.8, Eqs 8.13-8.23
+==========================================================================
+
+(A) The constant-delta closed form (p.212)
+  [PASS] Eq 8.22 follows from the ansatz: -a dlnS/da = a(1+d)/(e^a-1)
+  [PASS] ansatz forced to delta=0 by the X^1 term, but then predicts a spurious X^2 term (true sum has none): coeff = 1
+
+(B) Exact mean energy of a mode with the n^2 ladder
+  [PASS] a*M/S agrees with numerical -a dlnS/da at a=0.7 (0.3396516089 vs 0.3396516090)
+  [PASS] equipartition cross-check: continuum n^2 ladder gives <E> = kT/2 exactly
+
+      a=hv/kT     Ebar/kT (phat)   Ebar/kT (Planck)    R      delta_eff
+      --------------------------------------------------------------------
+      0.0001          0.49719488        0.99995000   0.49722   -0.50278
+      0.001           0.49123574        0.99950008   0.49148   -0.50852
+      0.01            0.47329707        0.99500833   0.47567   -0.52433
+      0.0528          0.44261854        0.97383231   0.45451   -0.54549
+      0.1             0.42429967        0.95083319   0.44624   -0.55376
+      0.5             0.35741281        0.77074704   0.46372   -0.53628
+      1.197           0.30655006        0.51814335   0.59163   -0.40837
+      2.821           0.15867184        0.17861625   0.88834   -0.11166
+      5               0.03346430        0.03391827   0.98662   -0.01338
+      11.25           0.00014633        0.00014633   0.99997   -0.00003
+      20              0.00000004        0.00000004   1.00000   -0.00000
+      40              0.00000000        0.00000000   1.00000   +0.00000
+
+      theta-asymptotic check:  Ebar/kT  vs  (1/2)u/(1+u), u=sqrt(pi/a)
+      a=0.01      exact = 0.4732970722   asymptotic = 0.4732970722   diff = 4.44e-16
+  [PASS] theta asymptotic form holds at a=0.01
+      a=0.0001    exact = 0.4971948783   asymptotic = 0.4971948783   diff = 2.22e-16
+  [PASS] theta asymptotic form holds at a=0.0001
+      a=1e-06     exact = 0.4997180643   asymptotic = 0.4997180643   diff = 2.89e-15
+  [PASS] theta asymptotic form holds at a=1e-06
+  [PASS] Rayleigh-Jeans limit: Ebar -> kT/2 (a=1e-8 gives 0.49997179)
+  [PASS] Rayleigh-Jeans limit: R -> 1/2, i.e. delta_eff -> -1/2 (a=1e-8)
+  [PASS] Wien limit: delta_eff -> 0 (a=40)
+
+      R is non-monotone: minimum R = 0.44196 at hv/kT = 0.1928 (deficit 55.8%)
+  [PASS] R dips BELOW the RJ value 1/2 (min 0.44196 at a=0.1928)
+  [PASS] delta_eff is NEGATIVE throughout, so the stated range 0 < delta < 1 is wrong in sign
+  [PASS] delta_eff SPREAD = 0.5538 > 0.49, so no constant delta exists
+
+(C) Best-fit Planck function vs the corrected phat spectrum
+      best-fit T_fit/T_true = 1.0740  (T_fit = 2.9272 K), amplitude = 0.6923
+      RMS |residual| / peak = 4.1454e-02   vs [F96]/[FM02] 50 ppm RMS limit
+      max |residual| / peak = 1.1535e-01
+      => exceeds the 50 ppm RMS limit by a factor 829
+  [PASS] a free-amplitude, free-temperature Planck fit CANNOT absorb the corrected phat spectrum (RMS residual 4.15e-02 >> 5e-5)
+      linearised bound on the phat fraction from FIRAS: eps < 1.21e-03
+
+      [caveat] FIRAS is differential (sky - calibrator); a universal
+      change to Planck's law partly cancels. [FM02] answer: calibration
+      self-consistency over 2-25 K. R depends on hv/kT, so at fixed v:
+        v=200 GHz, T_cal= 2.73 K :  hv/kT =  3.522   R = 0.9427
+        v=200 GHz, T_cal= 5.00 K :  hv/kT =  1.920   R = 0.7533
+        v=200 GHz, T_cal=10.00 K :  hv/kT =  0.960   R = 0.5398
+        v=200 GHz, T_cal=20.00 K :  hv/kT =  0.480   R = 0.4614
+  [PASS] R varies by 0.481 across the 2-25 K calibrator range at fixed frequency, so the distortion cannot cancel between sky and calibrator
+
+(D) Rayleigh-Jeans brightness temperature (ARCADE2 band, 3-90 GHz)
+      [F09] Table 2: ARCADE2 (RJ side) vs FIRAS (peak):
+        (T_RJ - T_peak)/T_peak = +0.0020  +/- 0.0019
+        => conservative bound on any real RJ/peak mismatch: 0.0057 (0.57%)
+  [PASS] measured RJ/peak offset is POSITIVE, i.e. opposite in sign to a phat deficit
+        3.0 GHz : a = 0.05283   I_phat/I_Planck = 0.45451   deficit = 54.5%
+       10.0 GHz : a = 0.17609   I_phat/I_Planck = 0.44206   deficit = 55.8%
+       30.0 GHz : a = 0.52826   I_phat/I_Planck = 0.46718   deficit = 53.3%
+       90.0 GHz : a = 1.58478   I_phat/I_Planck = 0.68151   deficit = 31.8%
+  [PASS] corrected phat spectrum predicts a 54.5% intensity deficit at 3 GHz
+  [PASS] that deficit exceeds the measured RJ/peak consistency by a factor 95
+      linearised bound on the phat fraction from RJ radiometry: eps < 1.05e-02
+
+(E) Stefan-Boltzmann analogue (integrated energy density)
+  [PASS] Planck quadrature reproduces pi^4/15 = 6.493939 (got 6.493939)
+      integrated energy density ratio u_phat/u_Planck = 0.88514
+      => a phat cavity radiates 11.5% less than sigma T^4 at the same T,
+         so its Stefan-Boltzmann constant would be 0.885 sigma.
+  [PASS] integrated power deficit of 11.5% is far above any radiometric uncertainty
+
+==========================================================================
+SUMMARY
+==========================================================================
+
+  1. Eq 8.22's closed form is invalid. Sum_{n>=0} X^{n^2} is a theta function;
+     no CONSTANT delta reproduces it (it fails already at O(X^2)). The exact
+     effective delta RUNS from 0 (Wien) through a minimum of -0.558 down to
+     -1/2 in the deep Rayleigh-Jeans limit, and is negative throughout, so the
+     stated 0 < delta < 1 is wrong in sign and in kind. Williams' algebra GIVEN
+     the ansatz is correct.
+
+  2. Corrected law: rho_v = (8 pi v^2/c^3) h v G(hv/kT),
+     G = Sum n^2 X^{n^2} / Sum X^{n^2}. Against Planck at the same T this is a
+     FREQUENCY-DEPENDENT factor R: 1/2 deep in the Rayleigh-Jeans regime, a
+     non-monotone minimum of 0.442 at hv/kT = 0.193, then 1 in the Wien tail. The
+     n^2 ladder carries HALF the Rayleigh-Jeans equipartition (kT/2, confirmed
+     independently by the equipartition theorem for one quadratic dof).
+
+  3. The thermal application is EXCLUDED, by three tests of differing
+     robustness:
+     (i)   FIRAS shape [F96]/[FM02]: a free-amplitude, free-temperature Planck
+           fit cannot absorb a frequency-dependent factor -- RMS residual 4.1e-02
+           of peak against the 50 ppm RMS limit. CAVEAT: FIRAS is differential
+           (sky - calibrator), so a UNIVERSAL change to Planck's law partly
+           cancels; [FM02]'s own answer is calibration self-consistency over
+           2-25 K, which bites because R depends on hv/kT (verified above).
+     (ii)  Cross-frequency temperature consistency [F09] Table 2: ARCADE2 on
+           the RJ side agrees with the FIRAS peak temperature to 0.57%, and in
+           the OPPOSITE sign to a phat deficit, against a predicted 55%
+           deficit at 3 GHz. Immune to the calibrator caveat (different
+           instruments, different frequencies).
+     (iii) Integrated energy density: a phat cavity radiates only 0.885 of
+           sigma T^4. Needs no spectrometer and no calibrator at all.
+     Binding bound on the phat fraction of thermal radiation: eps < 1e-03,
+     cross-checked at eps < 1e-02.
+
+  4. Why the error mattered: a constant (1+delta) is a NORMALISATION -- exactly
+     what a spectrum cannot measure, which is why Williams wrote that delta
+     could only be found by isolating a single frequency. The true factor is a
+     SHAPE change, which is what spectrometers measure best. The ansatz turned
+     a falsifiable prediction into an unfalsifiable constant.
+
+  5. NOT touched: the non-thermal phat photon (an N>=2 mode from a
+     non-equilibrium source, incl. the phat laser) is not constrained by
+     blackbody statistics and remains an open forward prediction; nor is the
+     gateway result (London condition -> Bohr radii) affected.
+
+==========================================================================
+ALL ASSERTIONS PASSED
+==========================================================================

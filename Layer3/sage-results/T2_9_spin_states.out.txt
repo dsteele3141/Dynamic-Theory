@@ -1,0 +1,39 @@
+============================================================
+COMPUTATION 1: Spin Operator Properties
+============================================================
+
+Verifying s_a^2 = u_a^2 = I/4:
+  [PASS] s_a^2 = I/4 for a = 1,2,3.
+  [PASS] u_a^2 = I/4 for a = 1,2,3.
+
+Verifying cross-anticommutation {s_a, u_b} for a != b:
+  [PASS] {s1, u2} = 0 (the zeros underpinning S_j^2 = 3/4 I).
+
+============================================================
+COMPUTATION 2: Four-Spin Components S_j
+============================================================
+  [PASS] S_j^2 = 3/4 I for j = 1..4 (eigenvalues +/- sqrt(3)/2).
+
+RESULT: S_j eigenvalues are +/- sqrt(3)/2.
+  Standard spin-1/2 has eigenvalues +/- 1/2.
+  Nucleons in 5D theory have spin magnitude sqrt(3)/2 components.
+
+============================================================
+COMPUTATION 3: Allowed States & t-Vector Audit
+============================================================
+
+Number of allowed states found: 8
+  [PASS] Exactly 8 states satisfy the imposed restriction (the table's cardinality).
+  (s; u) = (1/2, -1/2, -1/2, 1/2, 1/2, -1/2)
+  S_j = (1/2, 1/2, 1/2, 1/2)
+  t-vector = (0, 1, 1)
+
+AUDIT: Page 127 t3 = u2 + u3 definition.
+  Manuscript t3 (u2+u3) for state (3): 0
+  Corrected  t3 (u1+u2) for state (3): 1
+  CONCLUSION: Page 127 formula MUST be t3 = u1 + u2.
+  [PASS] Corrected t-vector for state (3) is (0, 1, 1).
+  [PASS] Page-127 source error is real: manuscript t3 (u2+u3) != corrected t3 (u1+u2) for state (3).
+
+Audit Complete: 17_spin_states.sage
+============================================================

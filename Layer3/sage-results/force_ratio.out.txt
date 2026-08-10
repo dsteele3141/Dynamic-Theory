@@ -1,0 +1,29 @@
+======================================================================
+ELECTRIC / GRAVITATIONAL FORCE RATIO -- derived & tied to H0 (mass sector)
+======================================================================
+
+[1] Classical electric/gravitational ratio, two electrons
+    e^2/(4 pi eps0 G m_e^2) = 4.166e+42   (Williams Eq 2.21: 4.17e42)
+  [PASS] two-electron force ratio = 4.17e42 (within 1%).
+
+[2] Mass-dependence of the ratio
+    two protons   : 1.24e+36  (~10^36)
+    electron-proton: 2.27e+39  (~10^39, the canonical '~10^40')
+  [PASS] protons ~ 1.2e36.
+  [PASS] electron-proton ~ 2.3e39.
+
+[3] DT identity: a0 c K_gamma = H0 / sqrt(F_ratio)  (Eq 2.21)
+    H0 = 70 km/s/Mpc = 2.269e-18 /s
+    a0 c K_gamma = H0 / sqrt(4.17e42) = 1.111e-39 /s   (Williams: ~1.12e-39)
+  [PASS] sqrt(F_ratio) = 2.042e21 (Williams' divisor).
+  [PASS] a0 c K_gamma ~ 1.12e-39 /s (within 5%, given H0 ~ 70 km/s/Mpc).
+
+  NET: DT REPRODUCES the classical force ratio (correspondence) and, by
+  identifying it with H0^2/(a0 c K_gamma)^2, ties the ~10^40 hierarchy to
+  the Hubble constant via the gauge function's time/mass dependences. It
+  is a relation among (force ratio, H0, a0cK_gamma), not an ab-initio
+  derivation of 10^40 -- but it removes the 'unexplained input' framing.
+
+======================================================================
+21 COMPLETE.
+======================================================================

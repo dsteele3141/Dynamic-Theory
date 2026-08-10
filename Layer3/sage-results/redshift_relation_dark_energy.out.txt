@@ -1,0 +1,37 @@
+======================================================================
+DT REDSHIFT RELATION (item 5) + self-consistent dark-energy re-test
+======================================================================
+
+[1] DT redshift (Eq 3.6, Hubble part): 1+z = exp(H0 L/c)
+  [PASS] low-z limit recovers Hubble's law z ~ H0 L/c.
+    z=0.5 : L_DT/D_comov(LCDM) = 0.919  (DT distance shorter)
+    z=1.0 : L_DT/D_comov(LCDM) = 0.899  (DT distance shorter)
+  [PASS] DT redshift-distance is shorter than the FRW comoving distance at z=1.
+
+[2] Cross-check: redshift-derived H vs lunar-orbit b (same gauge dep.)
+    H(redshift) = 1.79e-18 /s = 55 km/s/Mpc ;  b(lunar) = 1.9e-18 /s
+  [PASS] redshift H matches the lunar-orbit time-dependence within 15%.
+
+[3] Self-consistent re-run: DT luminosity distance + evolving candle
+    z=0.5 : geometry supplies most of the dimming; candle needs dm=0.182 mag -> xi=0.276
+    z=1.0 : geometry supplies most of the dimming; candle needs dm=0.232 mag -> xi=0.206
+  [PASS] self-consistent candle rate xi is much smaller than script 24's 0.8 (xi < 0.4).
+  [PASS] xi is still order ~0.2-0.3 (DT geometry absorbs ~half, candle the rest).
+
+[4] Caveat revisited: required |Gdot/G| vs direct bounds
+    script 24 (standard bookkeeping): |Gdot/G| ~ 0.81 H0 -> ~806x bounds
+    script 25 (DT redshift folded in): |Gdot/G| ~ 0.28 H0 -> ~276x bounds
+  [PASS] item 5 REDUCES the tension by ~2-4x relative to script 24.
+  [PASS] but the tension is NOT eliminated (still >100x direct bounds).
+
+  NET: DT's redshift relation (item 5) is a real, self-consistent piece --
+  it recovers Hubble's law, cross-checks against the lunar-orbit time-
+  dependence, and its log distance-redshift absorbs ~half the dark-energy
+  dimming geometrically, so the evolving candle needs only xi~0.25 (not 0.8).
+  This CUTS the |Gdot/G| tension ~3x (from ~800x to ~250x direct bounds) but
+  does NOT remove it. Dark energy is more plausibly absorbed in the full DT
+  picture; the residual objection is the still-large G-variation rate.
+
+======================================================================
+25 COMPLETE.
+======================================================================

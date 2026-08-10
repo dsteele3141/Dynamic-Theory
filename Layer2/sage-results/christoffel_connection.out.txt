@@ -1,0 +1,15 @@
+======================================================================
+04_christoffel_connection_adjudicated.sage
+======================================================================
+
+(A) Symmetry of Levi-Civita coefficients, hence of Williams Gamma=-{}
+  Gamma^k_ij = Gamma^k_ji for all indices: PASS
+
+(B) Riemann first-pair antisymmetry (Diagonal Metric Case)
+  R_abcd = -R_bacd for all 256 diagonal-metric components: PASS
+
+(C) Weyl/Conformal Connection Identity (Eq 33)
+  Eq 33 Williams convention checked for all 64 components: PASS
+
+Summary: Riemannian properties and Weyl identity verified without sampling.
+======================================================================

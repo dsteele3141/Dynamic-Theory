@@ -1,0 +1,120 @@
+# Verification Code Index
+
+Maps the reference codes used in the Supplementary Material to the file(s) in this repository. `[Cn]` codes (Appendix A) restart per layer; Layer-3 **book-extension** scripts (Appendix A.2) are tagged by the §7 block (`B-Cn` charge/particle, `B-Mn` mass/gravity) they support. Lean modules carry the proofs; Sage scripts give symbolic cross-checks/illustrations.
+
+
+## Layer 1 — Foundations: Space–Time–Matter Geometry
+
+| Code | Lean module(s) | Sage script(s) |
+|------|----------------|----------------|
+| **C1** | `Layer1/Lean/T1_1_IntegratingFactor.lean` | `Layer1/Sage/T1_1-3_integrating_factor.sage` |
+| **C2** | `Layer1/Lean/T1_1_Universality.lean` | — |
+| **C3** | `Layer1/Lean/T1_2_AbsoluteVelocity.lean` | — |
+| **C4** | `Layer1/Lean/T1_3_Entropy.lean` | — |
+| **C5** | `Layer1/Lean/T1_4_MaxwellRelations.lean` | `Layer1/Sage/T1_4_maxwell_relations.sage` |
+| **C6** | `Layer1/Lean/T1_10_Equilibrium.lean` | `Layer1/Sage/T1_10_equilibrium.sage` |
+| **C7** | `Layer1/Lean/T1_5_Sylvester.lean` | `Layer1/Sage/T1_5_stability_conditions.sage` |
+| **C8** | `Layer1/Lean/T1_6_StabilityMetric.lean`<br>`Layer1/Lean/T1_6_SignatureNecessity.lean`<br>`Layer1/Lean/T1_6_SignatureInertia.lean` | `Layer1/Sage/T1_6_stability_metric.sage` |
+| **C9** | `Layer1/Lean/T1_7_8_Connection.lean` | `Layer1/Sage/T1_9_weyl_variational.sage` |
+| **C10** | — | `Layer1/Sage/T1_8_weyl_integrability.sage`<br>`Layer1/Sage/T1_8_conformal_gauge.sage`<br>`Layer1/Sage/T1_9_weyl_strengthening.sage` |
+| **C11** | — | `Layer1/Sage/arrow_of_time.sage` |
+| **C12** | — | `Layer1/Sage/T1_6_general_lorentzian_necessity.sage` |
+
+## Layer 2 — Routes: 5D Geometry, Field Equations, Spinor Sector
+
+| Code | Lean module(s) | Sage script(s) |
+|------|----------------|----------------|
+| **C1** | `Layer2/Lean/T2_1_Minkowski5D.lean` | `Layer2/Sage/T2_1_5D_minkowski.sage` |
+| **C2** | — | `Layer2/Sage/christoffel_connection.sage`<br>`Layer2/Sage/setup.sage` |
+| **C3** | — | `Layer2/Sage/bianchi_maxwell.sage` |
+| **C4** | `Layer2/Lean/T2_3_EnergyMomentum.lean` | `Layer2/Sage/energy_momentum_tensor.sage` |
+| **C5** | `Layer2/Lean/T2_4_ForceDensity.lean` | `Layer2/Sage/force_density.sage` |
+| **C6** | `Layer2/Lean/T2_7_DiracFactorisation.lean` | `Layer2/Sage/dirac_algebra.sage` |
+| **C7** | `Layer2/Lean/T2_7_PositivityRoute.lean` | — |
+| **C8** | `Layer2/Lean/T2_8_DiracWithFields.lean` | `Layer2/Sage/dirac_with_fields.sage` |
+| **C9** | — | `Layer2/Sage/geometry_dependent_uncertainty.sage` |
+| **C10** | — | `Layer2/Sage/dirac_repn_and_moment_check.sage` |
+
+## Layer 3 — Outputs: Potentials, Particles, Gravity, Predictions
+
+| Code | Lean module(s) | Sage script(s) |
+|------|----------------|----------------|
+| **C1** | `Layer3/Lean/T2_10_London.lean` | `Layer3/Sage/gateway_london_quantisation.sage` |
+| **C2** | — | `Layer3/Sage/T2_11_hypersurface_metric.sage` |
+| **C3** | — | `Layer3/Sage/T2_14_schwarzschild_5D_sage.sage`<br>`Layer3/Sage/T2_14_schwarzschild_5D_sympy.sage` |
+| **C4** | — | `Layer3/Sage/T2_12_viscous_stress.sage` |
+| **C5** | — | `Layer3/Sage/T2_13_shock_viscosity.sage` |
+| **C6** | `Layer3/Lean/T2_9_SpinStates.lean` | `Layer3/Sage/T2_9_spin_states.sage` |
+| **C7** | — | `Layer3/Sage/T2_6_self_energy_sage.sage`<br>`Layer3/Sage/T2_6_self_energy_sympy.sage` |
+| **C8** | — | `Layer3/Sage/T2_5_gauge_pressure.sage` |
+| **C9** | — | `Layer3/Sage/T2_2_charge_conservation.sage` |
+| **C10** | — | `Layer3/Sage/mass_sector_gauge_vs_curvature.sage` |
+| **C11** | — | `Layer3/Sage/u4_rest_mass_nonconservation.sage` |
+| **C12** | — | `Layer3/Sage/weak_field_poisson.sage` |
+| **C13** | — | `Layer3/Sage/phat_photon_blackbody.sage` |
+
+### Layer 3 — Book extensions (Appendix A.2, §7)
+
+| §7 block | Sage script |
+|----------|-------------|
+| B-C1/C2 | `Layer3/Sage/nonsingular_force_3rdlaw.sage` |
+| B-C2 | `Layer3/Sage/yangmills_field_structure.sage` |
+| B-C1 | `Layer3/Sage/su3_three_body_structure.sage` |
+| B-C3 | `Layer3/Sage/neutron_com_barrier_lifetime.sage` |
+| B-C3 | `Layer3/Sage/virtual_mass_photon_LHC.sage` |
+| B-C3 | `Layer3/Sage/lowZ_masses_vs_SEMF.sage` |
+| B-C4 | `Layer3/Sage/P1_radiation_pressure_a0.sage` |
+| B-C3 | `Layer3/Sage/nuclear_model_recovered.sage` |
+| B-M1 | `Layer3/Sage/earth_magnetic_moment.sage` |
+| B-M2 | `Layer3/Sage/force_ratio.sage` |
+| B-M3 | `Layer3/Sage/perihelion_advance.sage` |
+| B-M4 | `Layer3/Sage/dark_matter_rotation_curves.sage` |
+
+### Layer 3 — Constants and provenance (exploratory)
+
+Scripts that trace where the theory's two numerical constants come from. They are
+assertion-driven and linted like the rest, but they establish provenance rather
+than a `[Cn]` claim, so the Supplementary Material cites them by name.
+
+| Script | What it settles |
+|--------|-----------------|
+| `Layer3/Sage/k_nuclide_anchor.sage` | anchors `k` on the nuclide chart and inverts it into `K_gamma` |
+| `Layer3/Sage/v0_source_law.sage` | what sources `V_0`, from the 68d Bianchi component in statics |
+| `Layer3/Sage/self_energy_assembly_factors.sage` | the assembly factors behind prediction P3 |
+| `Layer3/Sage/mass_energy_conversion_ceiling.sage` | the `d(gamma)/dt <= a_0 c` ceiling on mass conversion |
+
+### Layer 3 — Cosmology and further book-sourced checks
+
+Book-sourced results outside the numbered `B-Cn`/`B-Mn` blocks: the secular
+gravitational time-dependence and its consequences, plus structural checks on
+waves, orbits and singularity removal. Discussed in the Supplementary Material by
+name; several are negative or inconclusive results, recorded as such.
+
+| Script | Subject |
+|--------|---------|
+| `Layer3/Sage/redshift_relation_dark_energy.sage` | DT redshift relation |
+| `Layer3/Sage/dark_energy_standard_candle.sage` | the evolving Chandrasekhar candle |
+| `Layer3/Sage/pantheon_dark_energy_fit.sage` | fit to the Pantheon binned SN-Ia sample |
+| `Layer3/Sage/pantheon_systematic_covariance.sage` | the same fit under the published systematic covariance |
+| `Layer3/Sage/dark_energy_residual.sage` | how close the fit gets |
+| `Layer3/Sage/highz_residual_diagnostic.sage` | whether the two highest-z bins are calibration-limited |
+| `Layer3/Sage/local_unit_of_action_cancellation.sage` | whether the variable unit of action can hide the drift locally |
+| `Layer3/Sage/local_gdot_escape_candidates.sage` | candidate escapes from the local `Gdot/G` bound |
+| `Layer3/Sage/G_variation_constraints.sage` | the imported `Gdot/G` constraints |
+| `Layer3/Sage/density_screening_nogo.sage` | the density-screening escape, and why it fails |
+| `Layer3/Sage/nonsingular_cosmology_cmb.sage` | non-singular cosmology and the CMB |
+| `Layer3/Sage/nonsingular_black_holes.sage` | singularity removal in the mass sector |
+| `Layer3/Sage/electrogravitic_wave_polarization.sage` | polarization of the 5D wave |
+| `Layer3/Sage/nontransverse_pressure_rederivation.sage` | radiation pressure of the non-transverse mode, re-derived |
+| `Layer3/Sage/quantized_orbits.sage` | the gravitational Bohr ladder |
+| `Layer3/Sage/moon_system_quantisation.sage` | the same ladder applied to a satellite system |
+| `Layer3/Sage/gap_vs_feeding_pattern.sage` | ladder gaps against planetary data |
+
+> Figure generators are named `plot_*.sage` (`plot_dark_energy_hubble.sage`,
+> `plot_planetary_orbits.sage`). They emit PNGs into `sage-results/` and are
+> skipped by the linter.
+
+> `Layer3/Lean/NSM_SU3_Circulant.lean` — the Nonstandard-Model SU(3) circulant
+> proof (charge sector, §7). Cited in prose as `NSM_SU3_circulant`; it has no
+> separate `[Cn]` code but is part of the verified Lean library (included in the
+> `lake build` and the AxiomCheck footprint).

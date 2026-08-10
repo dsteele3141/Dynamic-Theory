@@ -1,0 +1,72 @@
+======================================================================
+ELECTROGRAVITIC (longitudinal) WAVE -- a frequency-dependent radiation
+pressure, followed from the optical fit outward
+======================================================================
+
+[0] DT's wave content vs Maxwell / GR
+    Maxwell light: 2 transverse polarizations.  GR waves: 2 tensor.
+    DT: 8 field eqs -> 10 components, incl. a NON-TRANSVERSE mode whose
+    vector lies ALONG k (Williams' 'electrogravitic wave').  -> extra
+    longitudinal polarization carrying the gravitational V-component.
+
+[1] Correspondence limit
+    A0 -> 0  =>  p/xi -> 1.0000  (ordinary transverse radiation)
+  [PASS] A0 -> 0 recovers the ordinary p/xi = 1 (no longitudinal reduction).
+
+[2] Optical anchor (Nichols & Hull, w = 540 THz, n = 1)
+    predicted p/xi = 0.99433   vs measured 0.99433
+  [PASS] with A0 = 40.72e12/s the optical ratio reproduces N&H 0.99433 (<1e-4).
+  [PASS] the optical reduction is tiny but real (longitudinal fraction ~0.6%).
+
+[3] The zero-pressure frequency (Williams' own 'Zero Pressure Radiation')
+    p/xi = 0 at w0 = A0/sqrt(1+n^2) = 2.879e+13 /s  (28.8 THz)
+    -> wavelength lambda0 = c/w0 = 1.04e-05 m  (10.4 um, mid-infrared)
+  [PASS] there is a finite zero-pressure frequency (Williams' claim) ~29 THz.
+  [PASS] the zero-pressure wavelength is in the mid-IR (~10 um), not exotic.
+
+[4] Longer wavelengths: the ratio goes NEGATIVE and -> -1
+    mid-IR  30 THz     p/xi = +0.0410
+    far-IR   3 THz     p/xi = -0.9785
+    CMB peak 160 GHz   p/xi = -0.9999
+    microwave 10 GHz   p/xi = -1.0000
+    radio    100 MHz   p/xi = -1.0000
+  [PASS] for w < w0 the predicted radiation pressure is NEGATIVE.
+  [PASS] toward low frequency p/xi -> -1 (equation of state w = -1).
+  [PASS] the CMB (160 GHz) is predicted at p/xi ~ -1, NOT the radiation +1/3.
+
+[5] Confrontation with measurement
+    Measured radiation pressure is POSITIVE across the spectrum:
+      - microwave/radio pressure underwrites laser-power standards and
+        radiometry; cavity & antenna forces are positive and classical;
+      - the CMB is radiation with w = +1/3 (acoustic-peak cosmology),
+        not w = -1.
+    DT (with its own Nichols&Hull-fixed A0) predicts p/xi < 0 for every
+    lambda > ~10 um.  These disagree by O(1) -- a falsification, not a
+    tension.
+  [PASS] DT's long-wavelength pressure sign CONTRADICTS the measured (+) sign.
+
+----------------------------------------------------------------------
+VERDICT
+----------------------------------------------------------------------
+POSITIVE: DT makes a genuine, sharp, NEW prediction -- a non-transverse
+  electrogravitic wave (an extra longitudinal polarization beyond the
+  transverse modes of Maxwell and GR) with a specific, frequency-
+  dependent radiation pressure.  This is falsifiable physics, not vague
+  -- and Williams owned the consequence ('Zero Pressure Radiation').
+LIMIT: taken literally with its own optical-fit constant A0, the curve
+  predicts zero radiation pressure at ~10 um and NEGATIVE pressure
+  (down to w=-1) at all longer wavelengths, including the CMB -- which
+  is excluded by measured positive microwave/radio radiation pressure
+  and the CMB's w=+1/3.  So EITHER A0 is not the universal constant the
+  theory treats it as (the optical fit doesn't extrapolate), OR the
+  longitudinal-mode radiation pressure is wrong.  A clean negative
+  result on DT's own equation, in the same spirit as the dark-energy
+  Gdot/G no-go.
+NOTE (2nd channel): a longitudinal/electrogravitic GW polarization is
+  also constrained directly -- LIGO/Virgo polarization tests favour pure
+  tensor modes, and GW170817 pins |v_GW - c|/c < 1e-15; DT's separate
+  longitudinal propagation constant would have to evade both.
+
+======================================================================
+36 COMPLETE.
+======================================================================

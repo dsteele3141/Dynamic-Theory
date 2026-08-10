@@ -1,0 +1,86 @@
+========================================================================
+34c  MOON-SYSTEM QUANTISATION -- is r~n^2 universal across the giants?
+========================================================================
+
+--- Sun / planets  (M = 1.989e+30 kg) ---
+    best n0 = 5 ; RMS-in-n = 0.169 (random ~0.289) ; w = 239.4 km/s
+      Mercury   n =  5.000  -> nearest  5  (resid +0.000)
+      Venus     n =  6.834  -> nearest  7  (resid -0.166)
+      Earth     n =  8.037  -> nearest  8  (resid +0.037)
+      Mars      n =  9.922  -> nearest 10  (resid -0.078)
+      Jupiter   n = 18.333  -> nearest 18  (resid +0.333)
+      Saturn    n = 24.821  -> nearest 25  (resid -0.179)
+      Uranus    n = 35.210  -> nearest 35  (resid +0.210)
+      Neptune   n = 44.074  -> nearest 44  (resid +0.074)
+
+--- Jupiter / Galileans  (M = 1.898e+27 kg) ---
+    best n0 = 8 ; RMS-in-n = 0.144 (random ~0.289) ; w = 138.6 km/s
+      Io        n =  8.000  -> nearest  8  (resid +0.000)
+      Europa    n = 10.091  -> nearest 10  (resid +0.091)
+      Ganymede  n = 12.744  -> nearest 13  (resid -0.256)
+      Callisto  n = 16.902  -> nearest 17  (resid -0.098)
+
+--- Saturn / major regular  (M = 5.683e+26 kg) ---
+    best n0 = 7 ; RMS-in-n = 0.165 (random ~0.289) ; w = 100.1 km/s
+      Mimas     n =  7.000  -> nearest  7  (resid +0.000)
+      Enceladus n =  7.929  -> nearest  8  (resid -0.071)
+      Tethys    n =  8.822  -> nearest  9  (resid -0.178)
+      Dione     n =  9.984  -> nearest 10  (resid -0.016)
+      Rhea      n = 11.798  -> nearest 12  (resid -0.202)
+      Titan     n = 17.964  -> nearest 18  (resid -0.036)
+      Iapetus   n = 30.666  -> nearest 31  (resid -0.334)
+
+--- Uranus / major  (M = 8.681e+25 kg) ---
+    best n0 = 5 ; RMS-in-n = 0.206 (random ~0.289) ; w = 33.5 km/s
+      Miranda   n =  5.000  -> nearest  5  (resid +0.000)
+      Ariel     n =  6.073  -> nearest  6  (resid +0.073)
+      Umbriel   n =  7.169  -> nearest  7  (resid +0.169)
+      Titania   n =  9.181  -> nearest  9  (resid +0.181)
+      Oberon    n = 10.618  -> nearest 11  (resid -0.382)
+
+[1] Ladder quality per system
+  [PASS] Sun / planets: RMS-in-n = 0.169 is in the numerology band (>0.05, not a clean quantisation)
+  [PASS] Jupiter / Galileans: RMS-in-n = 0.144 is in the numerology band (>0.05, not a clean quantisation)
+  [PASS] Saturn / major regular: RMS-in-n = 0.165 is in the numerology band (>0.05, not a clean quantisation)
+  [PASS] Uranus / major: RMS-in-n = 0.206 is in the numerology band (>0.05, not a clean quantisation)
+
+[1b] Formula check and the n0-degeneracy of w
+    Sun with Mercury pinned at n0=3 (script 34 / Nottale): w = 143.7 km/s
+    Sun at the min-RMS anchor n0=5 (broader scan): w = 239.4 km/s
+  [PASS] formula validated: Mercury=3 anchor reproduces Nottale's ~144 km/s.
+  [PASS] w is NOT uniquely determined even for the Sun: the min-RMS anchor (n0=5) gives a different w than the n0=3 anchor -> the ground state is not pinned (under-constraint, in the fit itself).
+
+[2] Universality of the quantisation velocity w = sqrt(GM/A)
+    w (km/s, min-RMS anchor): Sun=239, Jupiter=139, Saturn=100, Uranus=33
+    spread max/min = 7.16x
+  [PASS] w is NOT universal across systems (spread > 2x) -> each system needs its OWN constant; a single hbar_g is not supported.
+  [PASS] non-universality is robust to the anchor: even Sun@n0=3 (144) vs Uranus (33) exceeds 2x.
+
+[3] Resonance confound (spacing set by dynamics, not quantisation)
+    Galilean period ratios: Europa/Io = 2.007 , Ganymede/Europa = 2.014
+  [PASS] Io:Europa:Ganymede sit in the 4:2:1 LAPLACE resonance (period ratios ~2), so their spacing is dynamically locked -- NOT free evidence for quantisation.
+
+------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------
+The moon systems do NOT rescue the quantised-orbit picture to a clean win:
+  * each giant's regular moons CAN be laid on an r~n^2 ladder, but only at
+    the same modest RMS (~0.14-0.21) as the planets -- numerology band, not <0.05;
+  * the derived quantisation velocity w is NOT universal: at the min-RMS anchor
+    Sun~239, Jupiter~139, Saturn~100, Uranus~33 km/s (spread ~7x); even taking
+    the Sun at its Mercury=3 value (144) vs Uranus (33) is >4x. A single
+    hbar_g does not fit all systems -- each carries its OWN fitted constant;
+  * w is not even pinned WITHIN the Sun: the ground state n0 is degenerate
+    (n0=3 -> 144 km/s, min-RMS n0=5 -> 239 km/s), so the 'constant' floats;
+  * the sharpest sub-system (the Galileans) has its spacing FIXED by the 4:2:1
+    Laplace mean-motion resonance -- a standard dynamical mechanism, so it
+    cannot be counted as independent evidence for quantisation.
+NET: adding the moon data (more constraint, not more parameters) leaves the
+verdict INCONCLUSIVE and, if anything, strengthens the under-constrained
+reading. A universal gravitational action is not supported by the satellites.
+(Honest note: Jupiter ~139 sitting near the Sun's Mercury=3 value ~144 is the
+one mild coincidence -- but Saturn/Uranus break it, and the n0 freedom lets w
+drift, so it is not evidence for a shared constant.)
+========================================================================
+34c COMPLETE.
+========================================================================

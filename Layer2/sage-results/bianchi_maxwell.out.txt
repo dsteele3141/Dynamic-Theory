@@ -1,0 +1,21 @@
+======================================================================
+03_bianchi_maxwell_adjudicated.sage
+======================================================================
+
+(A) Bianchi identity dF = 0 (Eq 68)
+  Eq 68a residual (div B): PASS
+  Eq 68b component residual: PASS
+  Eq 68d component residual: PASS
+  Note: Eq 68d result contains -dE/dgamma, matching the corrected physics.
+
+(B) Divergence equations J^j = nabla_i F^{ij} (Eq 70)
+  Eq 70a algebraic residual: PASS
+  Raw J^4 matches div(V) - (1/c)dV0/dt: PASS
+  With x0=ict and covariant fifth current J_4 = -J^4 (g44=-1),
+  Eq 70c matches the manuscript's physical signs.
+
+(C) Signature Check
+  g44=+1 flips the V0 term in J^0: PASS
+
+Summary: Bianchi and Maxwell identities verified with explicit sign conventions.
+======================================================================

@@ -1,0 +1,34 @@
+======================================================================
+T1.9 STRENGTHENING — general Maxwell EL + the lambda-constraint term
+======================================================================
+
+----------------------------------------------------------------------
+(A) Maxwell EL for an ARBITRARY potential A (four free functions)
+----------------------------------------------------------------------
+  residual per nu (div F - (boxA - grad div A)): [0, 0, 0, 0]
+  div_mu F^{mu nu} = box A^nu - d^nu(div A)  for ARBITRARY A: True   [VERIFIED]
+  => the F^2-term EL is the 2nd-order Maxwell operator for any A,
+     not merely the single plane wave of 02_T1_9. In Lorenz gauge
+     (div A = 0) this reduces to box A^nu = 0 (the wave equation).
+
+----------------------------------------------------------------------
+(B) lambda-constraint term  -lambda(1/2 - 6 phi_i phi^i)  (DT-specific)
+----------------------------------------------------------------------
+  dLc/dlambda = -6*phi0^2 + 6*phi1^2 + 6*phi2^2 + 6*phi3^2 - 1/2        (= -(1/2 - 6 phi_i phi^i))
+  EL(lambda) = 0  =>  phi_i phi^i = 1/12   (unity-scale-factor normalisation)
+  dLc/dphi_k = [-12*lam*phi0, 12*lam*phi1, 12*lam*phi2, 12*lam*phi3]
+  dLc/dphi_k = 12 lambda phi^k  (source added to the gauge field eq): True   [VERIFIED]
+  => the constraint (i) pins the gauge-vector norm phi_i phi^i = 1/12, and
+     (ii) sources the Maxwell EL:  A * div_mu F^{mu nu} + 12 lambda phi^nu = 0.
+
+======================================================================
+T1.9 STRENGTHENING SUMMARY:
+  (A) Maxwell EL generalised from one plane wave to ARBITRARY A:
+      div_mu F^{mu nu} = box A^nu - d^nu(div A)  [VERIFIED, general]
+  (B) lambda-constraint (previously untouched) given explicit EL content:
+      EL(lambda) => phi^2 = 1/12 ; EL(phi_k) => source 12 lambda phi^k [VERIFIED]
+
+  Still cited, not derived (out of scope): the Einstein-Hilbert variation
+  delta INT R sqrt(-g) -> G_{mu nu} (standard Weyl-1918; no symbolic
+  variational calculus for the general metric here).
+======================================================================

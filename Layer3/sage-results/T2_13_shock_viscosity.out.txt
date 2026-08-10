@@ -1,0 +1,49 @@
+======================================================================
+T2.13 — Shock-wave enhanced viscosity (completes prediction P2)
+======================================================================
+
+----------------------------------------------------------------------
+(A) Steady-shock mass conservation: gamma u = k1  =>  gamma_x = -(k1/u^2) u_x
+----------------------------------------------------------------------
+  d gamma/dx = -k1*diff(u(x), x)/u(x)^2
+  -(k1/u^2)(du/dx): difference = 0
+
+----------------------------------------------------------------------
+(B) Total stress => sigma = P + eta_eff (du/dx)
+----------------------------------------------------------------------
+  sigma          = P{1 - (1/a0^2)(d gamma/dx)^2} + eta (du/dx)
+  eta_eff        = eta - (P k1^2)/(a0^2 u^4) (du/dx)
+  sigma - [P + eta_eff (du/dx)] = 0
+
+----------------------------------------------------------------------
+(C) Enhancement: eta_eff - eta > 0 when du/dx < 0 (inside a shock)
+----------------------------------------------------------------------
+  eta_eff - eta = -P*dudx*k1^2/(a0^2*u^4)
+          = -(P k1^2)/(a0^2 u^4) (du/dx)
+  with du/dx < 0 (and P,k1,a0,u > 0): eta_eff - eta > 0 ? True
+  => geometric term ENHANCES viscosity and THICKENS the shock front (P2).
+
+----------------------------------------------------------------------
+(D) Classical limit a0 -> infinity (geometric term switched off)
+----------------------------------------------------------------------
+  lim_{a0->inf} eta_eff = eta   (recovers ordinary viscosity eta): eta == eta
+
+----------------------------------------------------------------------
+(E) Numeric demonstration (dimensionless, du/dx < 0 inside shock)
+----------------------------------------------------------------------
+  a0 = 10.00 :  eta_eff = 1.0100  (= eta + 0.0100 enhancement; ratio 1.01x)
+  a0 =  3.00 :  eta_eff = 1.1111  (= eta + 0.1111 enhancement; ratio 1.11x)
+  a0 =  1.00 :  eta_eff = 2.0000  (= eta + 1.0000 enhancement; ratio 2.00x)
+  (smaller a0 => stronger geometric coupling => more enhancement)
+
+======================================================================
+T2.13 SUMMARY (completes prediction P2 — enhanced viscosity in shocks):
+  (A) gamma u = k1  =>  d gamma/dx = -(k1/u^2)(du/dx).                     [OK]
+  (B) sigma = P + eta_eff (du/dx), eta_eff = eta - (P k1^2/a0^2 u^4)(du/dx).[OK]
+  (C) inside a shock (du/dx<0): eta_eff > eta — viscosity ENHANCED.       [OK]
+  (D) a0 -> infinity: eta_eff -> eta (classical recovery).                [OK]
+  (E) numeric: enhancement grows as a0 decreases.                         [OK]
+  => Together with T2.12 (viscous stress from geometry), the Dynamic Theory
+     predicts INCREASED viscous effects in shocked (large-grad-gamma)
+     materials (prediction P2). Magnitude scales as 1/a0^2.
+======================================================================

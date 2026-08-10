@@ -1,0 +1,34 @@
+======================================================================
+EARTH MAGNETIC MOMENT -- parameter-free Layer-3 (mass-sector) postdiction
+======================================================================
+
+[1] beta = sqrt(eps0 G)  (Eq 10.19 value)
+    beta = 2.4309e-11 C/kg   (Williams: 2.4296e-11)
+  [PASS] beta = sqrt(eps0 G) = 2.4296e-11 C/kg (within 0.5%).
+  [PASS] printed sqrt(4 pi eps0 G) != the stated value (so the 4pi is a misprint).
+
+[2] Earth (Williams' values): M, I, omega
+    q_eff = beta M = 1.454e+14 C   (Williams: 1.454e14)
+  [PASS] q_eff = beta M_earth = 1.454e14 C (within 1%).
+
+[3] mu = (beta/2) I omega
+    mu = 8.6e+22 amp-m^2   (Williams: 8.6e22; measured 8.1e22)
+  [PASS] mu = 8.6e22 amp-m^2 (reproduces Williams, within 3%).
+  [PASS] mu agrees with the measured 8.1e22 amp-m^2 (within 10%).
+
+[4] Robustness: modern Earth (I, omega, M)
+    mu(modern) = 7.12e+22 amp-m^2  (measured ~8.0e22)
+  [PASS] modern-input mu is the same order and within 15% of the measured value.
+
+  NET: a spinning neutral body's magnetic moment, with beta = sqrt(eps0 G)
+  built from G and eps0 alone, reproduces Earth's measured dipole moment to
+  ~6-15%. PARAMETER-FREE (no a0, no fit) -- a clean mass-sector postdiction
+  the Report-scoped corpus did not record.
+  CAVEAT (finding L3-10): 'parameter-free' is CONDITIONAL on the beta
+  adjudication -- Eq 10.19 PRINTS beta=sqrt(4 pi eps0 G) but its stated
+  value is sqrt(eps0 G); we take the value (the one matching data). A source
+  correction, not a prediction from the literal printed equation.
+
+======================================================================
+20 COMPLETE.
+======================================================================

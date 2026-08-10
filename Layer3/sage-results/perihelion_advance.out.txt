@@ -1,0 +1,25 @@
+======================================================================
+PERIHELION ADVANCE (Mercury) -- DT recovers the GR result (mass sector)
+======================================================================
+
+[1] GR advance: delta = 6 pi G M / (c^2 a (1-e^2)) per orbit
+    per orbit   = 5.02e-07 rad
+    per century = 42.99 arcsec   (observed GR value: 42.98"/century)
+  [PASS] GR Mercury perihelion advance = 43 arcsec/century (within 2%).
+
+[2] DT matches GR when lambda = G M_sun / c^2
+    lambda = G M_sun / c^2 = 1477 m  (= half the solar Schwarzschild radius)
+  [PASS] lambda = G M_sun/c^2 ~ 1.48e3 m (within 2%).
+  [PASS] Eq (10.37) 1.47e5 cm = 1.47e3 m equals G M_sun/c^2 (Eq 10.38 '1.47e5 m' is a cm->m slip).
+
+[3] Correspondence: DT advance reduces to delta_GR under lambda = GM/c^2
+  [PASS] DT coefficient 6*lambda*GM equals 6*(GM)^2/c^2 under lambda = GM/c^2.
+    => DT's non-singular-potential advance reproduces the GR perihelion
+       advance (Mercury's 43"/century) in the limit lambda = GM/c^2.
+    SCOPE (finding L3-10): the identification lambda = GM/c^2 is SUPPLIED
+    (Book Eq 10.36), not derived here; the GR match is conditional on it.
+
+======================================================================
+22 COMPLETE: GR Mercury number 42.98"/century confirmed; DT recovers it
+under lambda = G M / c^2 (~1.48 km).
+======================================================================

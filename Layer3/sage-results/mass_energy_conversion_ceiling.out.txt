@@ -1,0 +1,83 @@
+============================================================================
+40_mass_energy_conversion_ceiling.sage
+Is DT's ceiling on mass-energy conversion violated by real processes?
+============================================================================
+  a0 = 3.650e+07 kg/m^4   c = 2.9980e+08 m/s
+  CEILING  S_max = a0*c = 1.0943e+16 kg/(m^3 s)   <->   u4 = 1
+
+[A] u4 = 0 identically for mass-conserving flow, however violent
+    (A1) advected profile gamma=f(x-vt), u=v:
+         d(gamma)/dt      = -v*D[0](f)(-t*v + x)
+         Div(gamma u)     = v*D[0](f)(-t*v + x)
+         residual         = 0
+  [PASS] A1: residual is identically zero though d(gamma)/dt is non-zero (a compression rate is NOT a u4).
+    (A2) steady shock gamma*u=k1:  residual = 0
+  [PASS] A2: the steady shock front has ZERO continuity residual, so u4=0 inside it (retracts the earlier shock-front estimate).
+  [PASS] A3: with d(gamma)/dt + Div(gamma u) = -S, |u4| = S/(a0 c).
+         => only a genuine mass SINK S gives u4 != 0.
+
+[B] Genuine mass-energy conversion: u4 = S/(a0 c) for real systems
+    Sun's core (steady fusion)         S = 1.933e-16   u4 = 1.766e-32 
+    lab e+e- annihilation (1 mm^3)     S = 1.822e-11   u4 = 1.665e-27 
+    1 Mt thermonuclear burn            S = 1.111e+08   u4 = 1.016e-08 
+    ICF hot spot (NIF-scale)           S = 3.099e+12   u4 = 2.832e-04 <- closest accessible
+    SN core collapse (R=10 km, 10 s)   S = 7.968e+15   u4 = 7.282e-01 <- closest in nature
+    SN core collapse (R=20 km, 10 s)   S = 9.960e+14   u4 = 9.102e-02 
+
+    ordering check and margins to the ceiling:
+      Sun core           u4 = 1.766e-32   margin to ceiling = 5.662e+31 x
+      lab annihilation   u4 = 1.665e-27   margin to ceiling = 6.007e+26 x
+      1 Mt burn          u4 = 1.016e-08   margin to ceiling = 9.847e+07 x
+      ICF hot spot       u4 = 2.832e-04   margin to ceiling = 3.531e+03 x
+      SN (R=20 km)       u4 = 9.102e-02   margin to ceiling = 1.099e+01 x
+      SN (R=10 km)       u4 = 7.282e-01   margin to ceiling = 1.373e+00 x
+  [PASS] B1: steady stellar fusion is ~30 orders below the ceiling.
+  [PASS] B2: laboratory annihilation is ~27 orders below the ceiling.
+  [PASS] B3: a 1 Mt thermonuclear burn stays below the ceiling.
+  [PASS] B4: ICF is the closest ACCESSIBLE system and is still below the ceiling.
+  [PASS] B5: SN core collapse APPROACHES the ceiling to within an order of magnitude but does not exceed it.
+  [PASS] B6: no continuum process checked violates the ceiling.
+  [PASS] B7: the SN figure scales as R^-3, so it is order-of-magnitude only (R: 10->20 km moves u4 by 8x).
+
+[C] Pointwise single-event estimate: a DOMAIN limit, not a violation
+    single e+e- annihilation, evaluated pointwise:
+      volume = lambda_C^3 = 1.428e-35 m^3, time = 1e-21 s
+      S = 1.276e+26 kg/(m^3 s)   ->  'u4' = 1.166e+10
+  [PASS] C1: the pointwise number formally EXCEEDS the ceiling by ~10 orders.
+  [PASS] C2: therefore it CANNOT be a u4 at all, since the (+,-,-,-,-) norm forces |u4|<1 -- a quantity computed outside the theory's domain, not a falsification of it.
+      REASON: gamma is a continuum/thermodynamic mass density and u4
+      contains the flux term Div(gamma u_bar); neither a density nor a
+      velocity field is defined inside one quantum event. DT is built on
+      the first law and an entropy-time, so its variables are
+      thermodynamic. The ceiling constrains CONTINUUM conversion rates.
+      Consequence: the ceiling is NOT testable by single-event physics;
+      it is testable where a bulk mass sink is resolvable in space and
+      time -- ICF and stellar collapse.
+
+[VERDICT]
+  u4 IS the local mass-energy conversion rate, normalised: |u4| = S/(a0 c)
+  with S the mass-destruction rate per unit volume. Williams ties this to
+  E=mc^2 directly: the one-to-one mass-energy correspondence holds only
+  when mass is conserved (Book, Eq. 6.11 discussion), i.e. only at u4=0.
+
+  The |u4|<1 bound therefore asserts a CEILING on mass-energy conversion,
+  S <= a0 c = 1.094e+16 kg/(m^3 s), the mass-sector analogue of 'cannot
+  cross c'. On the processes checked it is NOT violated (computed above):
+    stellar fusion        u4 = 1.766e-32     lab annihilation  u4 = 1.665e-27
+    1 Mt burn             u4 = 1.016e-08     ICF hot spot      u4 = 2.832e-04
+    SN core collapse      u4 = 7.282e-01 (R=10 km) to 9.102e-02 (R=20 km)
+      <- the only case within an order of magnitude of the ceiling
+
+  TWO HONEST EDGES.
+   (i) The SN figure is order-of-magnitude only (scales as R^-3, and the
+       burst duration and radius are both uncertain by factors of a few).
+       That it lands within an order of magnitude of the ceiling is a LEAD
+       worth a proper treatment, not a confirmation: a robust excess would
+       falsify the bound, and a robust saturation would be a prediction.
+  (ii) a0 was calibrated from shock data (Book Ch. 12), so the ceiling's
+       numerical value is not independent of that fit. A decisive test
+       needs a0 fixed by some other route.
+
+============================================================================
+40_mass_energy_conversion_ceiling COMPLETE.
+============================================================================

@@ -1,0 +1,56 @@
+======================================================================
+NON-SINGULAR COSMOLOGY (no Big Bang singularity) -- and the CMB it owes
+======================================================================
+
+[1] 'No singularity anywhere': the non-singular potential
+    V_g ~ -(GM/r) e^{-lambda/r};  lim_{r->0} (1/r)e^{-lambda/r} = 0
+  [PASS] the potential is FINITE as r->0 (no central singularity) -- ties to script 33.
+  [PASS] the field is bounded (no force singularity); Newton's 1/r^2 blow-up is gone.
+    => removes the singularity in Newton's LAW (the 1/r^2 force blow-up).
+       Potential-regularity, suggestive of a non-singular origin -- but no
+       metric/curvature/geodesic proof is given (not an established no-Big-Bang).
+
+[2] The CMB is a thermal blackbody (T = 2.7255 K); its peak frequency
+    nu_peak = 2.821439 kT/h = 160.2 GHz  (measured CMB peak ~160.2 GHz)
+  [PASS] the blackbody peak is ~160 GHz (matches the measured CMB).
+
+[3] Williams' CMB = 'zero pressure radiation' (5D gauge fields, script 36)
+    script-36 ratio at nu_peak:  p/xi = -0.99994
+    => DT's 5D radiation is NEGATIVE-pressure (w ~ -1) at CMB frequencies,
+       because the CMB sits far below the ~29 THz zero-pressure crossover.
+  [PASS] DT predicts the CMB band at p/xi ~ -1 (negative-pressure radiation).
+  [PASS] this CONTRADICTS the measured CMB equation of state w = +1/3 (radiation).
+
+[4] What a no-hot-Big-Bang model still owes the CMB
+    The CMB is (a) a blackbody to <1e-4 (FIRAS) and (b) carries acoustic
+    peaks (l1 ~ 220, ...) from baryon-photon-fluid oscillations. BOTH are
+    signatures of a HOT, DENSE, thermal-equilibrium early phase: a Planck
+    spectrum needs thermalization; the peak angular scale needs a sound
+    horizon int c_s dt. DT's no-singularity field supplies NEITHER a
+    thermalizing photon-baryon plasma NOR a sound horizon -- and Williams
+    grants the cosmology 'is not yet complete' (M undetermined; the gauge-
+    function scale may over-specify the dynamics, Ch.10).
+    So 'alternative to inflation' removes inflation's MOTIVATION (the
+    singularity) but not its quantitative successes (n_s~0.965 + the peaks).
+  [PASS] the blackbody + acoustic peaks are positive evidence for the hot dense phase.
+
+----------------------------------------------------------------------
+VERDICT
+----------------------------------------------------------------------
+POSITIVE: 'no singularity anywhere' is a GENUINE, internally-consistent
+  structural result -- the non-singular potential removes the r->0 force
+  divergence that forces a singular origin (same theme as the non-singular
+  black hole, script 33). A real theoretical alternative to the singular
+  beginning, which is itself a virtue, and few offer one.
+LIMIT: the cosmology is admittedly INCOMPLETE, and its one concrete
+  observable -- the CMB, which Williams attributes to 'zero pressure
+  radiation' from the 5D gauge fields -- is the SAME mechanism script 36
+  falsifies: at the CMB peak the law gives w ~ -1, not the measured +1/3.
+  The CMB's blackbody (to 1e-4) and acoustic peaks are positive evidence
+  for the hot dense phase DT discards, and DT provides no thermalization
+  or sound-horizon mechanism. So the singularity-removal is sound geometry;
+  the cosmological completion (above all the CMB) is not delivered.
+
+======================================================================
+37 COMPLETE.
+======================================================================

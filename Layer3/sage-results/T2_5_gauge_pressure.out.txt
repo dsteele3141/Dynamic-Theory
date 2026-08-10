@@ -1,0 +1,26 @@
+======================================================================
+T2.5 gauge pressure rewrite
+======================================================================
+
+(A) Traceless/isotropic split
+  tr(t)=0 with corrected 1/3 coefficient: 0 == 0 [PASS]
+  tr(tau') expected value: 0 == 0 [PASS]
+  tau' isotropic: True [PASS]
+
+(B) Pressure and classical limit
+  p = -(E^2+B^2+3V0^2-V^2)/(24*pi): 0 == 0 [PASS]
+  V=V0=0 gives p=-(1/3)u: 0 == 0 [PASS]
+
+(C) V-field correction and the EXACT reduction condition
+  Delta p = (V^2-3V0^2)/(24*pi): 0 == 0 [PASS]
+  With A=E^2+B^2>0 and D=V^2-3V0^2: 24pi*p_cl=-A, 24pi*p_DT=-A+D.
+  EXACT reduced-magnitude condition: 0 < D < 2A  (NOT merely D>0).
+  reduced case: 0<D<2A holds and |p| is reduced: True [PASS]
+  D<0 case: not (0<D<2A) and |p| is increased: True [PASS]
+  OVERSHOOT: D>0 (V^2>3V0^2) yet |p| NOT reduced when D>2A: True [PASS]
+  p=0 when V^2=E^2+B^2+3V0^2: 0 == 0 [PASS]
+
+Summary:
+  EXACT reduction condition: 0 < V^2-3V0^2 < 2(E^2+B^2).
+  D>0 alone is insufficient: D>2A overshoots to a larger positive pressure.
+======================================================================

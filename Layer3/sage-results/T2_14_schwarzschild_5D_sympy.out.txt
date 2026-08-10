@@ -1,0 +1,22 @@
+======================================================================
+18_schwarzschild_5D_adjudicated.sage
+======================================================================
+
+(A) Metric determinant Audit (Page 163)
+  det(g) = exp(mu+lam+nu) r^4 sin(theta)^2: PASS
+  Note: Manuscript Page 163 prints sin^-2(theta), confirmed as transcription error.
+
+(B) Christoffel Typo Audit (Page 164)
+  Gamma^theta_{theta r} = 1/r: PASS
+  Gamma^r_{theta r} = 0: PASS
+  Note: Manuscript Page 164 prints {1_21} = 1/r; confirmed index typo.
+
+(C) Ricci Field Equations (Eq 184-185)
+  R_22 equals -Eq184: PASS
+  Eq 185 is redundant (R33 = sin^2 * R22): PASS
+
+(D) 4D Schwarzschild Embedding
+  All Ricci components vanish for Schwarzschild_4 x R: PASS
+
+Summary: 5D Schwarzschild limit and manuscript typos verified.
+======================================================================

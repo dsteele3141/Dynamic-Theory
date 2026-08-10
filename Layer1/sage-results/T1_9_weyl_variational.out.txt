@@ -1,0 +1,28 @@
+======================================================================
+T1.9 Weyl variational rewrite: structural checks, no EH overclaim
+======================================================================
+
+(A) Eq 38: F=dA, antisymmetry, and dF=0
+  F_ij = d_i A_j - d_j A_i for all components: True [PASS]
+  F is antisymmetric: True [PASS]
+  dF = 0: True [PASS]
+
+(B) F^2 EL check on a concrete source-free plane wave
+  div_mu F^{mu nu}=0 for A_y=cos(t-x): True [PASS]
+  This is a concrete exact solution of the Maxwell EL, not a general derivation.
+  The general arbitrary-A identity is handled by 10_T1_9_weyl_strengthening.
+
+(C) R-term structural consistency on FLRW, not a derivation of EH variation
+  G_00 = 3*diff(a(tc), tc)^2/a(tc)^2
+  FLRW Einstein tensor is nonzero: True [PASS]
+  Ricci scalar R = 6*(diff(a(tc), tc)^2 + a(tc)*diff(a(tc), tc, tc))/a(tc)^2
+  R contains second derivatives of the metric scale factor: True [PASS]
+  div_mu G^{mu nu}=0 on FLRW: True [PASS]
+
+Summary:
+  Verified here: F=dA identities, one concrete Maxwell EL solution, and
+  FLRW Einstein-tensor consistency/order checks.
+  Not derived here: the general Einstein-Hilbert variation
+  delta INT R sqrt(-g) -> G_{mu nu}. That remains a trusted external
+  mathematical dependency, not an unresolved physics dispute.
+======================================================================

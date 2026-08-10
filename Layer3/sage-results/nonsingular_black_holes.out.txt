@@ -1,0 +1,40 @@
+======================================================================
+NON-SINGULAR BLACK HOLES -- DT's gravitational potential V_g = -(GM/r)e^{-lam/r}
+======================================================================
+
+[1] No central singularity
+  [PASS] V_g -> 0 as r -> 0+  (NON-singular; vs Newtonian -GM/r -> -inf).
+  [PASS] Newtonian -GM/r DIVERGES as r->0 (the singularity DT removes).
+
+[2] Bounded binding -> NO event horizon
+  [PASS] V_g has its extremum exactly at r = lambda = GM/c^2.
+  [PASS] |V_g| peaks at c^2/e  (V_g(lambda) = -c^2/e).
+  [PASS] max Newtonian escape speed = sqrt(2/e) c ~ 0.858 c < c (bounded; suggestive, not a horizon proof).
+    v_esc(max)/c = sqrt(2/e) = 0.8578  (Schwarzschild would reach 1 at r_s=2GM/c^2)
+
+[3] Regular core (no point collapse)
+  [PASS] gravitational force = 0 at r = lambda (binding turns over -> regular core).
+
+[4] Correspondence
+  [PASS] lambda -> 0 recovers Newtonian V_g = -GM/r.
+
+[scales] lambda = GM/c^2 (core size ~ lambda; Schwarzschild r_s = 2 lambda)
+    Sun                    lambda = 1.48e+03 m   (r_s = 2.95e+03 m)
+    10 Msun BH             lambda = 1.48e+04 m   (r_s = 2.95e+04 m)
+    Sgr A* (4.3e6 Msun)    lambda = 6.35e+09 m   (r_s = 1.27e+10 m)
+
+  NET: DT replaces the black-hole SINGULARITY (and even the event HORIZON,
+  since max escape speed is 0.858 c) with a regular, horizonless ultra-
+  compact object of core size ~lambda=GM/c^2 -- via the SAME non-singular
+  potential that gives the finite electron self-energy. A big, clean
+  structural prediction.
+  HONEST CEILING: (a) it is the energy/Newtonian read of DT's potential -- a
+  full strong-field metric needs DT's 5D treatment; (b) a HORIZONLESS compact
+  object is observationally EXPOSED -- EHT shadows and GW ringdowns so far
+  look Kerr-horizon-like, so this prediction is under observational pressure
+  (testable, not yet decisively excluded); (c) DT says nothing about Hawking
+  radiation / information or what stabilises the core.
+
+======================================================================
+33 COMPLETE.
+======================================================================

@@ -1,0 +1,37 @@
+========================================================================
+MASS POTENTIAL phi_m -- curvature object or fifth-gauge object? (both routes)
+========================================================================
+
+[A] ROUTE A -- CURVATURE:  phi_m is metric,  G_ij = kappa T_ij
+  [PASS] A1: Laplacian(-GM/r) = 0 away from source (unscreened Newton tail).
+  [PASS] A2: Yukawa e^{-lambda r}/r solves (Laplacian - lambda^2)f = 0 (massive field).
+  [PASS] A2: Yukawa is SINGULAR at r=0 (limit -> +oo): wrong regularity for phi_m.
+      => curvature/mass source screens at LARGE r and is singular at 0;
+         DT's phi_m ~ e^{-lambda/r} is the OPPOSITE (regular at 0).
+  [A VERDICT] curvature yields the -GM/r tail but CANNOT make e^{-lambda/r}.
+
+[B] ROUTE B -- FIFTH GAUGE:  phi_m in the V-sector, a0 d_gamma coupling
+  [PASS] B1: Laplacian(e^{-lambda/r}/r) = lambda(lambda-2r)/r^5 * e^{-lambda/r}.
+  [PASS] B1: effective source changes sign at r = lambda/2 (distributed source).
+  [PASS] B2: phi_m is NON-SINGULAR at r=0 (limit -> 0), unlike Yukawa.
+  [PASS] B2: phi_m -> 1/r Newtonian tail at large r (coefficient 1).
+  [PASS] B3: Gauss flux at infinity -r^2 phi' = 1 (unit effective mass).
+      => e^{-lambda/r} is the potential of a short-distance, gamma-coupled
+         distributed source: the a0 d_gamma V4 coupling, NOT a mass term.
+  [B VERDICT] the fifth-gauge coupling NATURALLY yields the non-singular core.
+
+[C] SECULAR FACTOR (1 - b t):  linearisation of the gauge e^{-b t}
+  [PASS] C: (1 - b t) is the leading gauge drift, taylor(e^{-b t}) = 1 - b t.
+      => with b = H0 this is a fifth-dimension / cosmological drift (route B),
+         NOT a curvature effect (route A needs M(t) put in by hand).
+
+[SYNTHESIS]  phi_m is NEITHER purely metric NOR purely gauge:
+  phi_m = (curvature tail) x (gauge regulator) = -GM(1-bt) e^{-lambda/r}/r
+    - curvature limit (a0 -> inf, lambda -> 0): clean GR/Newton  [YIELD]
+    - full phi_m: GR tail + gauge dressing; the dressing carries the
+      DT-specific, testable deviations (non-singular core + secular drift).
+    - Schwarzschild x R (T2_14) is the a0->inf, static, vacuum corner [ADMIT].
+
+========================================================================
+mass_sector_gauge_vs_curvature COMPLETE.
+========================================================================

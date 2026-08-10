@@ -1,0 +1,18 @@
+======================================================================
+10_dirac_repn_and_moment_check.sage
+======================================================================
+
+(i) Dirac representation -- minimal 4x4 closure & E5 independence
+  corrected complex A closes 5D Clifford algebra in MINIMAL 4x4 (Book 6.28): PASS
+  literal Eq-109 A FAILS the algebra even at 4x4 (E5 is genuine here too): PASS
+
+(h) Moment coupling -- contraction returns the Report/SI-2.23 form
+  contraction equals the Report/SI-2.23 form (machine-verified): PASS
+  contraction does NOT equal the transcribed Book-6.33 form: PASS
+
+----------------------------------------------------------------------
+VERDICTS (persisted): (i) E5 is representation-independent -- 4x4 (Book
+6.28) closes, literal A fails even at 4x4; 8x8 is a reducible doubling.
+(h) Report/SI-2.23 moment coupling is authoritative; Book-6.33 per-term
+coefficients are a transcription artifact (nonzero residual).
+======================================================================

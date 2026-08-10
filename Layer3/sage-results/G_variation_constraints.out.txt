@@ -1,0 +1,49 @@
+======================================================================
+G-VARIATION RATE -- DT requirement vs observational bounds (the caveat)
+======================================================================
+    H0 = 2.27e-18 /s = 7.16e-11 /yr
+
+[1] DT required |Gdot/G| = xi H0
+    xi = 0.25 (w/ redshift) -> 1.79e-11 /yr ; xi = 0.81 (std) -> 5.77e-11 /yr
+
+[2] Direct |Gdot/G| bounds (literature, /yr)
+    Lunar Laser Ranging (Hofmann+ 2018)    |Gdot/G| < 1e-13 /yr
+    Binary pulsar (PSR J1713+0747)         |Gdot/G| < 1e-12 /yr
+    BBN (light-element abundances)         |Gdot/G| < 1e-13 /yr
+    CMB (Planck-era acoustic scale)        |Gdot/G| < 1e-13 /yr
+  [PASS] DT rate (even the eased xi=0.25) exceeds the tightest bound by >100x.
+    -> tension: xi=0.25 is ~179x ; xi=0.8 is ~577x the tightest bound.
+
+[3] High-z amplification of the gauge factor e^{-H0 t}
+    G(BBN/CMB)/G(now) ~ e^1 = 2.72  (a ~172% change)
+  [PASS] a real G-drift gives ~170% change by BBN, excluded by |dG/G|<0.2 by >5x.
+
+[4] The decisive fork (which interpretation of DT's time-dependence?)
+    LOCAL-G  : excluded by LLR/pulsar/BBN/CMB at the ~10^2-10^3 level above.
+    GAUGE    : unit of action co-drifts (Eq 3.2) -> local bounds void, but
+               testable ONLY via SNe/redshift -> degenerate with dark energy.
+  [PASS] the caveat is real under LOCAL-G and only evaded under the GAUGE reading.
+
+[5] Re-check of the script-25 lunar cross-check (Van Flandern)
+    Van Flandern b = 1.90e-18 /s = 6.00e-11 /yr = 0.84 H0
+  [PASS] Van Flandern's b is ~0.8 H0 (the same scale DT needs).
+  [PASS] but b_VF EXCEEDS the modern LLR bound by >100x (so it is refuted, not support).
+    => Williams himself attributes it to systematic error; modern LLR
+       refutes a drift that large. The script-25 'lunar cross-check' is
+       DOWNGRADED: it is a historical, retracted claim, not live support.
+
+  NET (answer to 'is it in the book / can we explore it'):
+  - YES it is in the book: rate ~H0, the Van Flandern lunar test, and its
+    retraction as systematic error; Williams says the effect shows up
+    'only over cosmological distances'.
+  - The caveat is ROBUST if DT's time-dependence is a local G drift
+    (excluded ~10^2-10^3x by LLR/pulsar, and by ~170%-vs-20% at BBN/CMB).
+  - It is EVADED only under the gauge/unit-of-action reading -- which makes
+    the prediction degenerate with dark energy (not independently testable).
+  - Deciding between them needs DT to commit to whether G drifts LOCALLY;
+    the cleanest live test is a model-comparison of (DT log-z + evolving
+    candle) vs LCDM on a real SN compilation (e.g. Pantheon+). Future work.
+
+======================================================================
+26 COMPLETE.
+======================================================================

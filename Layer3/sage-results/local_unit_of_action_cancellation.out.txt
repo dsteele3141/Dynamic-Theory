@@ -1,0 +1,45 @@
+======================================================================
+LOCAL CANCELLATION TEST -- does the variable unit of action (Eq 3.2/3.3)
+hide the gravitational time-dependence (Eq 3.52) from a local measurement?
+======================================================================
+
+[0] Symbolic structure of Eq 3.3
+  [PASS] d ln(hbar)/dt = +(Phi/c^2) H0 e^{-lam/R}  (potential-SUPPRESSED).
+  [PASS] d ln(G M_eff)/dt = -H0/(1-H0 t) -> -H0 at t=0 (FULL rate, no suppression).
+
+[1] Gravitational potential Phi/c^2 at relevant local sites
+    Earth surface (GM_E/R_E)     Phi/c^2 = 6.96e-10
+    Moon's orbit (GM_E/r_Moon)   Phi/c^2 = 1.15e-11
+    Sun at Earth (GM_S/AU)       Phi/c^2 = 9.87e-09
+    most generous (largest) Phi/c^2 = 9.87e-09 (Sun at Earth)
+  [PASS] the largest local Phi/c^2 is tiny (< 1e-7).
+
+[2] Drift rates (units of H0)
+    gravitational binding (Eq 3.52): |rate|/H0 = 1
+    unit of action       (Eq 3.3) : |rate|/H0 = 9.87e-09  (e^{-lam/R}~1 macroscopically)
+  [PASS] the unit-of-action drift is >1e6 times SMALLER than the gravitational drift.
+
+[3] Local observable (orbit measured in atomic units): residual drift
+    inferred |Gdot/G|_local / H0 = |1 - 3*(Phi/c^2)| = 1.000000
+  [PASS] the residual local drift is ~H0 (cancellation incomplete by ~Phi/c^2 ~ 1e-8).
+    => cancellation FAILS by a factor ~1/(Phi/c^2) ~ 1e+08.
+
+[4] Confront the LLR bound
+    DT predicts local |Gdot/G| ~ 7.16e-11 /yr ; LLR bound ~ 1e-13 /yr -> exceeds by ~716x
+  [PASS] DT's local Gdot/G (on its own Eqs 3.2+3.52) exceeds the LLR bound by >100x.
+
+  VERDICT (the calculation settles the fork):
+  On Williams' OWN equations the variable unit of action does NOT cancel the
+  gravitational time-dependence locally: Eq 3.3 ties the unit-of-action drift
+  to the gravitational potential (Phi/c^2 ~ 1e-8 locally), while Eq 3.52 drifts
+  at the full rate H0. The residual is ~H0 -- a LOCALLY OBSERVABLE Gdot/G that
+  LLR excludes by ~716x. So the fork resolves to the LOCAL-G reading, and the
+  gauge escape FAILS on DT's own machinery: DT's dark-energy time-dependence is
+  excluded by local G-variation bounds.
+  (Caveat: this is forced by Eq 3.3's structure -- the time factor enters x W/R.
+   A gauge escape would need an un-suppressed, potential-INDEPENDENT hbar(t),
+   which Eq 3.3 does NOT provide. So the escape is not available as DT is written.)
+
+======================================================================
+30 COMPLETE.
+======================================================================

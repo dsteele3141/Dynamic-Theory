@@ -1,0 +1,34 @@
+======================================================================
+PREDICTION P1 -- reduced radiation pressure & the fixing of a0 (Book)
+======================================================================
+
+[1] Forward: 5D ratio with the Book's a0 reproduces Nichols & Hull
+    p/xi (A0=40.72e12 s^-1, w=540 THz, n=1) = 0.994330   (measured 0.99433)
+  [PASS] predicted p/xi matches Nichols & Hull 0.99433 (to 1e-4).
+
+[2] Inverse: solve the measured ratio for A0 (round trip)
+    A0 from ratio = 4.072e+13 s^-1   (Book: 40.72e12 s^-1)
+  [PASS] inverse-solved A0 returns 40.72e12 s^-1 (within 1%).
+
+[3] a0 = A0/(c k4) from the radiation-pressure determination
+    a0 = 3.653e+07 kg/m^4   (Book states 3.65e7 kg/m^4)
+  [PASS] a0 = A0/(c k4) = 3.65e7 kg/m^4 (within 2%).
+
+[4] Consistency: radiation pressure vs shock waves
+    (NOT independent -- k4 was back-solved from a0; see the header NOTE)
+    a0 (radiation pressure) = 3.653e+07 kg/m^4
+    a0 (shock waves, Ch.7)  = 3.65e+07 kg/m^4
+  [PASS] radiation-pressure and shock-wave figures agree (within 2%) -- consistency, NOT independence (see the header NOTE).
+
+[5] Correspondence: a0 -> 0 (A0 -> 0) gives p/xi -> 1
+  [PASS] p/xi -> 1 as A0 -> 0 (ordinary radiation pressure recovered).
+
+  NET: P1 is a machine-checked POSTDICTION of the Nichols & Hull ratio,
+  and it fixes the product A0 = a0 c k4 = 40.72e12 s^-1. With the Book's
+  vacuum k4 this gives the DT constant a0 ~ 3.65e7 kg/m^4, the constant the
+  Report-scoped SI leaves open -- consistent with, but not independent of,
+  the Ch.7 shock-wave figure. (Book-sourced; not in the 1980 Report.)
+
+======================================================================
+P1 COMPLETE: reduced radiation pressure postdicts 0.99433; a0 fixed.
+======================================================================

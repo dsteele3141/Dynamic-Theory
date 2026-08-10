@@ -1,0 +1,25 @@
+======================================================================
+T2.14 5D Schwarzschild hardened checks
+======================================================================
+
+(A) Determinant
+  det(g) = r^4*e^(lam(r, gm) + mu(r, gm) + nu(r, gm))*sin(th)^2
+  det(g) = exp(mu+lam+nu) r^4 sin(theta)^2: 0 == 0 [PASS]
+
+(B) Full Ricci equations and Eq 184/185
+  R_00 = 1/4*(r*e^(mu(r, gm) + nu(r, gm))*diff(mu(r, gm), r)^2 + r*e^(lam(r, gm) + mu(r, gm))*diff(lam(r, gm), gm)*diff(mu(r, gm), gm) + r*e^(lam(r, gm) + mu(r, gm))*diff(mu(r, gm), gm)^2 + r*e^(mu(r, gm) + nu(r, gm))*diff(mu(r, gm), r)*diff(nu(r, gm), r) - r*e^(lam(r, gm) + mu(r, gm))*diff(mu(r, gm), gm)*diff(nu(r, gm), gm) + 2*r*e^(mu(r, gm) + nu(r, gm))*diff(mu(r, gm), r, r) + 2*r*e^(lam(r, gm) + mu(r, gm))*diff(mu(r, gm), gm, gm) - (r*e^(mu(r, gm) + nu(r, gm))*diff(lam(r, gm), r) - 4*e^(mu(r, gm) + nu(r, gm)))*diff(mu(r, gm), r))*e^(-lam(r, gm) - nu(r, gm))/r
+  R_11 = -1/4*(r*e^(lam(r, gm))*diff(lam(r, gm), gm)^2 - r*e^(nu(r, gm))*diff(lam(r, gm), r)*diff(mu(r, gm), r) + r*e^(nu(r, gm))*diff(mu(r, gm), r)^2 + r*e^(lam(r, gm))*diff(lam(r, gm), gm)*diff(mu(r, gm), gm) - r*e^(nu(r, gm))*diff(lam(r, gm), r)*diff(nu(r, gm), r) + r*e^(nu(r, gm))*diff(nu(r, gm), r)^2 - r*e^(lam(r, gm))*diff(lam(r, gm), gm)*diff(nu(r, gm), gm) + 2*r*e^(lam(r, gm))*diff(lam(r, gm), gm, gm) + 2*r*e^(nu(r, gm))*diff(mu(r, gm), r, r) + 2*r*e^(nu(r, gm))*diff(nu(r, gm), r, r) - 4*e^(nu(r, gm))*diff(lam(r, gm), r))*e^(-nu(r, gm))/r
+  R_22 = 1/2*(r*diff(lam(r, gm), r) - r*diff(mu(r, gm), r) - r*diff(nu(r, gm), r) + 2*e^(lam(r, gm)) - 2)*e^(-lam(r, gm))
+  R_44 = -1/4*(r*e^(lam(r, gm))*diff(lam(r, gm), gm)^2 + r*e^(lam(r, gm))*diff(mu(r, gm), gm)^2 + r*e^(nu(r, gm))*diff(nu(r, gm), r)^2 + 2*r*e^(lam(r, gm))*diff(lam(r, gm), gm, gm) + 2*r*e^(lam(r, gm))*diff(mu(r, gm), gm, gm) + 2*r*e^(nu(r, gm))*diff(nu(r, gm), r, r) - (r*e^(nu(r, gm))*diff(lam(r, gm), r) - r*e^(nu(r, gm))*diff(mu(r, gm), r) - 4*e^(nu(r, gm)))*diff(nu(r, gm), r) - (r*e^(lam(r, gm))*diff(lam(r, gm), gm) + r*e^(lam(r, gm))*diff(mu(r, gm), gm))*diff(nu(r, gm), gm))*e^(-lam(r, gm))/r
+  R_{r,gamma} = 1/4*(r*diff(mu(r, gm), gm)*diff(nu(r, gm), r) + (r*diff(lam(r, gm), gm) - r*diff(mu(r, gm), gm))*diff(mu(r, gm), r) - 2*r*diff(mu(r, gm), r, gm) + 4*diff(lam(r, gm), gm))/r
+  R_22 / Eq184 = -1
+  R_22 = -Eq184 under Sage curvature sign convention: -1 == -1 [PASS]
+  R_33 = sin(theta)^2 R_22: 0 == 0 [PASS]
+
+(C) Embedded 4D Schwarzschild x R
+  All Ricci components vanish for Schwarzschild_4 x R: True [PASS]
+
+Summary: embedding check -- Schwarzschild_4 x R is a Ricci-flat solution of
+the 5D vacuum ansatz (existence/embedding, not a general solve or uniqueness);
+determinant and Eq184 asserted.
+======================================================================

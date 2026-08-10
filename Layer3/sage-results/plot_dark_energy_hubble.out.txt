@@ -1,0 +1,2 @@
+wrote /home/dsteele/lean/Dynamic-Theory/Layer3/Sage/../sage-results/dark_energy_hubble.png
+data points: 40 ; high-z data lie ABOVE EdS(0) and track LambdaCDM/DT.

@@ -1,0 +1,41 @@
+======================================================================
+NONSTANDARD MODEL C -- low-Z nuclear masses: the SEMF baseline
+======================================================================
+
+[1] SEMF validated on medium/heavy nuclei (where the liquid drop works)
+    56Fe    B_exp =   492.25  B_SEMF =   495.38  err =  +3.13 MeV
+    62Ni    B_exp =   545.26  B_SEMF =   549.51  err =  +4.26 MeV
+    120Sn   B_exp =  1020.54  B_SEMF =  1025.80  err =  +5.26 MeV
+    208Pb   B_exp =  1636.43  B_SEMF =  1634.26  err =  -2.17 MeV
+  [PASS] SEMF reproduces medium/heavy binding energies to a few MeV (RMS < 6 MeV).
+
+[2] SEMF on light nuclei A<=10  (the regime of Williams' claim)
+    2H    A= 2 Z=1  B_exp =   2.225  B_SEMF =  -4.661  err =  -6.886 MeV
+    3H    A= 3 Z=1  B_exp =   8.482  B_SEMF =   2.325  err =  -6.157 MeV
+    3He   A= 3 Z=2  B_exp =   7.718  B_SEMF =   1.339  err =  -6.380 MeV
+    4He   A= 4 Z=2  B_exp =  28.296  B_SEMF =  22.841  err =  -5.455 MeV
+    6Li   A= 6 Z=3  B_exp =  31.995  B_SEMF =  28.814  err =  -3.181 MeV
+    7Li   A= 7 Z=3  B_exp =  39.245  B_SEMF =  39.499  err =  +0.254 MeV
+    9Be   A= 9 Z=4  B_exp =  58.165  B_SEMF =  57.999  err =  -0.166 MeV
+    10B   A=10 Z=5  B_exp =  64.751  B_SEMF =  64.744  err =  -0.007 MeV
+    --> SEMF RMS error over these A<=10 nuclei = 4.56 MeV
+        (cf. Williams' reported 2.9 MeV for his orbital model)
+  [PASS] SEMF light-nucleus RMS is LARGE (> 3 MeV): a weak baseline for A<=10.
+  [PASS] deuteron (2H) is badly mispredicted by the SEMF (|err| > 5 MeV).
+  [PASS] SEMF is worse for light nuclei than for medium/heavy (RMS_light > RMS_heavy).
+
+[3] Verdict
+    - The SEMF RMS for A<=10 is 4.6 MeV, so 'beating the SEMF' here is a
+      LOW bar: the liquid-drop model is calibrated for heavy nuclei and
+      is not a serious light-nucleus model.
+    - Williams' 2.9 MeV is an IN-SAMPLE fit (level energies taken from
+      experiment, p.276), not a parameter-free prediction; and his
+      Eqs (9.88)-(9.93) are not reproduced verbatim here.
+    - A fair test compares against a genuine light-nucleus model
+      (ab initio / no-core shell model), NOT the SEMF.  The DT claim is
+      PLAUSIBLE but, on the available text, NOT a demonstrated improvement.
+
+======================================================================
+C COMPLETE: SEMF baseline established; the 'beats SEMF for A<=10' claim
+clears a low bar and rests on an in-sample fit.
+======================================================================

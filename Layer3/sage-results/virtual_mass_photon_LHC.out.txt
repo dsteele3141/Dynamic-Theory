@@ -1,0 +1,30 @@
+======================================================================
+NONSTANDARD MODEL B2 -- virtual masses from static Klein-Gordon (Eq 9.96)
+======================================================================
+
+[1] Coulomb potential psi = 1/r  =>  virtual mass = 0 (the photon)
+  [PASS] laplacian(1/r) = 0 for r>0  =>  m^2 = 0  (massless photon).
+
+[2] Non-singular potential psi = exp(-lam/r)/r  =>  m massless only asymptotically
+  [PASS] laplacian(exp(-lam/r)/r) != 0  (NOT an exact massless solution).
+  [PASS] implied m^2 c^2/hbar^2 = 2 lam/r^3 - lam^2/r^4.
+  [PASS] m^2 -> 0 as r -> oo  (photon recovered in the long-range/Coulomb limit).
+  [PASS] m^2 > 0 at finite r (r > lam/2): non-singular potential is NOT exactly massless.
+    => sharpens Williams: 'also zero' holds only in the large-r limit,
+       not identically (m^2 is r-dependent and positive at finite r).
+
+[3] Source-error catch: the '7,254 MeV ~ LHC' claim (Ch.9 Eq 9.105 / Ch.13)
+  [PASS] Williams' prediction (7254 MeV) ~ his stated 'LHC' figure (7000 MeV): within 5%.
+    7254 MeV / (7 TeV beam = 7e6 MeV) = 1.036e-03
+  [PASS] vs the REAL LHC beam energy (7 TeV), the prediction is ~1000x too small.
+    => the '7,254 MeV is right at the LHC energy' coincidence rests on
+       equating the LHC to 7,000 MeV instead of 7,000 GeV (7 TeV):
+       a 1000x unit error.  Flag for the SI-5 source-error catalogue.
+
+  NOTE: the virtual-mass formulas Eqs (9.99)-(9.105) are not reproduced
+  here; only the well-posed photon claim (Eq 9.96-9.98) is verified.
+
+======================================================================
+B2 COMPLETE: photon masslessness verified; non-singular 'masslessness'
+sharpened to a long-range limit; the LHC coincidence is a unit error.
+======================================================================

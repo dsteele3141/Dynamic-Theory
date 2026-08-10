@@ -1,0 +1,29 @@
+======================================================================
+09_geometry_dependent_uncertainty.sage  (L2-b: Book Eq 6.23)
+======================================================================
+
+(A) Christoffel of the Weyl-conformal metric = the eq-2.8 / Rpt-33 form
+  conformal Christoffel = Weyl gauge form (phi_i = d_i ln f^{1/2}): PASS
+
+(B) Flat / no-gauge limit: canonical commutator recovered
+  phi=0  =>  [x^j,p^k] = i hbar g^{kj}  (standard QM commutator): PASS
+
+(C) Vector on (phi != 0): nonzero, phi-sourced correction (PURE GAUGE)
+  phi != 0 induces a nonzero commutator correction (Delta != 0): PASS
+  correction is built only from phi: Delta -> 0 when phi_i -> 0: PASS
+
+  Sample correction term (j=1,k=1), exhibiting its phi-dependence:
+    Delta^{11} = -(x0*diff(omega(x0, x1, x2, x3), x0) + x1*diff(omega(x0, x1, x2, x3), x1) + x2*diff(omega(x0, x1, x2, x3), x2) + x3*diff(omega(x0, x1, x2, x3), x3))*e^(-2*omega(x0, x1, x2, x3))
+
+----------------------------------------------------------------------
+INTERPRETATION (L2-b -- kinematic identity only):
+  The commutator [x^j,p^k] = i hbar g^{kl}(delta^j_l + Gamma^j_{sl} x^s)
+  (Book 6.23) is connection-dependent: with a Weyl-conformal metric the
+  correction is the eq-2.8 form built from phi_i = d_i omega. But phi here
+  is EXACT (d phi = 0) -- the gravitational/integrable (WIST) branch, PURE
+  GAUGE, NOT the electromagnetic sector -- and Gamma^j_{sl} x^s is
+  COORDINATE-DEPENDENT (nonzero in flat space, curvilinear coords). So this
+  is a VERIFIED IDENTITY + the canonical-QM flat limit; it is NOT a
+  measurable prediction (no invariant uncertainty observable is derived).
+  The earlier strong-gauge/nuclear 'prediction' reading is WITHDRAWN.
+======================================================================

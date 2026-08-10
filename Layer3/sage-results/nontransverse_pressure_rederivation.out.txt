@@ -1,0 +1,56 @@
+==========================================================================
+36b  RE-DERIVATION: radiation pressure of the NON-TRANSVERSE mode
+     (audit of the script-36 'clean falsification')
+==========================================================================
+
+[1] Magnetic content of the mode (B proportional to k x E)
+    non-transverse (E || k):  k x E = (0, 0, 0)
+    transverse     (E _|_ k):  k x E = (0, Ex*kz, 0)
+  [PASS] non-transverse mode has B = 0 (E parallel k => k x E = 0).
+  [PASS] the ordinary transverse wave does have B != 0.
+
+[2] Pressure numerator  (24*pi*p),  Eq 11.72
+    script-36 numerator :  N_script = E^2*n^2 + E^2 - V^2    (= (1+n^2)E^2 - V^2)
+    actual-mode numerator:  N_mode   = E^2 - V^2 + 3*V4^2    (=  E^2 + 3V4^2 - V^2)
+    N_mode - N_script     = -E^2*n^2 + 3*V4^2
+  [PASS] mode and script differ by exactly (3 V4^2 - n^2 E^2) -- the scalar the script dropped and the magnetic term it wrongly added.
+  [PASS] they are NOT the same field configuration (difference is not identically 0).
+
+[3] Zero-pressure condition  V^2 = E^2 + B^2 + 3 V4^2   (Eq 11.73)
+    mode   :  V^2 = E^2 + 3*V4^2
+    script :  V^2 = E^2*n^2 + E^2
+  [PASS] the mode's zero-pressure balance carries the +3 V4^2 term the script omits.
+
+[4] The source's two radiation-pressure ratios (constants from script 18)
+    at the CMB peak (160.2 GHz):
+       Eq 11.74  p/xi = +0.999985
+       Eq p.365  p/xi = -0.999938   (this is the value script 36 used)
+  [PASS] script 36's formula (Eq p.365) is NEGATIVE at the CMB (reproduces its claim).
+  [PASS] Williams' OWN 'zero-pressure' Eq 11.74 is POSITIVE at the CMB.
+  [PASS] => the two source formulae give OPPOSITE signs at the CMB: the theory does not even fix the sign of the radiation pressure there.
+    at w = 2*A0 (away from the CMB):
+       Eq 11.74  p/xi = -3.000000
+       Eq p.365  p/xi = +0.777778
+  [PASS] the sign disagreement is not a CMB artifact: opposite signs at w = 2*A0 too.
+
+--------------------------------------------------------------------------
+VERDICT
+--------------------------------------------------------------------------
+The script-36 'clean falsification' does NOT survive re-derivation:
+  * the mode carries NO magnetic field (E || k => B = 0), so the '1+n^2'
+    in the formula script 36 used is a transverse artifact absent here;
+  * the mode's defining SCALAR component V4 enters the pressure as +3 V4^2
+    (Eq 11.72) and was dropped by script 36;
+  * Williams' own Eq 11.74 and Eq p.365 give OPPOSITE-sign radiation
+    pressure at the CMB, so the source does not fix the sign to falsify.
+Williams also states the gravity wave 'does not exist by itself' (AtO p.170),
+so a NULL longitudinal-GW result (LIGO/GW170817) is EXPECTED, not a
+constraint against DT -- script 36's 'second channel' is misapplied.
+What remains is the SOFTER, already-tracked tension: Williams' CMB-as-
+zero-pressure-radiation (w ~ 0) vs the measured acoustic-peak w = +1/3 and
+the unexplained thermal spectrum (script 37).  That is not a clean
+falsification of a *predicted wave*.
+
+==========================================================================
+36b COMPLETE.
+==========================================================================

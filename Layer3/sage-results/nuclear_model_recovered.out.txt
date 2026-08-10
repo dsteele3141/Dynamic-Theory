@@ -1,0 +1,33 @@
+======================================================================
+NUCLEAR MODEL (recovered from page photos) -- clean-part verification
+======================================================================
+
+[1] Mass-model recurrence self-consistency (9.90-9.93)
+  [PASS] (9.92) E_2 = [E(2,1)* - E_c]/2 is self-consistent (returns E_2).
+  [PASS] (9.93) E(3,1) = E(2,1) + E_2  (3He = deuteron + one n=2 proton).
+  [PASS] (9.93) expands to 2 E_1 + E_2 + E_c.
+  [PASS] ground and excited 2H states differ exactly by 2(E_1 - E_2).
+
+[2] Neutron COM potential (9.94) matches script 15
+  [PASS] (9.94) V_c = -(k/r)[e^{-lam_p/r} - e^{-lam_e/r}] equals script-15 form.
+  [PASS] V_c > 0 for lam_p > lam_e (positive barrier; cf. Fig 9.9 ~530 MeV peak).
+
+[3] Virtual-mass (9.100) denominator near-pole -> fitted, not robust
+    denom(r=lam_p)      = +5.44618e-04
+    denom(r=0.98 lam_p) = -6.81146e-03
+  [PASS] denominator is +m_e/m_p at r = lam_p.
+  [PASS] denominator changes sign just below lam_p (a pole of m_n exists there).
+    pole at r* = 9.985196 F  (just below lam_p = 10.0 F)
+    |m_n|~1/|denom| at r*+{1e-2,1e-4,1e-6} = 2.718e+03, 2.718e+05, 2.718e+07
+  [PASS] |m_n| ~ 1/|denom| grows monotonically as r -> r* (unbounded near the pole).
+    => m_N ~ 3.28e3 GeV requires r tuned to the near-pole; it is a FITTED
+       value, not parameter-free (parallels the script-15 lifetime).
+
+  NET: the page photos make the nuclear-MASS model (9.88-9.93) clean and
+  self-consistent, and confirm the neutron barrier (9.94). The virtual-
+  MASS values (9.101/9.104/9.105) remain fitted (near-pole + a bare-lam_p
+  dimensional slip in 9.99/9.100). Full record: book-recovered-equations.txt.
+
+======================================================================
+19 COMPLETE.
+======================================================================

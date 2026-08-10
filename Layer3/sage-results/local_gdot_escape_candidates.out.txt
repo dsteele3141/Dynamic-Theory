@@ -1,0 +1,49 @@
+======================================================================
+LOCAL Gdot/G ESCAPE CANDIDATES -- can any mechanism decouple cosmic from local?
+======================================================================
+
+[1] Candidate: density screening via the gauge factor e^{-K_gamma gamma}
+  [PASS] density response d/dgamma e^{-K gamma} = -K e^{-K gamma}.
+  [PASS] |response| DECREASES with density (d/dgamma < 0): high-density screening.
+  [PASS] |response| -> 0 as gamma -> infinity (saturates: local env. barely responds).
+    => e^{-K_gamma gamma} is a saturating density-dependence -- DT's native
+       chameleon-like screening (active at low cosmic density, off locally).
+
+[2] Local Gdot/G: TIME-driven (ungated) vs DENSITY-driven (gated by dgamma/dt)
+  [PASS] TIME factor gives local rate = H0 ALWAYS (ungated by environment; cf. script 30).
+  [PASS] DENSITY-driven local rate ~ |response| * dgamma_local/dt -> 0 for a static local env.
+  [PASS] cosmic mean density DOES change (d ln gamma_bar/dt = -3 H0 != 0): effect survives cosmologically.
+    => if the effect is DENSITY-driven, static local environments are
+       screened (no local Gdot/G) while the cosmos still evolves -> the
+       script-30 exclusion is evaded. (Time-driven is NOT: local rate ~H0.)
+
+[3] K_gamma = H0/(a0 c) (sets where screening turns on)
+    K_gamma = 2.07e-34  (1/[gamma-units]); screening requires K_gamma*gamma_local >> 1
+    >> K_gamma*gamma_cosmic ~ O(1). gamma's 5th-coord normalisation is NOT
+    pinned down in the book, so this inequality cannot be checked numerically.
+  [PASS] K_gamma is well-defined from a0 (script 18) and H0, but gamma-normalisation is open.
+
+  CANDIDATE MECHANISMS (answer):
+  (A) DENSITY SCREENING via e^{-K_gamma gamma} [the one in-framework candidate]:
+      real screening structure (saturates at high density); decouples cosmic
+      from local IF the effect is density-driven. THREE caveats:
+      - RECONSTRUCTION: Williams derived dark energy/MOND from the TIME factor
+        (1-H0 t), NOT gamma; re-deriving from the density factor is new work.
+      - CANDLE DILEMMA: a Type-Ia white dwarf is ULTRA-high density -> deep in
+        the screened regime -> the M_Ch candle effect would ALSO vanish, unless
+        M_Ch couples to the AMBIENT COSMIC density (a Machian, unestablished step).
+      - gamma NORMALISATION undetermined -> cannot confirm local screening numerically.
+  (B) PURE PATH/REDSHIFT effect: rescues the geometric DISTANCE (script 25) but
+      not the candle (a local-epoch effect) -> partial only.
+  (C) STANDARD SN astrophysical evolution (metallicity/age): a real effect that
+      mimics dark-energy dimming with NO G-variation -- but it is not a DT
+      mechanism; invoking it makes DT's M_Ch mechanism unnecessary.
+  (D) generic chameleon/symmetron/Vainshtein: (A) is DT's native version.
+  VERDICT: one genuine candidate (A) exists in DT's own gauge function, but it
+  is a demanding reconstruction with a candle dilemma -- a live research
+  direction, NOT a resolution. The TIME-driven mechanism Williams actually
+  used stays excluded (script 30).
+
+======================================================================
+31 COMPLETE.
+======================================================================

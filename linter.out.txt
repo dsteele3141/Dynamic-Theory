@@ -1,0 +1,316 @@
+========================================================================
+DYNAMIC THEORY -- SAGE LINTER  (linter.py)
+Run: 2026-08-10 12:01:12
+Scanned: /home/dsteele/lean/Dynamic-Theory
+Sage scripts: 69  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+========================================================================
+
+### Layer1
+T1_1-3_integrating_factor.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_1-3_integrating_factor.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_10_equilibrium.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_10_equilibrium.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_4_maxwell_relations.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_4_maxwell_relations.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_5_stability_conditions.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_5_stability_conditions.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_6_general_lorentzian_necessity.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_6_general_lorentzian_necessity.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_6_stability_metric.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_6_stability_metric.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_8_conformal_gauge.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_8_conformal_gauge.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_8_weyl_integrability.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_8_weyl_integrability.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_9_weyl_strengthening.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_9_weyl_strengthening.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T1_9_weyl_variational.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T1_9_weyl_variational.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+arrow_of_time.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+arrow_of_time.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+
+### Layer2
+T2_1_5D_minkowski.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_1_5D_minkowski.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:42 signature: g44 = -1 (spacelike mass).
+bianchi_maxwell.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+bianchi_maxwell.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:25 signature: g44 = -1 (spacelike mass).
+christoffel_connection.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+christoffel_connection.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+dirac_algebra.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+dirac_algebra.sage
+  [OK  ] dirac: corrected complex A-matrix [[0,iI],[-iI,0]] present.
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:59 signature list [1,-1,-1,-1,-1]: spacelike mass.
+dirac_repn_and_moment_check.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+dirac_repn_and_moment_check.sage
+  [OK  ] dirac: corrected complex A-matrix [[0,iI],[-iI,0]] present.
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:41 signature list [1,-1,-1,-1,-1]: spacelike mass.
+dirac_with_fields.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+dirac_with_fields.sage
+  [OK  ] dirac: corrected complex A-matrix [[0,iI],[-iI,0]] present.
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:40 signature list [1,-1,-1,-1,-1]: spacelike mass.
+energy_momentum_tensor.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+energy_momentum_tensor.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+force_density.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+force_density.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+geometry_dependent_uncertainty.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+geometry_dependent_uncertainty.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+setup.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+setup.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+
+### Layer3
+G_variation_constraints.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+G_variation_constraints.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+P1_radiation_pressure_a0.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+P1_radiation_pressure_a0.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T2_11_hypersurface_metric.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_11_hypersurface_metric.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T2_12_viscous_stress.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_12_viscous_stress.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T2_13_shock_viscosity.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_13_shock_viscosity.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T2_14_schwarzschild_5D_sage.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_14_schwarzschild_5D_sage.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:47 signature: g44 = -exp(nu) (spacelike mass).
+  [OK  ]:84 signature: g44 = -1 (spacelike mass).
+T2_14_schwarzschild_5D_sympy.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_14_schwarzschild_5D_sympy.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:32 signature: g44 = -exp(nu) (spacelike mass).
+  [OK  ]:71 signature: g44 = -1 (spacelike mass).
+T2_2_charge_conservation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_2_charge_conservation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T2_5_gauge_pressure.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_5_gauge_pressure.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T2_6_self_energy_sage.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_6_self_energy_sage.sage
+  [OK  ] self-energy: corrected cube-root R0 = (...)^(1/3) present (Eq 103).
+  [OK  ] self-energy: corrected coefficient 3 e^2/(16 pi eps0 R0) present (factor of 3).
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T2_6_self_energy_sympy.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_6_self_energy_sympy.sage
+  [OK  ] self-energy: corrected cube-root R0 = (...)^(1/3) present (Eq 103).
+  [OK  ] self-energy: corrected coefficient 3 e^2/(16 pi eps0 R0) present (factor of 3).
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+T2_9_spin_states.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+T2_9_spin_states.sage
+  [OK  ] dirac: corrected complex A-matrix [[0,iI],[-iI,0]] present.
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+dark_energy_residual.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+dark_energy_residual.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+dark_energy_standard_candle.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+dark_energy_standard_candle.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+dark_matter_rotation_curves.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+dark_matter_rotation_curves.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+density_screening_nogo.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+density_screening_nogo.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+earth_magnetic_moment.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+earth_magnetic_moment.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+electrogravitic_wave_polarization.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+electrogravitic_wave_polarization.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+force_ratio.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+force_ratio.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+gap_vs_feeding_pattern.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gap_vs_feeding_pattern.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+gateway_london_quantisation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gateway_london_quantisation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+highz_residual_diagnostic.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+highz_residual_diagnostic.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+k_nuclide_anchor.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+k_nuclide_anchor.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+local_gdot_escape_candidates.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+local_gdot_escape_candidates.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+local_unit_of_action_cancellation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+local_unit_of_action_cancellation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+lowZ_masses_vs_SEMF.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+lowZ_masses_vs_SEMF.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+mass_energy_conversion_ceiling.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+mass_energy_conversion_ceiling.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+mass_sector_gauge_vs_curvature.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+mass_sector_gauge_vs_curvature.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+moon_system_quantisation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+moon_system_quantisation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+neutron_com_barrier_lifetime.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+neutron_com_barrier_lifetime.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+nonsingular_black_holes.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+nonsingular_black_holes.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+nonsingular_cosmology_cmb.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+nonsingular_cosmology_cmb.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+nonsingular_force_3rdlaw.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+nonsingular_force_3rdlaw.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+nontransverse_pressure_rederivation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+nontransverse_pressure_rederivation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+nuclear_model_recovered.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+nuclear_model_recovered.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+pantheon_dark_energy_fit.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+pantheon_dark_energy_fit.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+pantheon_systematic_covariance.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+pantheon_systematic_covariance.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+perihelion_advance.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+perihelion_advance.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+phat_photon_blackbody.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+phat_photon_blackbody.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+quantized_orbits.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+quantized_orbits.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+redshift_relation_dark_energy.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+redshift_relation_dark_energy.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+self_energy_assembly_factors.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+self_energy_assembly_factors.sage
+  [OK  ] self-energy: corrected cube-root R0 = (...)^(1/3) present (Eq 103).
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+su3_three_body_structure.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+su3_three_body_structure.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+u4_rest_mass_nonconservation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+u4_rest_mass_nonconservation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+v0_source_law.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+v0_source_law.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+virtual_mass_photon_LHC.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+virtual_mass_photon_LHC.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+weak_field_poisson.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weak_field_poisson.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:89 signature: g44 = -1 (spacelike mass).
+yangmills_field_structure.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+yangmills_field_structure.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+
+### (corpus)
+(cross-file)
+  [OK  ] signature consistent: all 10 g44 definition(s) spacelike (g44 < 0).
+
+========================================================================
+SUMMARY    OK: 158    INFO: 0    WARN: 0    FAIL: 0
+RESULT: CLEAN -- no inconsistencies detected.
+========================================================================

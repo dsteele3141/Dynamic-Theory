@@ -1,0 +1,49 @@
+======================================================================
+NONSTANDARD MODEL A3 -- 3-body cyclic structure vs su(3) (strong sector)
+======================================================================
+
+[1] Establish su(3): Gell-Mann generators close with standard f^{abc}
+  [PASS] All lambda_a are traceless.
+  [PASS] All lambda_a are Hermitian.
+  [PASS] Orthonormal: tr(lambda_a lambda_b) = 2 delta_ab.
+  [PASS] [T_a,T_b] = i f^{abc} T_c closes for ALL a,b (su(3) Lie algebra).
+  [PASS] f123 = 1.
+  [PASS] f458 = sqrt(3)/2.
+  [PASS] f678 = sqrt(3)/2.
+  [PASS] f147 = 1/2.
+  [PASS] f^{abc} totally antisymmetric: f123 = -f213 = f231.
+  [PASS] su(3) is NON-ABELIAN: [T_1,T_2] != 0.
+
+[2] Williams' cyclic combination C^theta = A^beta + A^gamma
+  [PASS] Cyclic map M = J - I.
+  [PASS] Cyclic map M = P + P^2  (M is CIRCULANT).
+  [PASS] J = I + P + P^2  (sum of the 3 cyclic permutations).
+  [PASS] P^3 = I  (P is the 3-cycle).
+
+[3] Circulant => commuting => at most a Cartan (rank-2) slice of su(3)
+  [PASS] [M, P] = 0.
+  [PASS] [P, P^2] = 0.
+  [PASS] [M, P^2] = 0.
+  => {I, P, P^2, M} generate a COMMUTATIVE (circulant) algebra:
+     the full Williams cyclic construction is abelian.
+  [PASS] i*M is traceless.
+  [PASS] i*M is anti-Hermitian  => i*M lies IN su(3).
+  ... but only as ONE Cartan-type element; the accessible traceless
+      anti-Hermitian circulant space has dimension <= 2 (= rank su(3)),
+      NOT 8.
+  [PASS] M is circulant.
+  [PASS] lambda_4 (off-diagonal 1<->3 coupling) is NOT circulant => unreachable.
+  [PASS] lambda_6 (off-diagonal 2<->3 coupling) is NOT circulant => unreachable.
+
+  VERDICT:
+   - DT's 3-body equation genuinely carries the fundamental TRIPLET
+     (the '3' of SU(3)) index structure -- this much is real.
+   - But the explicit cyclic combination C = A^beta + A^gamma is
+     circulant/abelian: it reaches only a Cartan (maximal-torus) slice,
+     not the 8-generator non-abelian su(3).  No f^{abc}, no colour, no
+     gluon octet are produced.  'SU(3) characteristics' = triplet +
+     Cartan resemblance, NOT a derivation of the QCD gauge algebra.
+
+======================================================================
+A3 COMPLETE.
+======================================================================

@@ -1,0 +1,35 @@
+======================================================================
+HIGH-z DIAGNOSTIC -- are the two z~1 bins a real misfit or instrumental?
+======================================================================
+
+[1] Error bars: the two highest-z bins are the LARGEST in the sample
+    median dmb = 0.0262 mag
+    z=1.234 : dmb = 0.0563 mag  (2.2x the median)
+    z=1.612 : dmb = 0.0735 mag  (2.8x the median)
+  [PASS] the two highest-z bins are the two largest-error bins in the sample.
+  [PASS] their errors are >2x the median (rare HST SNe, calibration-dominated).
+
+[2] Pulls (residual / sigma) of the two bins
+    z=1.234 : pull(LCDM) = -0.20 sigma ; pull(DT) = -1.83 sigma
+    z=1.612 : pull(LCDM) = -1.46 sigma ; pull(DT) = -3.64 sigma
+  [PASS] vs LambdaCDM the two bins are only ~1-2 sigma low (NOT a significant tension).
+  [PASS] they pull harder against DT than LambdaCDM (DT overshoots at high z).
+
+[3] Contribution to the DT-vs-LambdaCDM chi^2 excess
+    total DT-LCDM chi^2 excess = 28.5 ; from the two z~1 bins = 14.4 (51%)
+  [PASS] the two z~1 bins alone supply a large share (>30%) of the DT-LCDM excess.
+
+  NET (answer): YES -- plausibly instrumental/systematic, not a real misfit.
+  The two z~1 points are (a) the two LARGEST-error bins (>2x median), (b) the
+  rarest, HST-observed SNe where photometric calibration and selection
+  systematics are largest, (c) only ~1-2 sigma below LambdaCDM (not
+  significant), yet (d) they supply ~51% of the DT-vs-LambdaCDM excess.
+  This is exactly why script 29 found that excess COLLAPSE (28.5 -> 7.7) once
+  the full, z-correlated calibration covariance is included: the high-z tail's
+  large correlated systematics absorb the apparent DT misfit. So those two
+  points are consistent with calibration, and they should NOT be read as DT
+  failing at high z.
+
+======================================================================
+35 COMPLETE.
+======================================================================

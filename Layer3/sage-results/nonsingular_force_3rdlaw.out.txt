@@ -1,0 +1,36 @@
+======================================================================
+NONSTANDARD MODEL A1 -- non-singular force & Newton's-3rd-law violation
+======================================================================
+
+[1] Force F = -dphi/dr from phi = k exp(-lam/r)/r
+  [PASS] F(r) = k (1 - lam/r) exp(-lam/r) / r^2  (matches Eq 2.33/2.34 form)
+
+[2] Character-change radius: F(lam) = 0
+  [PASS] F(r=lam) = 0 identically (the (1 - lam/r) factor vanishes).
+
+[3] Sign flip: repulsive (r>lam) -> attractive (r<lam)
+  [PASS] (1 - lam/r) < 0 for r < lam   (force attractive below lam).
+  [PASS] (1 - lam/r) > 0 for r > lam   (force repulsive baseline above lam).
+
+[4] Non-singular potential: phi -> 0 at both ends; max at r = lam
+  [PASS] phi -> 0 as r -> 0+   (NON-SINGULAR; exp beats 1/r).
+  [PASS] phi -> 0 as r -> oo.
+  [PASS] phi has its (only) stationary point exactly at r = lam.
+
+[5] Correspondence: lam -> 0 recovers Coulomb
+  [PASS] lim_{lam->0} F(r) = k / r^2  (Coulomb force recovered).
+
+[6] Newton's third law: holds at atomic range, VIOLATED at nuclear range
+  [PASS] |F_p|/|F_e| -> 1 as r -> oo  (3rd law restored at atomic separations).
+  [PASS] F_on_e = 0 at r = lam_p  (electron indifferent to proton).
+  [PASS] F_on_p != 0 at r = lam_p  (proton still attracted)  => 3rd law VIOLATED.
+
+  Numeric (Williams: lam_p = 1 Fermi, lam_e = 1e-3 Fermi):
+    r = 10.00 F : F_on_p = +9.9980e-03   F_on_e = +8.1435e-03   ratio = 1.228
+    r =  1.00 F : F_on_p = +9.9800e-01   F_on_e = +0.0000e+00   ratio = inf (F_e=0)
+    r =  0.50 F : F_on_p = +3.9840e+00   F_on_e = -5.4134e-01   ratio = -7.360
+
+======================================================================
+A1 COMPLETE: one non-singular potential -> short-range attraction +
+exact 3rd-law violation for unlike particles.  No new force introduced.
+======================================================================

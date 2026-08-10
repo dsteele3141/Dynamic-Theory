@@ -1,0 +1,32 @@
+======================================================================
+PANTHEON with FULL systematic covariance -- does the DT residual survive?
+======================================================================
+
+[1] chi2 with STAT-only errors (script 27) vs FULL covariance (here)
+    model        stat-only      full-cov
+    EdS            1469.0         532.2
+    DT               79.8          47.1  (best xi: 0.235 stat / 0.230 full)
+    LambdaCDM        51.3          39.3
+
+[2] The dark-energy detection is robust to systematics
+  [PASS] EdS (no dark energy) stays catastrophic even with full covariance (chi2 > 200).
+  [PASS] dark-energy detection survives systematics: EdS - LambdaCDM (full) > 100.
+
+[3] Does the DT-vs-LambdaCDM residual survive the calibration covariance?
+    Delta chi2 (DT - LambdaCDM):  stat-only = +28.5 ;  full-cov = +7.7
+    -> the residual shrinks by a factor ~3.7 once calibration is included.
+  [PASS] the DT-LambdaCDM residual SHRINKS when the systematic covariance is included.
+  [PASS] with full systematics, DT is statistically competitive with LambdaCDM (Delta chi2 < 9 ~ 3sigma).
+
+  NET: the EdS rejection (dark energy / its mimic is real) is ROBUST to
+  the calibration-dominated systematic covariance. But the DT-vs-LambdaCDM
+  residual -- Delta chi2 = 28 with stat-only errors -- shrinks to 7.7 once
+  the z-correlated calibration systematics are folded in, i.e. to < ~3 sigma.
+  So on the SN Hubble diagram DT and LambdaCDM are NOT cleanly separable:
+  the apparent residual was largely an artifact of using statistical errors
+  only. Confirms script 28's read -- the discriminator is the |Gdot/G| fork
+  (script 26), not the supernova residual.
+
+======================================================================
+29 COMPLETE.
+======================================================================

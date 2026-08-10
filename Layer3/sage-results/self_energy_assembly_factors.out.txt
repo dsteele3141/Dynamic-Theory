@@ -1,0 +1,39 @@
+======================================================================
+P3 ASSEMBLY FACTORS -- the radius is robust, the depth is not
+======================================================================
+
+[1] Stationary radius for general assembly factors
+  [PASS] G'(R0) = 0  with R0^3 = 12 m k eps0 (beta/alpha)/(e a0)
+  [PASS] G''(R0) > 0 (a genuine minimum for all positive alpha,beta)
+
+[2] Depth of the minimum scales with alpha alone
+  [PASS] G_min - G0 = -(3 alpha/4) e^2/(4 pi eps0 R0)
+
+[3] R0 is invariant under a COMMON rescaling of both factors
+  [PASS] R0(c*alpha, c*beta) = R0(alpha, beta): the two errors cancel exactly
+  [PASS] ...but the depth does NOT: G_min(c*alpha) = c * G_min(alpha)
+
+[4-6] Numerical effect on R0 and on the inferred k
+    (alpha, beta)                                    R0 (fm)  R0/base  k needed
+    Williams: both at final potential (1, 1)          1.2003   1.0000  5.69e-20
+    both properly assembled, surface (1/2, 1/2)       1.2003   1.0000  5.69e-20
+    Coulomb uniform ball + V halved (3/5, 1/2)        1.1295   0.9410  6.83e-20
+    NAIVE: Coulomb alone corrected (3/5, 1)           1.4231   1.1856  3.41e-20
+  [PASS] (1/2,1/2) leaves R0 EXACTLY unchanged
+  [PASS] (1/2,1/2) halves the depth exactly
+  [PASS] (3/5,1/2) moves R0 by less than 6%
+  [PASS] correcting the Coulomb term ALONE moves R0 by ~18.6% (why both are needed)
+
+  NET: the fixed-potential defect is real and affects BOTH integrals of
+  Williams' free energy. Because R0 depends only on the ratio beta/alpha,
+  correcting them together leaves the stationary radius unchanged (exactly,
+  if both are halved; within 6% if the Coulomb term is treated as a uniform
+  ball). The radius law, and the estimate of k inferred from it, therefore
+  survive. What does NOT survive is the DEPTH: G_min scales with alpha and
+  is halved, so no comparison of G_min with measured nuclear energies should
+  be made on the uncorrected expression. Correcting the Coulomb term alone
+  would move R0 by 18.6% and is the wrong fix.
+
+======================================================================
+self_energy_assembly_factors COMPLETE.
+======================================================================

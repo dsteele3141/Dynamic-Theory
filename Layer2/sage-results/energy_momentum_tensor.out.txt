@@ -1,0 +1,16 @@
+======================================================================
+12_energy_momentum_tensor_adjudicated.sage
+======================================================================
+
+(A) Tensor Component Verification
+  T_00 matches energy density xi: PASS
+  T_01 matches Poynting + V-field flow: PASS
+  T_44 matches expected mass stress: PASS
+
+(B) Manuscript Audit (Page 99)
+  Theory: S_alpha = -(c/i) T_0alpha (Corrected).
+  Theory: Stress bracket [8pi*xi - 2V^2] (Dimensionally consistent corrected form).
+  T_11 matches corrected Dynamic stress decomposition: PASS
+
+Summary: Energy-momentum tensor components and corrected decomposition verified.
+======================================================================

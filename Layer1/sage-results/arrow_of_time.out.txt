@@ -1,0 +1,48 @@
+======================================================================
+THE ARROW OF TIME -- proper time = entropy = arc-length (DT identification)
+======================================================================
+
+[1] 2nd law as the asymmetry:  dE/phi <= dS   (entropy production >= 0)
+    reversible  : dS = dE/phi  -> sigma = 0.000000000000000
+    irreversible: dS > dE/phi  -> sigma = 0.200000000000000 > 0
+  [PASS] entropy production sigma = dS - dE/phi is >= 0 (2nd law sets a direction).
+  [PASS] equality (sigma=0) is exactly the reversible / isentropic limit.
+
+[2] T1.6 (Lean-proved): the entropy arc-length is the timelike coord
+    solving the stability quadratic for (dq0)^2: (c^2*dt^2 + dx2)/h0
+  [PASS] the proper-time coefficient is +c^2/h0 (TIMELIKE): entropy arc-length is time.
+    => proper time tau = entropy arc-length S (the (+,-,-,-) timelike leg).
+
+[3] Identification:  d(tau) = d(S) = arc-length element
+    so 2nd law dS >= 0  <=>  d(tau) >= 0  (the SAME statement)
+    irreversible : dS = 0.5 -> d(tau) = 0.5
+    reversible   : dS = 0.0 -> d(tau) = 0.0
+  [PASS] forward time (d tau >= 0) is IDENTICAL to the 2nd law (dS >= 0), not aligned to it.
+  [PASS] reversible limit dS=0 gives d(tau)=0: no arrow along isentropic directions.
+
+[4] What the identification does NOT settle
+    DT makes the 2nd law a FOUNDING LAW (a postulated inequality); it does
+    NOT derive irreversibility from time-symmetric microdynamics (the hard
+    problem is RELOCATED, not solved), and it does not supply the low-
+    entropy 'past hypothesis'. The non-singular cosmology (script 37)
+    removes the singular t=0 but not the low-S boundary condition.
+  [NOTE] the arrow's ORIGIN (low-S boundary / reversible-microphysics derivation) stays open -- recorded as a caveat, not a verified claim.
+
+----------------------------------------------------------------------
+VERDICT
+----------------------------------------------------------------------
+POSITIVE (a clean STRUCTURAL win): DT identifies proper time, entropy, and
+  the stability-metric arc-length as ONE object (T1.6, Lean-proved), so the
+  thermodynamic arrow and the temporal arrow are the SAME statement -- no
+  separate argument is needed to align them, and time's direction is the
+  2nd law's inequality by construction. This is a genuinely tighter
+  foundational placement than the standard bolt-on, and one of DT's
+  'elegant regardless' moves (with time/signature emerging from stability).
+LIMIT: it relocates rather than resolves the deep question -- the asymmetry
+  is installed as a founding law (not derived from reversible microphysics),
+  and the low-entropy past hypothesis is not supplied. So: a sound, elegant
+  identification of the arrow, not an explanation of its ultimate origin.
+
+======================================================================
+38 COMPLETE.
+======================================================================

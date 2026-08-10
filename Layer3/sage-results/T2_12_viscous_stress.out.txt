@@ -1,0 +1,47 @@
+============================================================
+COMPUTATION 1: Covariant Metric Perturbation (h_ab)
+============================================================
+
+Covariant Metric A_ab:
+[eps*f0^2*gh44 + gh0      eps*f0*f1*gh44]
+[     eps*f0*f1*gh44 eps*f1^2*gh44 + gh1]
+
+============================================================
+COMPUTATION 2: Exact Contravariant Metric (Inversion)
+============================================================
+
+Exact Contravariant Metric A^ab (Sherman-Morrison):
+[(eps*f1^2*gh44 + gh1)/(gh0*gh1 + (eps*f1^2*gh0 + eps*f0^2*gh1)*gh44)       -eps*f0*f1*gh44/(gh0*gh1 + (eps*f1^2*gh0 + eps*f0^2*gh1)*gh44)]
+[      -eps*f0*f1*gh44/(gh0*gh1 + (eps*f1^2*gh0 + eps*f0^2*gh1)*gh44) (eps*f0^2*gh44 + gh0)/(gh0*gh1 + (eps*f1^2*gh0 + eps*f0^2*gh1)*gh44)]
+  [PASS] Sherman-Morrison inverse satisfies A^ab A_bc = I.
+
+============================================================
+COMPUTATION 3: Viscous Term h^ab and Linearization
+============================================================
+
+Exact h^ab perturbation:
+[-eps*f0^2*gh1*gh44/(gh0^2*gh1 + (eps*f1^2*gh0^2 + eps*f0^2*gh0*gh1)*gh44)            -eps*f0*f1*gh44/(gh0*gh1 + (eps*f1^2*gh0 + eps*f0^2*gh1)*gh44)]
+[           -eps*f0*f1*gh44/(gh0*gh1 + (eps*f1^2*gh0 + eps*f0^2*gh1)*gh44) -eps*f1^2*gh0*gh44/(gh0*gh1^2 + (eps*f1^2*gh0*gh1 + eps*f0^2*gh1^2)*gh44)]
+
+Linearized h^ab:
+[     -f0^2*gh44/gh0^2 -f0*f1*gh44/(gh0*gh1)]
+[-f0*f1*gh44/(gh0*gh1)      -f1^2*gh44/gh1^2]
+  [PASS] Linearized h^ab = -ghat^ac h_cd ghat^db (sign flip + metric scaling).
+
+============================================================
+COMPUTATION 4: Viscous Stress Identity (t^ab = -P h^ab)
+============================================================
+
+Viscous Stress t^ab (linearized):
+[     P*f0^2*gh44/gh0^2 P*f0*f1*gh44/(gh0*gh1)]
+[P*f0*f1*gh44/(gh0*gh1)      P*f1^2*gh44/gh1^2]
+
+INTERPRETATION (definition + reading, NON-ASSERTED):
+  1. The viscous stress t^ab is proportional to (P * gh44) * (grad gamma)^2.
+  2. Index-raising introduces a MINUS sign relative to the covariant h_ab
+     (this sign is the asserted COMPUTATION 3 result).
+  3. Viscosity coefficients in Eq 172 are therefore derived from the
+     geometric curvature of the 5D hypersurface.
+
+Audit Complete: 14_viscous_stress.sage
+============================================================

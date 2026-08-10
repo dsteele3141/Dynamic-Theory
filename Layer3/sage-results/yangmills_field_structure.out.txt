@@ -1,0 +1,33 @@
+======================================================================
+NONSTANDARD MODEL A2 -- Yang-Mills field structure (weak sector)
+======================================================================
+
+[0] Clifford algebra of the gamma matrices
+  [PASS] {gamma^mu, gamma^nu} = 2 eta^{mu nu} I4 for all mu,nu.
+
+[1] Field tensor antisymmetry B_{mu nu} = -B_{nu mu}
+  [PASS] B_{mu nu} := d_mu A_nu - d_nu A_mu is antisymmetric (B^T = -B).
+
+[2] sigma.F coupling: gamma^mu gamma^nu F_{mu nu} = -i sigma^{mu nu} F_{mu nu}
+  [PASS] gamma^mu gamma^nu F_{mu nu} = -i sigma^{mu nu} F_{mu nu}  (F antisymmetric).
+  [PASS] eta^{mu nu} F_{mu nu} = 0  (symmetric . antisymmetric vanishes).
+  => the -i sigma^{mu nu} B_{mu nu} term of Eq (2.31)/(9.39) is exactly
+     the field-strength coupling produced by squaring (i gamma.D - m).
+
+[3] Abelian (as written) vs non-abelian (genuine Yang-Mills)
+  [PASS] [A_mu, A_nu] != 0 for matrix-valued (multi-particle) potentials.
+  [PASS] [A_mu, A_nu] = 0 when potentials ∝ identity  (pure Maxwell/abelian limit).
+  [PASS] F_full - (dA - dA) = -i e [A_mu, A_nu], non-zero in the non-abelian case.
+
+  VERDICT:
+   - The field tensor FORM and the sigma.F coupling are genuine and exact.
+   - As literally written, B = dA - dA is the ABELIAN curl; the
+     non-abelian Yang-Mills self-coupling -i e[A_mu,A_nu] is carried by
+     the I^theta multi-particle matrix structure, not by the scalar curl.
+   - So 'these ARE the Yang-Mills fields' is exact at the level of the
+     field-tensor/coupling form; the non-abelian content is implicit in
+     the index structure and is NOT made explicit in Eq (2.31)/(9.39).
+
+======================================================================
+A2 COMPLETE.
+======================================================================

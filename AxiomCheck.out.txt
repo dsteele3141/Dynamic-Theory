@@ -1,0 +1,10 @@
+================================================================
+DTWilliams AXIOM FOOTPRINT  (collectAxioms over all theorems/defs)
+================================================================
+Theorems + defs scanned under `DTWilliams`: 273
+Axioms used (union): [propext, Classical.choice, Quot.sound]
+Declarations depending on sorryAx: 0
+Axioms beyond {propext, Classical.choice, Quot.sound}: NONE
+RESULT: PASS -- every DTWilliams theorem rests only on Lean's
+        standard axioms; no sorryAx anywhere in the footprint.
+================================================================

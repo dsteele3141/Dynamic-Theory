@@ -1,0 +1,43 @@
+======================================================================
+DENSITY-SCREENING RECONSTRUCTION -- possible for dark energy? (NO-GO test)
+======================================================================
+
+[1] Mass-density ordering of the relevant environments
+    rho_WD     = 1.0e+09 kg/m^3   (Type-Ia white dwarf)
+    rho_local  = 3.3e+03 kg/m^3   (Earth/Moon -- the LLR test bodies)
+    rho_cosmic = 2.7e-27 kg/m^3   (cosmic mean)
+  [PASS] rho_WD >> rho_local >> rho_cosmic (the WD is the DENSEST object).
+
+[2] Screening response R(rho) = exp(-kappa rho) is monotone DECREASING
+  [PASS] dR/drho < 0 (denser -> more screened; from script 31's saturating e^{-K gamma}).
+
+[3] The dilemma's two horns (kappa scaled so 'screened' means R < ~0.01)
+    HORN A (screen local: R_local=0.01): R_WD = 0 -> candle response ~0
+  [PASS] HORN A: screening the local body makes the (denser) WD response ~0 -> candle DEAD.
+    HORN B (un-screen WD: R_WD=0.50): R_local = 0.999998 -> local NOT screened
+  [PASS] HORN B: keeping the WD responsive leaves the local body un-screened (R_local~1) -> LLR FAILS.
+    => no single kappa screens the local body AND keeps the WD responsive:
+       the requirements are mutually exclusive (density ordering + monotonicity).
+
+[4] Fallback: drop the candle, keep only the local-Gdot-safe redshift distance
+    DT path-only (no candle): chi2 = 325 vs LambdaCDM 51 (EdS 1469)
+  [PASS] the candle-free (local-safe) DT is a POOR fit -- chi2 far above LambdaCDM (>200 worse).
+    => the candle is load-bearing (it carries ~half the signal); removing it
+       to dodge the WD dilemma leaves DT a poor fit. No safe route recovers DE.
+
+  VERDICT (answer: is the density-screening reconstruction possible?):
+  For DARK ENERGY -- essentially NO. It is a structural no-go, not a caveat:
+  any LOCAL-density screening strong enough to pass LLR also screens the
+  (much denser) Type-Ia white dwarf, freezing the Chandrasekhar candle that
+  IS the dark-energy mechanism. And the only local-Gdot-safe piece (the
+  redshift distance, candle-free) fits the SN data poorly. The escape would
+  need a NON-LOCAL/cosmic-mean coupling that distinguishes the WD's bulk from
+  its environment -- which standard (self-screening) chameleon physics does
+  NOT provide and DT does not contain.
+  (For DARK MATTER the situation is different and fine: MOND-type modification
+   is ACCELERATION-thresholded at a0~cH0, naturally off in the solar system --
+   it never had the local-Gdot problem; see script 23.)
+
+======================================================================
+32 COMPLETE.
+======================================================================

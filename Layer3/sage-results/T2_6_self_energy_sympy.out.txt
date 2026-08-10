@@ -1,0 +1,19 @@
+======================================================================
+19_self_energy_adjudicated.sage
+======================================================================
+
+(A) 5D Free Energy (Eq 99)
+  Integrated G matches Eq 99 structure: PASS
+
+(B) Equilibrium Radius R0 (Eq 103)
+  Derived R0 matches Eq 103: PASS
+
+(C) Minimum Self-Energy Audit (Eq 104)
+  Derived G_min = G0 - 3e^2/(16pi eps0 R0): PASS
+  Note: Manuscript Eq 104 prints 1/16; confirmed as coefficient error.
+
+(D) Stability Check (G'' > 0)
+  R0 is a stable minimum (G'' > 0): PASS
+
+Summary: Finite self-energy radius and stable minimum verified.
+======================================================================

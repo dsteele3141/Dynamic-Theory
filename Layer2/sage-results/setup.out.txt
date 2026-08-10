@@ -1,0 +1,29 @@
+============================================================
+04_sage / 01_setup  —  Sage layer + SageManifolds smoke test
+============================================================
+Sage version: 10.9
+
+------------------------------------------------------------
+Smoke test 1: flat 2D metric -> Ricci scalar = 0
+------------------------------------------------------------
+  Ricci scalar = 0   [OK]
+
+------------------------------------------------------------
+Smoke test 2: 4D Schwarzschild -> Ricci tensor = 0 (Ricci-flat)
+------------------------------------------------------------
+  All R_{ij} = 0 (Ricci-flat): True   [VERIFIED]
+
+------------------------------------------------------------
+Bonus: Kretschmann scalar K = R_abcd R^abcd
+------------------------------------------------------------
+  K = 48*m^2/r^6
+  expected 48 m^2 / r^6 ; difference = 0   [VERIFIED]
+
+============================================================
+SAGE LAYER READY
+SageManifolds tensor-calculus pipeline validated:
+  metric -> Christoffel -> Riemann -> Ricci -> scalar invariants  [OK]
+Next Sage target: T1.9 (Weyl variational principle): Weyl-scalar
+  expansion R[Weyl] = R[Levi-Civita] + phi-terms (=> 2nd-order EL),
+  Maxwell EL from the F^2 term, and the phi_i <-> F_alpha identification.
+============================================================
