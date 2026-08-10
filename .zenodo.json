@@ -1,0 +1,13 @@
+{
+  "title": "Dynamic Theory: a machine-verified reconstruction (Lean 4/Mathlib proofs and assertion-driven SageMath scripts)",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Steele, J. D.",
+      "affiliation": "University of Dundee, UK",
+      "orcid": "0000-0002-9822-8753"
+    }
+  ],
+  "description": "Verification corpus for the Dynamic Theory of Pharis E. Williams (LA-8370-MS, 1980). Two verification layers, Lean 4 / Mathlib proofs and assertion-driven SageMath / SymPy scripts, organised by the three-layer reading of the Chapter-1 flow chart, with run logs and a per-layer index. Accompanies the manuscript \"Dynamic Theory: Reconstruction, Verification, and Experimental Predictions\"."
+}
