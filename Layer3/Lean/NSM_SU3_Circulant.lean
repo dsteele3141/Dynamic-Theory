@@ -39,13 +39,13 @@ theorem M_circulant : M = P + P * P := by
 /-- `M = J - 1` (Williams' written form, where `1` is the identity matrix). -/
 theorem M_eq_J_sub_one : M = J - 1 := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [M, J, sub_apply]
+    simp [M, J, Matrix.sub_apply]
 
 /-- `J = 1 + P + P²`: the all-ones matrix is the sum of the three cyclic
 permutations. -/
 theorem J_decomp : J = 1 + P + P * P := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [J, P, add_apply]
+    simp [J, P, Matrix.add_apply]
 
 /-- The cyclic combination COMMUTES with its generator: `[M, P] = 0`. -/
 theorem M_comm_P : M * P = P * M := by
@@ -70,7 +70,7 @@ theorem su3_nonabelian : lam1 * lam3 ≠ lam3 * lam1 := by
 theorem comm_lam1_lam3 :
     lam1 * lam3 - lam3 * lam1 = !![0, -2, 0; 2, 0, 0; 0, 0, 0] := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [lam1, lam3, sub_apply]
+    simp [lam1, lam3, Matrix.sub_apply]
 
 /--
   A3 capstone. Williams' explicit cyclic construction commutes with its

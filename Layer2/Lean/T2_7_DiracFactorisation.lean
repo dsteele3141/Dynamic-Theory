@@ -21,7 +21,7 @@
 
 import Mathlib.Tactic
 import Mathlib.Data.Matrix.Basic
-import Mathlib.Data.Complex.Basic
+import Mathlib.Basic.Complex.Basic
 import Mathlib.LinearAlgebra.Matrix.Kronecker
 import Mathlib.LinearAlgebra.Matrix.Reindex
 
@@ -81,7 +81,7 @@ lemma gMetric_symm (i j : Fin 5) : gMetric R i j = gMetric R j i := by
   unfold gMetric
   rcases eq_or_ne i j with rfl | h
   · rfl
-  · rw [if_neg h, if_neg (Ne.symm h)]
+  · simp [h, Ne.symm h]
 
 /-- `g^{00} = 1`. -/
 lemma gMetric_zero_zero : gMetric R (0 : Fin 5) 0 = 1 := by simp [gMetric]

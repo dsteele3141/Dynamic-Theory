@@ -7,7 +7,7 @@
 -/
 
 import Mathlib.Tactic
-import Mathlib.Data.Complex.Basic
+import Mathlib.Basic.Complex.Basic
 import Mathlib.Data.Matrix.Basic
 import Mathlib.Algebra.BigOperators.Fin
 

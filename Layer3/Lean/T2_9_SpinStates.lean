@@ -15,9 +15,13 @@ namespace DTWilliams.Gemini.SpinStates
 /-- The eight combinations listed on pages 126-128. -/
 inductive OctetState
   | t1p | t1m | t2p | t2m | t3p | t3m | t4p | t4m
-  deriving DecidableEq, Fintype
+  deriving DecidableEq
 
 open OctetState
+
+-- Explicit instance: the `deriving Fintype` handler broke under Lean v4.34.1 / Mathlib v4.34.1.
+instance : Fintype OctetState :=
+  Fintype.ofList [t1p, t1m, t2p, t2m, t3p, t3m, t4p, t4m] (by intro x; cases x <;> simp)
 
 /-- Doubled `(s1,s2,s3,u1,u2,u3)` values for each listed state. -/
 def spinData : OctetState -> Int × Int × Int × Int × Int × Int

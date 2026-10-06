@@ -1,7 +1,7 @@
 ================================================================
 DTWilliams AXIOM FOOTPRINT  (collectAxioms over all theorems/defs)
 ================================================================
-Theorems + defs scanned under `DTWilliams`: 273
+Theorems + defs scanned under `DTWilliams`: 269
 Axioms used (union): [propext, Classical.choice, Quot.sound]
 Declarations depending on sorryAx: 0
 Axioms beyond {propext, Classical.choice, Quot.sound}: NONE
