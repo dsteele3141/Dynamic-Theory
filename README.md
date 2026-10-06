@@ -41,8 +41,9 @@ lake exe cache get   # fetch the prebuilt Mathlib oleans
 lake build           # compiles every proof module (success ⇒ all proofs check)
 ```
 
-Toolchain `leanprover/lean4:v4.31.0-rc1` (pinned in `lean-toolchain`); Mathlib
-revision pinned in `lake-manifest.json`. The build is clean — **0 `sorry`**.
+Toolchain `leanprover/lean4:v4.34.1` (pinned in `lean-toolchain`); Mathlib
+`v4.34.1` and [Physlib](https://github.com/leanprover-community/physlib)
+(formerly PhysLean) revisions pinned in `lake-manifest.json`. The build is clean — **0 `sorry`**.
 
 A Lean *proof* module emits no stdout on success — it either compiles (proof
 verified) or it does not. So each `lean-results/*.out.txt` is simply a
@@ -57,7 +58,7 @@ lake env lean AxiomCheck.lean        # writes/compares the footprint
 
 Runs `collectAxioms` over every `def`/`theorem` under the `DTWilliams` namespace
 and flags any `sorryAx` or any axiom outside Lean's three standard axioms.
-Current footprint (see `AxiomCheck.out.txt`): **273 declarations, 0 sorry,
+Current footprint (see `AxiomCheck.out.txt`): **269 declarations, 0 sorry,
 {propext, Classical.choice, Quot.sound} only — PASS**.
 
 ## Sage — run & lint

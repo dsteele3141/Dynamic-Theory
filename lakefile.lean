@@ -16,6 +16,7 @@ lean_lib DynamicTheory where
   globs := #[
     .one `DynamicTheory,
     .one `Basic,
+    .one `PhyslibCompat,
     .submodules `Layer1,
     .submodules `Layer2,
     .submodules `Layer3
