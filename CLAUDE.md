@@ -55,7 +55,7 @@ python3 linter.py               # Sage convention linter (pure Python)
 |---|---|
 | `lake build` | succeeds, no `sorry` |
 | `lake env lean AxiomCheck.lean` | 300 declarations, 0 `sorry`, exactly `propext`, `Classical.choice`, `Quot.sound` (Lean's standard axioms, not assumptions of the theory) |
-| `python3 linter.py` | 181 OK / 0 WARN / 0 FAIL (incl. 3 Cadabra cross-checks in `Layer{1,2}/Cadabra/`; rerun with `cadabra2 X.cdb > ../cadabra-results/X.out.txt`) |
+| `python3 linter.py` | 184 OK / 0 WARN / 0 FAIL (incl. 3 Cadabra cross-checks in `Layer{1,2}/Cadabra/`; rerun with `cadabra2 X.cdb > ../cadabra-results/X.out.txt`) |
 
 Versions: lean4 `v4.34.1`, Mathlib `v4.34.1` (rev
 `d13f23b723b8a846827a245b89c10fc7d3f11612`), Physlib rev `53dfa9d`, SageMath 10.9. Everything else is
