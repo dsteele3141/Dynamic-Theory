@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 22:15:35
+Run: 2026-10-07 23:08:54
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 97  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 98  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -242,6 +242,10 @@ gravitational_radiation.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
   [OK  ]:197 signature list [1,-1,-1,-1,-1]: spacelike mass.
   [OK  ]:231 signature list [1,-1,-1,-1,-1]: spacelike mass.
+hbar_potential_clocks.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+hbar_potential_clocks.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 highz_residual_diagnostic.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 highz_residual_diagnostic.sage
@@ -441,8 +445,6 @@ yangmills_field_structure.sage
   [OK  ] signature consistent: all 23 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 230    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 232    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
-
-Report written to: /home/dsteele/lean/Dynamic-Theory/linter.out.txt
