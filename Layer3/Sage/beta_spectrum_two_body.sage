@@ -125,17 +125,18 @@ print("""VERDICT
      measured spectra.  ~ 0.48 MeV per decay must leave in something
      neutral, not a photon, and nearly invisible.  "No need to postulate
      neutrinos" is refuted -- by DT's own internal-energy conservation.
-  3. DT HAS a candidate: its own non-transverse phi_4 wave quantum, which
-     Williams himself identifies with the neutrino (Ch.11, Eqs 11.34-37;
-     weak_parity [D]).  Read that way, neutron decay is p + e + (DT
-     neutrino), and the spectrum argument passes over to the SM's.
+  3. DT HAS candidates.  Williams' own (the phi_4 wave quantum, Ch.11 Eqs
+     11.34-37) is spin 0 and is EXCLUDED by angular momentum; the chiral
+     zero mode of DT's 5D Dirac field passes (neutrino_helicity.sage).
+     With it, neutron decay is p + e + (DT neutrino), and the spectrum
+     argument passes over to the SM's.
   STANDING (assumption ledger: SHARED WITH SM, by data-selected reading).
   Just as Pauli (1930) assumed a light neutral particle carries the missing
-  energy, if DT's neutron decay emits its phi_4 quantum, the spectrum is
+  energy, if DT's neutron decay emits its 5D-Dirac zero mode, the spectrum is
   consistent with the SM.  Williams' no-neutrino reading is EXCLUDED; DT
   is not -- the data select the reading with a neutrino (selected, not
-  derived).  Ledger Q9.  The neutrino it needs inherits the open problems
-  already logged: helicity 0 vs measured -1 (Q2/Q3) and strength (Q5).
+  derived).  Ledger Q9.  Its spin and helicity: neutrino_helicity.sage
+  (Q10); its strength: Q5.
   Bracket: (i) [A] is non-relativistic in the relative coordinate; the
   proton is non-relativistic (v < 2e-3 c) and the electron enters only
   through the exact radial term; (ii) the allowed shape is imported but

@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 20:53:48
+Run: 2026-10-07 20:59:06
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 90  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 91  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -288,6 +288,10 @@ moon_system_quantisation.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 moon_system_quantisation.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+neutrino_helicity.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+neutrino_helicity.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 neutron_com_barrier_lifetime.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 neutron_com_barrier_lifetime.sage
@@ -409,7 +413,7 @@ yangmills_field_structure.sage
   [OK  ] signature consistent: all 19 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 212    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 214    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
 
