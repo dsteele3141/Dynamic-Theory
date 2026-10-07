@@ -54,6 +54,13 @@
 #       below the test precision.  Solar system: tau0dot <~ 1e-3 (LLR,
 #       imported) / 1.4e4 (Mercury, DT-native kinematics).  Galaxies (to be
 #       flat): ~5e5.
+#   (H) No compromise.  v_flat^2 x T_fade = GM/c for every tau0dot, so speed
+#       is bought only with faster fading.  The natural reading (Eq 3.19,
+#       tau0dot = 1) gives the Milky Way a ~0.25 km/s floor.  The shortfall
+#       (= tau0dot needed) falls as M^-1/2: ~1e7 dwarfs, ~5e5 Milky Way, ~4e3
+#       clusters; it closes only at ~the mass inside the Hubble radius (the
+#       a0 ~ c H0 coincidence restated).  Any fixed tau0dot gives v^2 ~ M, not
+#       Tully-Fisher: BTF itself needs the per-system tuning.
 #
 # VERDICT (honest bracket).  DT's GR limit is EXACT at tau0dot = 0, and its
 # domain is controlled by that single initial condition (plus lambda/r, which
@@ -211,6 +218,35 @@ ok("G1: the GR limit and the MOND regime sit at opposite ends of the same dial",
    td_llr < 1 < td_merc < td_mw)
 
 # ---------------------------------------------------------------------------
+print("\n[H] No compromise: the trade-off rule and the mass dependence")
+T_fade = 1 / (H0 * td)                                   # time for G_eff M to change by itself
+v2flat = G * M * (H0 * td / c)                           # flat floor, Eq 3.30
+ok("H1: v_flat^2 x T_fade = GM/c for EVERY tau0dot (and independent of H0)",
+   bool((v2flat * T_fade - G * M / c).simplify_full() == 0))
+v_nat = sqrt(GMmw * H0n / cn)                            # Eq 3.19: tau0dot = 1
+print("    natural reading (Eq 3.19, tau0dot = 1): Milky Way v_flat = %.3f km/s (observed ~200)" % (v_nat / 1e3))
+ok("H2: the natural reading gives a Milky Way floor of ~0.25 km/s", 0.1e3 < v_nat < 0.5e3)
+print("    %-24s %10s %14s %16s" % ("system", "M [Msun]", "tau0dot needed", "r_c/c [yr]"))
+need = []
+for name, Mx in [("dwarf galaxy", 1e8), ("Milky Way", 6e10), ("galaxy cluster", 1e15)]:
+    GMx = 6.674e-11 * Mx * Msun
+    rcx = sqrt(GMx / a0n)
+    need.append(float(cn / (H0n * rcx)))
+    print("    %-24s %10.0e %14.2g %16.2g" % (name, Mx, need[-1], float(rcx / cn / yr)))
+ok("H3: every real system falls short, the smallest worst (shortfall falls as M^-1/2, > 1e3 even for clusters)",
+   need[0] > need[1] > need[2] > 1e3)
+M_match = a0n * (cn / H0n)**2 / 6.674e-11 / Msun         # r_c = c/H0  <=>  tau0dot = 1
+M_hub = (4 * float(pi) / 3) * (3 * H0n**2 / (8 * float(pi) * 6.674e-11)) * (cn / H0n)**3 / Msun
+print("    the shortfall closes (tau0dot = 1) only at M = %.2g Msun" % M_match)
+print("    mass inside the Hubble radius (critical density) = %.2g Msun" % M_hub)
+ok("H4: that closing mass is of order the mass inside the Hubble radius (a0 ~ c H0 restated)",
+   0.1 < M_match / M_hub < 10)
+p = var('p')
+ok("H5: with any FIXED tau0dot, v_flat^2 ~ M^1, not the Tully-Fisher M^(1/2): BTF needs tau0dot ~ M^(-1/2)",
+   bool(diff(log(v2flat), M) * M == 1)
+   and bool((diff(log(sqrt(G * M * a0n)), M) * M - QQ(1) / 2).simplify_full() == 0))
+
+# ---------------------------------------------------------------------------
 print("\n[VERDICT]")
 print("  * DT's Newton/GR limit is exact at tau0dot = 0; one initial condition")
 print("    controls its domain (lambda/r is already settled by the metric reading).")
@@ -219,6 +255,9 @@ print("  * Flat curves, taken at face value, need each galaxy's gravity to chang
 print("    O(1) every ~3e4 yr: an internal-consistency FLAG on the Ch. 3 dark-matter")
 print("    postdiction, not a falsification of DT and not a negative for its GR")
 print("    sector.  Defeater: Williams' 'two times' bookkeeping (Eqs 3.28-3.30).")
+print("  * No compromise: v_flat^2 x T_fade = GM/c.  The natural reading gives the")
+print("    right SHAPE at 1e-3..1e-7 of the size (worst for dwarfs); it is the")
+print("    right size only for the universe as a whole.")
 print("\n" + "=" * 74)
 print("gr_limit_domain COMPLETE.")
 print("=" * 74)

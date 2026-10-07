@@ -53,6 +53,20 @@ gr_limit_domain.sage -- gap #5: where does DT reduce to Newton/GR?
     galaxy, flat rotation curve        ~ 5e+05  (Williams Eqs 3.35-3.36)
   [PASS] G1: the GR limit and the MOND regime sit at opposite ends of the same dial
 
+[H] No compromise: the trade-off rule and the mass dependence
+  [PASS] H1: v_flat^2 x T_fade = GM/c for EVERY tau0dot (and independent of H0)
+    natural reading (Eq 3.19, tau0dot = 1): Milky Way v_flat = 0.245 km/s (observed ~200)
+  [PASS] H2: the natural reading gives a Milky Way floor of ~0.25 km/s
+    system                     M [Msun] tau0dot needed       r_c/c [yr]
+    dwarf galaxy                  1e+08        1.3e+07          1.1e+03
+    Milky Way                     6e+10        5.1e+05          2.7e+04
+    galaxy cluster                1e+15          4e+03          3.5e+06
+  [PASS] H3: every real system falls short, the smallest worst (shortfall falls as M^-1/2, > 1e3 even for clusters)
+    the shortfall closes (tau0dot = 1) only at M = 1.6e+22 Msun
+    mass inside the Hubble radius (critical density) = 4.5e+22 Msun
+  [PASS] H4: that closing mass is of order the mass inside the Hubble radius (a0 ~ c H0 restated)
+  [PASS] H5: with any FIXED tau0dot, v_flat^2 ~ M^1, not the Tully-Fisher M^(1/2): BTF needs tau0dot ~ M^(-1/2)
+
 [VERDICT]
   * DT's Newton/GR limit is exact at tau0dot = 0; one initial condition
     controls its domain (lambda/r is already settled by the metric reading).
@@ -61,6 +75,9 @@ gr_limit_domain.sage -- gap #5: where does DT reduce to Newton/GR?
     O(1) every ~3e4 yr: an internal-consistency FLAG on the Ch. 3 dark-matter
     postdiction, not a falsification of DT and not a negative for its GR
     sector.  Defeater: Williams' 'two times' bookkeeping (Eqs 3.28-3.30).
+  * No compromise: v_flat^2 x T_fade = GM/c.  The natural reading gives the
+    right SHAPE at 1e-3..1e-7 of the size (worst for dwarfs); it is the
+    right size only for the universe as a whole.
 
 ==========================================================================
 gr_limit_domain COMPLETE.
