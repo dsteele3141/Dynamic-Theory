@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 16:11:09
+Run: 2026-10-07 16:33:52
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 70  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 71  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -200,6 +200,13 @@ gateway_london_quantisation.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 gateway_london_quantisation.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+gr_on_4d_surface.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gr_on_4d_surface.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:117 signature: g44 = -1 (spacelike mass).
+  [OK  ]:199 signature: g44 = -1 (spacelike mass).
+  [OK  ]:223 signature: g44 = -1 (spacelike mass).
 highz_residual_diagnostic.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 highz_residual_diagnostic.sage
@@ -317,9 +324,9 @@ yangmills_field_structure.sage
 
 ### (corpus)
 (cross-file)
-  [OK  ] signature consistent: all 10 g44 definition(s) spacelike (g44 < 0).
+  [OK  ] signature consistent: all 13 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 163    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 168    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
