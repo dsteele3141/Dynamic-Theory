@@ -72,12 +72,12 @@ nothing; it just carries over the SM's own limitation.
 
 | SM input | SM | DT | Script |
 |---|---|---|---|
-| Chirality (left-handed doublets) | postulated by hand | DERIVED: the no-flux edge, given unitarity and 4D Lorentz invariance; the hand stays a choice |  |
+| Chirality (left-handed doublets) | postulated by hand | DERIVED: the no-flux edge, given unitarity and 4D Lorentz invariance; the hand stays a choice | `noflux_boundary_derivation.sage` |
 | Charge quantisation | partly explained by anomaly cancellation, given the field content | DERIVED: q = Ze, independent of field content | Layer 3 (Report) |
-| Form of the internal symmetry | postulated | DERIVED: exactly u(N) on N zero modes, with nothing larger | ,  |
-| Weak doublet (N = 2), \|Y\| = 1/2 | postulated | DERIVED from Williams' 8x8; which member is neutral is SELECTED |  |
-| Odd N_c, fractional quark charge | follow from SM anomaly consistency (Witten) | the same argument, plus q = Ze turning confinement into a selection rule |  |
-| N_c = 3, three families | postulated | SELECTED by data |  |
+| Form of the internal symmetry | postulated | DERIVED: exactly u(N) on N zero modes, with nothing larger | `su2_from_5d.sage`, `su3_larger_rep.sage` |
+| Weak doublet (N = 2), \|Y\| = 1/2 | postulated | DERIVED from Williams' 8x8; which member is neutral is SELECTED | `su2_from_5d.sage` |
+| Odd N_c, fractional quark charge | follow from SM anomaly consistency (Witten) | the same argument, plus q = Ze turning confinement into a selection rule | `strong_sector_su3.sage` |
+| N_c = 3, three families | postulated | SELECTED by data | `strong_sector_su3.sage` |
 | Gauging (Yang-Mills), Higgs, Yukawas, couplings | postulated | ADOPTED, exactly as the SM does | Q5, Q6, Q15 |
 
 What DT adds beyond the SM: chirality, q = Ze independent of field content, and the
