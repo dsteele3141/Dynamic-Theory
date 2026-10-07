@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 19:21:47
+Run: 2026-10-07 19:27:12
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 82  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 83  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -205,6 +205,10 @@ electrogravitic_wave_polarization.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 electrogravitic_wave_polarization.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+exact_ppwave_lift.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+exact_ppwave_lift.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 force_ratio.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 force_ratio.sage
@@ -376,7 +380,7 @@ yangmills_field_structure.sage
   [OK  ] signature consistent: all 18 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 195    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 197    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
 
