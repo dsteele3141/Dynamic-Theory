@@ -14,6 +14,15 @@ Categories:
 - **DT-SPECIFIC**: needed by DT only, usually because DT is 5D.
 - **SELECTED**: one reading of DT among several, chosen by data (selected, not derived).
 - **DT-SAVES**: something the established theory assumes that DT derives.
+- **WILLIAMS DISCREPANCY**: Williams' own reading is excluded by experiment and
+  the reading the data select is adopted instead; the discrepancy with Williams
+  is recorded in the row. Not a count against DT.
+
+**Williams is the default guide, not the final oracle.** Where DT's structure
+(or a shared SM/GR assumption) supports a reading other than Williams', and
+experiment selects it, that reading is DT and his is noted as a discrepancy.
+Falsification is a test against EXPERIMENT: DT fails only where no reading
+its structure supports, plus shared assumptions, fits the data.
 
 ## Gravity (Route 2, mass sector)
 
@@ -24,7 +33,7 @@ Categories:
 | G3 | g44 frozen (conservation of mass as a restriction) | SELECTED (Cassini) | GR has no scalar | PPN gamma = 1 | `kk_radion_g44.sage` |
 | G4 | GR strong-field reading, not e^{-lambda/r} as a metric | SELECTED (ringdown, EHT) | GR's Kerr | matches LIGO/EHT | `black_hole_ringdown.sage` |
 | G5 | Lorentzian signature | DT-SAVES | GR assumes it | forced by the stability Hessian (T1.6) | Layer 1, `T1_6` |
-| G6 | tau-dot_0 (dark-matter floor) | DT-SPECIFIC, free | none | shape right, size 1e-3..1e-7 (FLAG) | `gr_limit_domain.sage` |
+| G6 | tau-dot_0 (dark-matter floor) | WILLIAMS DISCREPANCY (his tau-dot_0 ~ 5e5 excluded by consistency; tau-dot_0 -> 0, the GR limit, adopted: dark matter then unexplained, as in GR) | none | shape right, size 1e-3..1e-7 (FLAG) | `gr_limit_domain.sage` |
 
 ## Quantum / weak sector (Route 3, charge sector)
 
@@ -40,15 +49,16 @@ Categories:
 | Q13 | Charged-fermion masses from Yukawa couplings to the Higgs doublet (not DT's 5D mass) | SHARED-SM (by IMPORT) | Yukawa couplings y_f (inputs) | DT's 5D mass (bulk +1 and gamma^4 d4) flips chirality and, inside one 5D field, is SU(2)-invariant only for a VECTOR-LIKE electron: excluded (g_A^e 0 vs -0.503, ~30 sigma; A_e 0 vs 0.1515, ~80 sigma). Chiral electron = two 5D fields whose zero modes DT's mass leaves massless; only psibar_L Phi psi_R works. DT's native mass survives for the heavy mass-axis modes only | `mass_term_su2.sage` |
 | Q14 | Colour multiplicity: quarks in N_c = 3 copies (fractional charges 2/3, -1/3) | SHARED-SM (by IMPORT; two constraints DERIVED) | quarks in the SU(3) triplet | DT's 5D spinor has no room (4x4: U(1); Williams' 8x8: abelian U(1)xU(1)); anomaly cancellation of the imported SU(2)_L x U(1)_Y with DT's leptons FORCES an odd N_c with Q_u = 1/2+1/(2N_c); DT's q = Z e then forbids free quarks (confinement as a selection rule). N_c = 3 SELECTED by nucleon charges, R ratio, Z width R_l (selected, not derived) | `strong_sector_su3.sage` |
 | Q15 | SU(3)_C gauge dynamics (gluons, asymptotic freedom, confinement) | SHARED-SM (by IMPORT) | gauged SU(3)_C, alpha_s input | DT's phi_0 cannot serve: fitted to alpha_s(m_tau)->alpha_s(M_Z) it turns repulsive before 1 TeV (meas 0.088) and has no string tension. Not a negative for Williams' NUCLEON potential (a role he never gave it) | `strong_sector_su3.sage` |
-| Q7 | Particle lambda values (e^{-lambda/r}) | DT-SPECIFIC | none (QED needs none) | hydrogen: lambda_p < ~1.8e-3 fm, Williams' 1 fm excluded (NEGATIVE CANDIDATE); the neutron barrier rests on the same 1 fm | `hydrogen_nonsingular_spectrum.sage`, `neutron_lifetime_tunnelling.sage` |
-| Q8 | Neutron decay rate: effective units of action hbar'_e, hbar'_p (fitted to mu_n, spin) + tunnelling mass | DT-SPECIFIC (SM counterpart: g_A, V_ud measured) | SM: 2 measured inputs give 878 s to <1% | DT: book's choices span 10^-27..10^435 s, none near 878 s; natural (m_e, hbar'_e) pairing needs hbar' only 1.54x Williams' value (16 decades in tau); FITTABLE, not predicted | `neutron_lifetime_tunnelling.sage` |
+| Q7 | Particle lambda values (e^{-lambda/r}) | WILLIAMS DISCREPANCY (his 1 fm excluded; lambda_p < ~1.8e-3 fm adopted, a bounded DT parameter) | none (QED needs none) | hydrogen: lambda_p < ~1.8e-3 fm, Williams' 1 fm excluded (NEGATIVE CANDIDATE); the neutron barrier rests on the same 1 fm | `hydrogen_nonsingular_spectrum.sage`, `neutron_lifetime_tunnelling.sage` |
+| Q8 | Neutron decay rate: effective units of action hbar'_e, hbar'_p (fitted to mu_n, spin) + tunnelling mass | WILLIAMS DISCREPANCY (his tunnelling lifetime not predictive; decay via the W, Q5, with g_A, V_ud adopted) | SM: 2 measured inputs give 878 s to <1% | DT: book's choices span 10^-27..10^435 s, none near 878 s; natural (m_e, hbar'_e) pairing needs hbar' only 1.54x Williams' value (16 decades in tau); FITTABLE, not predicted | `neutron_lifetime_tunnelling.sage` |
 | Q9 | Neutron decay emits a light neutral fermion (a neutrino); Williams' no-neutrino p+e reading EXCLUDED | SHARED-SM, SELECTED by data | Pauli 1930: a light neutral particle carries the missing energy | DT internal energy exactly conserved for any Newton-III violation, so p+e gives a 3 keV line at ~782 keV; 6e-8 of measured decays there, mean missing 481 keV | `beta_spectrum_two_body.sage` |
 | Q10 | DT's neutrino is the chiral zero mode of the 5D Dirac field (not Williams' phi_4 wave quantum) | SHARED-SM, SELECTED by data | SM: massless left-handed Weyl neutrino | phi_4 quantum is a 4D scalar (spin 0): excluded by J in n->p+e+X and by helicity 0 vs -1; zero mode: spin 1/2, nu helicity -1, nubar +1, as measured. Rests on Q3 + Q4 (our boundary reading). Massless, like the minimal SM | `neutrino_helicity.sage` |
-| Q11 | Williams' neutron (Eq 2.57) carries J = hbar | DT-SPECIFIC (negative candidate) | -- (SM neutron J = 1/2) | Eq 2.57 adds the free p, e spins linearly (h/2+h/2 = h) and fixes the neutron's internal J to match; measured neutron spin 1/2 (2 Stern-Gerlach beams). Defeater: J counted in h' inside the neutron -- but the free neutron is spin 1/2 | `neutrino_helicity.sage` |
+| Q11 | Williams' neutron (Eq 2.57) carries J = hbar | WILLIAMS DISCREPANCY (excluded by spin 1/2; udd neutron, Q14, adopted) | -- (SM neutron J = 1/2) | Eq 2.57 adds the free p, e spins linearly (h/2+h/2 = h) and fixes the neutron's internal J to match; measured neutron spin 1/2 (2 Stern-Gerlach beams). Defeater: J counted in h' inside the neutron -- but the free neutron is spin 1/2 | `neutrino_helicity.sage` |
 
 ## Running count
 
 - SHARED (neutral): G1, Q1, Q2/Q3, Q5, Q6, Q9, Q10, Q12, Q13, Q14, Q15
 - SELECTED by data: G3, G4, Q3 (4x4 over 8x8, Z width), Q9, Q10 (G2 upgraded to required)
 - DT-SAVES: G5
-- DT-SPECIFIC: G6, Q4, Q7, Q8, Q11
+- DT-SPECIFIC (counts against): Q4
+- WILLIAMS DISCREPANCY (noted, data-selected reading adopted): G6, Q7, Q8, Q11 (and Williams' readings in Q3, Q9, Q10)

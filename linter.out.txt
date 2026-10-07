@@ -1,6 +1,6 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 21:28:01
+Run: 2026-10-07 21:35:18
 Scanned: /home/dsteele/lean/Dynamic-Theory
 Sage scripts: 94  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
