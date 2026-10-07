@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 21:08:01
+Run: 2026-10-07 21:28:01
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 93  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 94  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -353,6 +353,11 @@ self_energy_assembly_factors.out.txt
 self_energy_assembly_factors.sage
   [OK  ] self-energy: corrected cube-root R0 = (...)^(1/3) present (Eq 103).
   [OK  ] path: stdout-capture convention (no self-managed output path).
+strong_sector_su3.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+strong_sector_su3.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:68 signature list [1,-1,-1,-1,-1]: spacelike mass.
 su3_three_body_structure.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 su3_three_body_structure.sage
@@ -418,10 +423,10 @@ yangmills_field_structure.sage
 
 ### (corpus)
 (cross-file)
-  [OK  ] signature consistent: all 19 g44 definition(s) spacelike (g44 < 0).
+  [OK  ] signature consistent: all 20 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 218    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 221    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
 
