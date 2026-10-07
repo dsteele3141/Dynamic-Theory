@@ -1,0 +1,95 @@
+# ==========================================================================
+#  Force-density five-vector  K = Div(T) = F.J   (Eq 70, p.102) -- Cadabra
+#
+#  Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section III, eq (70).
+#  Full derivation, context and provenance:
+#    Supplementary_Material.pdf -- §S2, Appendix A [C5].
+#
+#  Independent second engine for Layer2/Sage/force_density.sage.  The Sage
+#  script checks Div(T) = F.J component by component in an explicit 5D chart.
+#  This file proves the same statement in ABSTRACT INDICES, with no chart and
+#  no dimension fixed, so it holds in 5D as a special case:
+#
+#      d_b T_ab  -  F_ac d_b F_cb  ==  1/2 F_cd (d_a F_cd + d_c F_da + d_d F_ac)
+#
+#  is an algebraic IDENTITY (no field equation used).  The right-hand side is
+#  F contracted with the Bianchi 3-form dF, so under dF = 0 (automatic for
+#  F = dA, check B) the divergence is exactly the force F_ac J_c, J_c = d_b F_cb.
+#
+#  Run:  cadabra2 force_density.cdb     (assertion-driven)
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+# 1. CONVENTIONS (Williams' Euclidean ict convention, as in force_density.sage)
+#    | convention     | choice                                         | Rpt  |
+#    |----------------|------------------------------------------------|------|
+#    | metric         | delta_ab (x0 = ict), all indices down          | p.98 |
+#    | index range    | abstract; any dimension (5D is a special case) |      |
+#    | field tensor   | F_ab antisymmetric                             | 66   |
+#    | stress tensor  | T_ab = F_ac F_cb + 1/4 delta_ab F_cd F_cd      | 69   |
+#    | source         | J_c = d_b F_cb                                 | 67   |
+#    | force          | K_a = F_ac J_c   (factor 1/c absorbed)         | 70   |
+# --------------------------------------------------------------------------
+{a,b,c,d,e,f}::Indices(position=free).
+\partial{#}::PartialDerivative.
+F_{a b}::AntiSymmetric.
+A_{a}::Depends(\partial{#}).
+F_{a b}::Depends(\partial{#}).
+\delta_{a b}::KroneckerDelta.
+
+# --------------------------------------------------------------------------
+# 2. EQUATION MAP
+#    | Rpt eq | meaning                              | check |
+#    |--------|--------------------------------------|-------|
+#    | (69)   | T_ab, divergence taken               | A1    |
+#    | (70)   | Div T = F.J  given dF = 0            | A1    |
+#    | (66)   | F = dA  =>  dF = 0  (Bianchi)        | B     |
+# --------------------------------------------------------------------------
+
+def check(label, ex):
+    """Assert ex (or its right-hand side) is identically zero."""
+    rhs = ex[1] if ex.top().name in ("\\equals", "=") else ex
+    s = str(rhs).strip()
+    assert s in ("0", "0;", ""), f"{label} FAILED: got {rhs}"
+    print(f"CHECK {label}: OK")
+
+def simp(ex):
+    distribute(ex)
+    product_rule(ex)
+    distribute(ex)
+    unwrap(ex)                 # derivatives of constants (delta) vanish
+    eliminate_kronecker(ex)
+    sort_product(ex)
+    canonicalise(ex)
+    rename_dummies(ex)
+    sort_product(ex)
+    canonicalise(ex)
+    collect_terms(ex)
+    return ex
+
+# --------------------------------------------------------------------------
+# 3. A1: the divergence identity, any dimension
+# --------------------------------------------------------------------------
+divT:= \partial_{b}{ F_{a c} F_{c b} + 1/4 \delta_{a b} F_{c d} F_{c d} };
+FJ:=   F_{a c} \partial_{b}{F_{c b}};
+dF:=   1/2 F_{c d} ( \partial_{a}{F_{c d}} + \partial_{c}{F_{d a}} + \partial_{d}{F_{a c}} );
+lhs:= @(divT) - @(FJ) - @(dF);
+simp(lhs);
+check("A1 d_b T_ab - F_ac J_c = 1/2 F.(dF)_a  (identity, any dim)", lhs)
+
+# Mutation test: dropping the 1/4 trace term must break the identity.
+bad:= \partial_{b}{ F_{a c} F_{c b} } - @(FJ) - @(dF);
+simp(bad);
+assert str(bad).strip() not in ("0", ""), "A1-mutation: identity survived a wrong T_ab"
+print("CHECK A1-mutation (T_ab without trace term fails): OK")
+
+# --------------------------------------------------------------------------
+# 4. B: Bianchi identity dF = 0 for F_ab = d_a A_b - d_b A_a
+# --------------------------------------------------------------------------
+bi:= \partial_{a}{F_{b c}} + \partial_{b}{F_{c a}} + \partial_{c}{F_{a b}};
+substitute(bi, $F_{a b} -> \partial_{a}{A_{b}} - \partial_{b}{A_{a}}$)
+simp(bi);
+check("B  F = dA  =>  dF = 0", bi)
+
+print("SUMMARY force_density.cdb: Div(T) = F.J proved in abstract indices for any")
+print("dimension (hence 5D), as an identity plus the Bianchi identity dF = 0.")

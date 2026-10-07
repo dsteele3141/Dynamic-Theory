@@ -110,6 +110,22 @@ name; several are negative or inconclusive results, recorded as such.
 | `Layer3/Sage/moon_system_quantisation.sage` | the same ladder applied to a satellite system |
 | `Layer3/Sage/gap_vs_feeding_pattern.sage` | ladder gaps against planetary data |
 
+## Cadabra cross-checks (independent second engine)
+
+Abstract-index derivations in [Cadabra2](https://cadabra.science), valid in any
+dimension (so 5D is a special case). Each is assertion-driven with a mutation
+test; output in `Layer{N}/cadabra-results/`, checked by `linter.py`.
+
+| Backs | Cadabra file | What it adds over the Sage script |
+|-------|--------------|-----------------------------------|
+| L1 **C9** | `Layer1/Cadabra/maxwell_variation.cdb` | the Maxwell field equation as the Euler-Lagrange equation of -1/4 F^2; gauge invariance of F = dA |
+| L2 **C5** | `Layer2/Cadabra/force_density.cdb` | Div T = F.J as an identity plus Bianchi, for any dimension (Sage: explicit 5D components) |
+| L2 **C8** | `Layer2/Cadabra/dirac_with_fields.cdb` | the Eq 116 -> 119 squaring step, sign of the -(i/2) F sigma coupling derived (Sage: prose only); Eq 117; 5D gamma contraction |
+
+`Layer3/Sage/units_audit.sage` is a dimensional audit (sympy.physics.units) of
+the mass-sector constants: a0, K_gamma, u4, k4, A0, the Eq 2.10 / 2.21
+relations, and the two notation collisions (gauge a0 vs MOND a0; u4 vs u^4).
+
 > Figure generators are named `plot_*.sage` (`plot_dark_energy_hubble.sage`,
 > `plot_planetary_orbits.sage`). They emit PNGs into `sage-results/` and are
 > skipped by the linter.

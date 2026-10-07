@@ -1,0 +1,19 @@
+ -  1/4 (\partial_{a}(A_{b})-\partial_{b}(A_{a})) (\partial_{a}(A_{b})-\partial_{b}(A_{a}))
+ -  1/4 (\partial_{a}(A_{b})-\partial_{b}(A_{a})) (\partial_{a}(A_{b})-\partial_{b}(A_{a}))
+ -  1/4 (\partial_{a}(δ{A_{b}})-\partial_{b}(δ{A_{a}})) (\partial_{a}(A_{b})-\partial_{b}(A_{a})) -  1/4 (\partial_{a}(A_{b})-\partial_{b}(A_{a})) (\partial_{a}(δ{A_{b}})-\partial_{b}(δ{A_{a}}))
+ -  1/4 (\partial_{a}(h_{b})-\partial_{b}(h_{a})) (\partial_{a}(A_{b})-\partial_{b}(A_{a})) -  1/4 (\partial_{a}(A_{b})-\partial_{b}(A_{a})) (\partial_{a}(h_{b})-\partial_{b}(h_{a}))
+-\partial_{a}((\partial_{a}(A_{b})-\partial_{b}(A_{a})) h_{b}) + h_{b} \partial_{a}((\partial_{a}(A_{b})-\partial_{b}(A_{a})))
+ -  1/4 (\partial_{a}(h_{b})-\partial_{b}(h_{a})) (\partial_{a}(A_{b})-\partial_{b}(A_{a})) -  1/4 (\partial_{a}(A_{b})-\partial_{b}(A_{a})) (\partial_{a}(h_{b})-\partial_{b}(h_{a})) + \partial_{a}((\partial_{a}(A_{b})-\partial_{b}(A_{a})) h_{b})-h_{b} \partial_{a}((\partial_{a}(A_{b})-\partial_{b}(A_{a})))
+0
+CHECK A  delta L = div(-F h) + h_b d_a F_ab  =>  EL eq. is d_a F_ab: OK
+ -  1/4 (\partial_{a}(A_{b}) + \partial_{b}(A_{a})) (\partial_{a}(A_{b}) + \partial_{b}(A_{a}))
+ -  1/4 (\partial_{a}(δ{A_{b}}) + \partial_{b}(δ{A_{a}})) (\partial_{a}(A_{b}) + \partial_{b}(A_{a})) -  1/4 (\partial_{a}(A_{b}) + \partial_{b}(A_{a})) (\partial_{a}(δ{A_{b}}) + \partial_{b}(δ{A_{a}}))
+ -  1/4 (\partial_{a}(h_{b}) + \partial_{b}(h_{a})) (\partial_{a}(A_{b}) + \partial_{b}(A_{a})) -  1/4 (\partial_{a}(A_{b}) + \partial_{b}(A_{a})) (\partial_{a}(h_{b}) + \partial_{b}(h_{a}))
+ -  1/4 (\partial_{a}(h_{b}) + \partial_{b}(h_{a})) (\partial_{a}(A_{b}) + \partial_{b}(A_{a})) -  1/4 (\partial_{a}(A_{b}) + \partial_{b}(A_{a})) (\partial_{a}(h_{b}) + \partial_{b}(h_{a})) + \partial_{a}((\partial_{a}(A_{b})-\partial_{b}(A_{a})) h_{b})-h_{b} \partial_{a}((\partial_{a}(A_{b})-\partial_{b}(A_{a})))
+-2\partial_{a}(A_{b}) \partial_{b}(h_{a})
+CHECK A-mutation (symmetrised F does not give Maxwell): OK
+\partial_{a}((A_{b} + \partial_{b}(χ)))-\partial_{b}((A_{a} + \partial_{a}(χ)))-\partial_{a}(A_{b}) + \partial_{b}(A_{a})
+0
+CHECK B  F_ab invariant under A_a -> A_a + d_a chi: OK
+SUMMARY maxwell_variation.cdb: the Maxwell field equation is the Euler-Lagrange
+equation of -1/4 F^2 (any dimension), and F = dA is gauge invariant.

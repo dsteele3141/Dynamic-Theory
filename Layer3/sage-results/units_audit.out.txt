@@ -1,0 +1,55 @@
+========================================================================
+UNITS AUDIT -- DT mass-sector constants (sympy.physics.units, SI)
+========================================================================
+
+[1] Gauge constant a0 (kg/m^4) and K_gamma = H0/(a0 c)   (Eq 2.10)
+    [a0 c]    = {'Dimension(mass, M)': 1, 'Dimension(length, L)': -3, 'Dimension(time, T)': -1}
+    [K_gamma] = {'Dimension(length, L)': 3, 'Dimension(mass, M)': -1}
+  [PASS] a0*c is a rate of change of mass density (the dgamma/dt ceiling).
+  [PASS] K_gamma has dimensions m^3/kg.
+  [PASS] K_gamma*gamma is dimensionless (the gauge exponent e^{-K_gamma gamma} is legal).
+
+[2] Fifth velocity component u4 (Eq 1.36)
+  [PASS] u4 = H0 gamma/(a0 c) is dimensionless.
+  [PASS] u4 = (dgamma/dt)/(a0 c) is dimensionless (ceiling u4 = 1 <-> dgamma/dt = a0 c).
+  [PASS] y4 = gamma/a0 is a length, so u4 = (1/c) dy4/dt is dimensionless.
+
+[3] The a0*c*K_gamma tension: Eq 2.10 (= H0) vs Eq 2.21 (= H0/sqrt(F_ratio))
+  [PASS] F_ratio = e^2/(4 pi eps0 G m^2) is dimensionless.
+  [PASS] Eq 2.10 side a0 c K_gamma is a rate (1/s).
+  [PASS] Eq 2.21 side H0/sqrt(F_ratio) is a rate (1/s).
+    => the ~2e21 gap is a pure number (sqrt(F_ratio) for two electrons);
+       it is NOT a units error, and its size depends on which masses enter
+       F_ratio (electron vs proton changes it by ~1e3; force_ratio.sage [2]).
+
+[4] P1 (A0 = a0 c k4) and the nuclear anchor K_gamma = k/(a0 e/4 pi eps0)
+  [PASS] k4 has the same dimensions as K_gamma (a wavenumber along the mass axis).
+  [PASS] A0 = a0 c k4 is a frequency (compared with w = 540 THz).
+  [PASS] A0/w is dimensionless.
+  [PASS] e/(4 pi eps0) has dimensions V*m.
+  [PASS] K_gamma = k/(a0 e/4 pi eps0), k in volts, has dimensions m^3/kg.
+
+[5] MOND acceleration a0 (m/s^2), Eqs 3.33-3.35
+  [PASS] r_c = sqrt(G M/a0) is a length.
+  [PASS] tau0dot = c/(r_c H0) is dimensionless.
+  [PASS] Tully-Fisher v^4 = G M a0 is consistent.
+  [PASS] a0/(c H0) is dimensionless (the 0.176 vs 1/2pi comparison is legal).
+
+[6] Notation collisions (pinned so they cannot propagate)
+  [PASS] gauge a0 (kg/m^4) and MOND a0 (m/s^2) are DIFFERENT quantities.
+  [PASS] substituting the gauge a0 into Tully-Fisher breaks it (mixing is detectable).
+  [PASS] substituting the MOND a0 into K_gamma breaks the gauge exponent.
+  [PASS] u4 (Eq 1.36, velocity component) and u^4 (Eq 12.53, speed^4) differ.
+
+[7] Mutation tests
+  [PASS] wrong K_gamma = H0 a0/c would make the gauge exponent dimensionful.
+  [PASS] wrong A0 = a0 k4/c is not a frequency.
+
+  NET: every mass-sector relation the corpus uses is dimensionally
+  consistent. The Eq 2.10/2.21 tension is numerical, not dimensional.
+  The two 'a0' and the two 'u4' are distinct quantities; scripts keep
+  each to one meaning, and any mixing would fail the checks above.
+
+========================================================================
+units_audit COMPLETE.
+========================================================================

@@ -31,7 +31,7 @@ lakefile.lean  lean-toolchain  lake-manifest.json   Lake project config
 DynamicTheory.lean                                  library root (imports all layers)
 Basic.lean                                          shared support
 AxiomCheck.lean   AxiomCheck.out.txt                Lean axiom-footprint audit + its output
-linter.py         linter.out.txt                    Sage convention linter + its output
+linter.py         linter.out.txt                    Sage + Cadabra linter + its output
 ```
 
 ## Lean — build & verify
@@ -78,8 +78,9 @@ python3 linter.py
 Checks signature conventions, the corrected Dirac/Clifford and self-energy
 forms, hard-coded-verdict anti-patterns, Sage-API regressions, the
 stdout-capture output convention, and that each script's result is
-traceback/Error/FAIL-free. Current state (see `linter.out.txt`):
-**158 OK, 0 WARN, 0 FAIL — CLEAN**. Figure-generator scripts (`plot_*.sage`)
+traceback/Error/FAIL-free; it also checks the Cadabra cross-checks in
+`Layer{N}/Cadabra/` (run with `cadabra2 file.cdb > ../cadabra-results/file.out.txt`).
+Current state (see `linter.out.txt`): **163 OK, 0 WARN, 0 FAIL — CLEAN**. Figure-generator scripts (`plot_*.sage`)
 emit PNGs into `sage-results/` and are skipped by the linter.
 
 ## Provenance

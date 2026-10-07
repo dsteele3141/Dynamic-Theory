@@ -1,0 +1,18 @@
+ 1/2 Γ^{j} Γ^{k}-g^{j k} +  1/2 Γ^{k} Γ^{j}
+0
+CHECK A  Eq 117: gamma^j gamma^k = g^jk + 1/2[gamma^j,gamma^k]: OK
+i Γ^{k} \partial_{k}(ψ)-φ_{k} Γ^{k} ψ
+i Γ^{j} \partial_{j}((i Γ^{k} \partial_{k}(ψ)-φ_{k} Γ^{k} ψ))-φ_{j} Γ^{j} (i Γ^{k} \partial_{k}(ψ)-φ_{k} Γ^{k} ψ)
+g^{j k} (-\partial_{j k}(ψ)-i \partial_{j}(φ_{k} ψ)-i φ_{j} \partial_{k}(ψ) + φ_{j} φ_{k} ψ)
+ -  1/2 i (\partial_{j}(φ_{k})-\partial_{k}(φ_{j})) Γ^{j k} ψ
+i Γ^{j} \partial_{j}((i Γ^{k} \partial_{k}(ψ)-φ_{k} Γ^{k} ψ))-φ_{j} Γ^{j} (i Γ^{k} \partial_{k}(ψ)-φ_{k} Γ^{k} ψ)-g^{j k} (-\partial_{j k}(ψ)-i \partial_{j}(φ_{k} ψ)-i φ_{j} \partial_{k}(ψ) + φ_{j} φ_{k} ψ) +  1/2 i (\partial_{j}(φ_{k})-\partial_{k}(φ_{j})) Γ^{j k} ψ
+0
+CHECK B  Eq 116 -> 119: P^2 psi = D.D psi - (i/2) F_jk sigma^jk psi: OK
+i Γ^{j} \partial_{j}((i Γ^{k} \partial_{k}(ψ)-φ_{k} Γ^{k} ψ))-φ_{j} Γ^{j} (i Γ^{k} \partial_{k}(ψ)-φ_{k} Γ^{k} ψ)-g^{j k} (-\partial_{j k}(ψ)-i \partial_{j}(φ_{k} ψ)-i φ_{j} \partial_{k}(ψ) + φ_{j} φ_{k} ψ) -  1/2 i (\partial_{j}(φ_{k})-\partial_{k}(φ_{j})) Γ^{j k} ψ
+-2Γ^{j k} \partial_{j}(φ_{k}) ψ i
+CHECK B-mutation (opposite-sign spin coupling fails): OK
+Γ^{j} Γ^{k} Γ^{l} g_{j l} + 3Γ^{k}
+0
+CHECK C  5D: gamma^j gamma^k gamma_j = -3 gamma^k: OK
+SUMMARY dirac_with_fields.cdb: Eq 117 and the Eq 116 -> 119 squaring step
+derived in abstract indices (any metric, any dimension); 5D contraction checked.

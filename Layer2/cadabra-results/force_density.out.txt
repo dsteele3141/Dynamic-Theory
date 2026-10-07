@@ -1,0 +1,14 @@
+\partial_{b}((F_{a c} F_{c b} +  1/4 δ_{a b} F_{c d} F_{c d}))
+F_{a c} \partial_{b}(F_{c b})
+ 1/2 F_{c d} (\partial_{a}(F_{c d}) + \partial_{c}(F_{d a}) + \partial_{d}(F_{a c}))
+\partial_{b}((F_{a c} F_{c b} +  1/4 δ_{a b} F_{c d} F_{c d}))-F_{a c} \partial_{b}(F_{c b}) -  1/2 F_{c d} (\partial_{a}(F_{c d}) + \partial_{c}(F_{d a}) + \partial_{d}(F_{a c}))
+0
+CHECK A1 d_b T_ab - F_ac J_c = 1/2 F.(dF)_a  (identity, any dim): OK
+\partial_{b}(F_{a c} F_{c b})-F_{a c} \partial_{b}(F_{c b}) -  1/2 F_{c d} (\partial_{a}(F_{c d}) + \partial_{c}(F_{d a}) + \partial_{d}(F_{a c}))
+ -  1/2 F_{b c} \partial_{a}(F_{b c})
+CHECK A1-mutation (T_ab without trace term fails): OK
+\partial_{a}(F_{b c}) + \partial_{b}(F_{c a}) + \partial_{c}(F_{a b})
+0
+CHECK B  F = dA  =>  dF = 0: OK
+SUMMARY force_density.cdb: Div(T) = F.J proved in abstract indices for any
+dimension (hence 5D), as an identity plus the Bianchi identity dF = 0.

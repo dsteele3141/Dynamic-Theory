@@ -1,0 +1,124 @@
+# ==========================================================================
+#  5D Dirac equation with fields: squaring to the spin coupling (Eqs 116-119)
+#  -- Cadabra
+#
+#  Source: P. E. Williams, LA-8370-MS (LASL, 1980), eqs (116), (117), (119).
+#  Full derivation, context and provenance:
+#    Supplementary_Material.pdf -- §S2, Appendix A [C8].
+#
+#  Independent second engine for Layer2/Sage/dirac_with_fields.sage.  The Sage
+#  script checks the Clifford split (Eq 117) on explicit 8x8 matrices, but its
+#  part (B), the step Eq 116 -> Eq 119, is printed prose with no check.  This
+#  file DERIVES that step in abstract indices, for any metric and any
+#  dimension: acting twice with the field-coupled operator
+#
+#      P = (i d_j - phi_j) gamma^j                                 (Rpt 116)
+#
+#  on an arbitrary spinor psi gives
+#
+#      P^2 psi = g^jk D_j D_k psi  -  (i/2) F_jk sigma^jk psi,     (Rpt 119)
+#
+#  D_j = i d_j - phi_j,  F_jk = d_j phi_k - d_k phi_j,  sigma^jk = 1/2[gamma^j,gamma^k].
+#  The (+,-,-,-,-) 5D case is a special case (check C uses d = 5).
+#
+#  Run:  cadabra2 dirac_with_fields.cdb     (assertion-driven)
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+# 1. CONVENTIONS
+#    | convention   | choice                                          | Rpt  |
+#    |--------------|-------------------------------------------------|------|
+#    | metric       | g^jk, Clifford {gamma^j,gamma^k} = 2 g^jk       | 112  |
+#    | spin tensor  | sigma^jk = gamma^j gamma^k - g^jk  (= 1/2 [ , ])| 117  |
+#    | coupling     | minimal: i d_j -> i d_j - phi_j                 | 116  |
+#    | field        | F_jk = d_j phi_k - d_k phi_j                    | 119  |
+#    | dimension    | abstract for A, B; d = 5 for C                  | 108  |
+# --------------------------------------------------------------------------
+{j,k,l,m,n,p}::Indices(position=fixed).
+{j,k,l,m,n,p}::Integer(0..4).
+g_{j k}::Metric.
+g^{j k}::InverseMetric.
+g_{j}^{k}::KroneckerDelta.
+g^{j}_{k}::KroneckerDelta.
+\partial{#}::PartialDerivative.
+\Gamma^{#}::GammaMatrix(metric=g).
+# Gamma^{j k ...} are antisymmetrised products of gammas:
+\Gamma^{#}::AntiSymmetric.
+\psi::Spinor(dimension=5, type=Dirac).
+\psi::Depends(\partial{#}).
+\phi_{j}::Depends(\partial{#}).
+# Placeholders for derivatives of the spinor (Cadabra's canonicaliser does not
+# see through \partial of a spinor).  omega is symmetric: mixed partials commute.
+\omega_{j k}::Symmetric.
+i::ImaginaryI.
+
+# --------------------------------------------------------------------------
+# 2. EQUATION MAP
+#    | Rpt eq | meaning                                  | check |
+#    |--------|------------------------------------------|-------|
+#    | (117)  | gamma^j gamma^k = g^jk + sigma^jk        | A     |
+#    | (116)->(119) | P^2 = D.D - (i/2) F_jk sigma^jk    | B     |
+#    | (112)  | 5D contraction gamma^j gamma^k gamma_j = -3 gamma^k | C |
+# --------------------------------------------------------------------------
+
+def check(label, ex):
+    rhs = ex[1] if ex.top().name in ("\\equals", "=") else ex
+    s = str(rhs).strip()
+    assert s in ("0", ""), f"{label} FAILED: got {rhs}"
+    print(f"CHECK {label}: OK")
+
+def simp(ex):
+    distribute(ex)
+    product_rule(ex)
+    distribute(ex)
+    unwrap(ex)
+    substitute(ex, $\partial_{j}{\partial_{k}{\psi}} -> \omega_{j k}$)
+    substitute(ex, $\partial_{j}{\psi} -> \chi_{j}$)
+    for _ in range(2):         # 2nd pass: gammas become adjacent only after sorting
+        sort_product(ex)
+        join_gamma(ex)
+        distribute(ex)
+        eliminate_metric(ex)
+        eliminate_kronecker(ex)
+        sort_product(ex)
+        canonicalise(ex)
+        rename_dummies(ex)
+        canonicalise(ex)
+        collect_terms(ex)
+    return ex
+
+# --------------------------------------------------------------------------
+# A. Eq 117: Clifford split, with sigma^jk = 1/2 [gamma^j, gamma^k]
+# --------------------------------------------------------------------------
+c117:= \Gamma^{j} \Gamma^{k} - g^{j k} - 1/2 ( \Gamma^{j} \Gamma^{k} - \Gamma^{k} \Gamma^{j} );
+simp(c117);
+check("A  Eq 117: gamma^j gamma^k = g^jk + 1/2[gamma^j,gamma^k]", c117)
+
+# --------------------------------------------------------------------------
+# B. Eq 116 -> Eq 119: square the field-coupled operator on a test spinor
+#    sigma^jk is Cadabra's antisymmetrised \Gamma^{j k} (A shows they agree).
+# --------------------------------------------------------------------------
+Ppsi:= i \Gamma^{k} \partial_{k}{\psi} - \phi_{k} \Gamma^{k} \psi;
+PPpsi:= i \Gamma^{j} \partial_{j}{ @(Ppsi) } - \phi_{j} \Gamma^{j} @(Ppsi);
+DD:= g^{j k} ( - \partial_{j}{\partial_{k}{\psi}} - i \partial_{j}{\phi_{k} \psi}
+               - i \phi_{j} \partial_{k}{\psi} + \phi_{j} \phi_{k} \psi );
+spin:= - i/2 ( \partial_{j}{\phi_{k}} - \partial_{k}{\phi_{j}} ) \Gamma^{j k} \psi;
+eq119:= @(PPpsi) - @(DD) - @(spin);
+simp(eq119);
+check("B  Eq 116 -> 119: P^2 psi = D.D psi - (i/2) F_jk sigma^jk psi", eq119)
+
+# Mutation test: the opposite sign of the spin coupling must fail.
+bad:= @(PPpsi) - @(DD) + @(spin);
+simp(bad);
+assert str(bad).strip() not in ("0", ""), "B-mutation: wrong-sign coupling survived"
+print("CHECK B-mutation (opposite-sign spin coupling fails): OK")
+
+# --------------------------------------------------------------------------
+# C. 5D contraction identity (d = 5): gamma^j gamma^k gamma_j = (2 - d) gamma^k
+# --------------------------------------------------------------------------
+c5:= \Gamma^{j} \Gamma^{k} \Gamma^{l} g_{j l} + 3 \Gamma^{k};
+simp(c5);
+check("C  5D: gamma^j gamma^k gamma_j = -3 gamma^k", c5)
+
+print("SUMMARY dirac_with_fields.cdb: Eq 117 and the Eq 116 -> 119 squaring step")
+print("derived in abstract indices (any metric, any dimension); 5D contraction checked.")

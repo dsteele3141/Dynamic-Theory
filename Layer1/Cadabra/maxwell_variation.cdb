@@ -1,0 +1,103 @@
+# ==========================================================================
+#  Maxwell field equations from the F^2 action, and gauge invariance of F
+#  -- Cadabra
+#
+#  Source: P. E. Williams, LA-8370-MS (LASL, 1980), eqs (66)-(67) (F = dA and
+#  the source equation); the Weyl gauge vector of T1.9.
+#  Full derivation, context and provenance:
+#    Supplementary_Material.pdf -- §S1 (T1.9), Appendix A.
+#
+#  Independent second engine for Layer1/Sage/T1_9_weyl_variational.sage.  The
+#  Sage script checks F = dA identities and one explicit plane-wave solution;
+#  it does not derive the field equations from an action.  This file does, in
+#  abstract indices and any dimension:
+#
+#    A. delta S / delta A_b  =  d_a F_ab    for S = int -1/4 F_ab F_ab
+#       (so the vacuum field equation d_a F_ab = 0 is the Euler-Lagrange eq.)
+#    B. F_ab is invariant under the gauge shift A_a -> A_a + d_a chi
+#       (the Weyl gauge freedom used in T1.9).
+#
+#  Euclidean ict convention (all indices down, delta metric), as in the Sage.
+#  Run:  cadabra2 maxwell_variation.cdb     (assertion-driven)
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+# 1. CONVENTIONS
+#    | convention | choice                                   | Rpt  |
+#    |------------|------------------------------------------|------|
+#    | metric     | delta_ab (x0 = ict), indices down        | p.98 |
+#    | potential  | A_a (Weyl gauge vector phi_a up to i)    | T1.9 |
+#    | field      | F_ab = d_a A_b - d_b A_a                 | 66   |
+#    | action     | S = int -1/4 F_ab F_ab                   |      |
+#    | dimension  | abstract                                 |      |
+# --------------------------------------------------------------------------
+{a,b,c,d,e}::Indices(position=free).
+\partial{#}::PartialDerivative.
+A_{a}::Depends(\partial{#}).
+\chi::Depends(\partial{#}).
+\delta{#}::Accent.
+h_{a}::Depends(\partial{#}).
+
+# --------------------------------------------------------------------------
+# 2. EQUATION MAP
+#    | Rpt eq | meaning                                | check |
+#    |--------|----------------------------------------|-------|
+#    | (67)   | field eq. d_a F_ab = J_b from action   | A     |
+#    | (66)   | F = dA gauge invariant                 | B     |
+# --------------------------------------------------------------------------
+
+def check(label, ex):
+    s = str(ex).strip()
+    assert s in ("0", ""), f"{label} FAILED: got {ex}"
+    print(f"CHECK {label}: OK")
+
+def simp(ex):
+    distribute(ex)
+    product_rule(ex)
+    distribute(ex)
+    unwrap(ex)
+    sort_product(ex)
+    canonicalise(ex)
+    rename_dummies(ex)
+    canonicalise(ex)
+    collect_terms(ex)
+    return ex
+
+# --------------------------------------------------------------------------
+# A. Vary the Lagrangian.  delta A_b is an arbitrary field h_b.  We prove the
+#    pointwise identity
+#        delta L  =  d_a( -F_ab h_b )  +  h_b d_a F_ab ,
+#    whose first term is a total divergence (drops from the action), so
+#    delta S / delta A_b = d_a F_ab exactly.  No integration step is trusted.
+# --------------------------------------------------------------------------
+L:= -1/4 ( \partial_{a}{A_{b}} - \partial_{b}{A_{a}} )
+         ( \partial_{a}{A_{b}} - \partial_{b}{A_{a}} );
+dL:= @(L);
+vary(dL, $A_{a} -> \delta{A_{a}}$);
+substitute(dL, $\delta{A_{a}} -> h_{a}$);
+rhs:= \partial_{a}{ - ( \partial_{a}{A_{b}} - \partial_{b}{A_{a}} ) h_{b} }
+      + h_{b} \partial_{a}{ \partial_{a}{A_{b}} - \partial_{b}{A_{a}} };
+diff:= @(dL) - @(rhs);
+simp(diff);
+check("A  delta L = div(-F h) + h_b d_a F_ab  =>  EL eq. is d_a F_ab", diff)
+
+# Mutation test: a symmetrised 'F' must NOT reproduce the Maxwell operator.
+Lbad:= -1/4 ( \partial_{a}{A_{b}} + \partial_{b}{A_{a}} )
+            ( \partial_{a}{A_{b}} + \partial_{b}{A_{a}} );
+vary(Lbad, $A_{a} -> \delta{A_{a}}$);
+substitute(Lbad, $\delta{A_{a}} -> h_{a}$);
+dbad:= @(Lbad) - @(rhs);
+simp(dbad);
+assert str(dbad).strip() not in ("0", ""), "A-mutation: symmetric 'F' gave Maxwell"
+print("CHECK A-mutation (symmetrised F does not give Maxwell): OK")
+
+# --------------------------------------------------------------------------
+# B. Gauge invariance: F[A + d chi] - F[A] = 0
+# --------------------------------------------------------------------------
+g:= \partial_{a}{A_{b} + \partial_{b}{\chi}} - \partial_{b}{A_{a} + \partial_{a}{\chi}}
+    - \partial_{a}{A_{b}} + \partial_{b}{A_{a}};
+simp(g);
+check("B  F_ab invariant under A_a -> A_a + d_a chi", g)
+
+print("SUMMARY maxwell_variation.cdb: the Maxwell field equation is the Euler-Lagrange")
+print("equation of -1/4 F^2 (any dimension), and F = dA is gauge invariant.")
