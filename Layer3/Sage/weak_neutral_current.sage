@@ -120,7 +120,9 @@ print("""VERDICT
   neutral current is consistent with the SM.  Neutral, but say plainly:
   this IMPORTS the SM's electroweak structure; DT supplies none of it.
   DT's own contribution here is the neutrino's chirality (Q3 + Q4), which
-  the Z width confirms (selected, not derived).  Ledger Q6.
+  the Z width confirms (selected, not derived).  Ledger Q6 (couplings)
+  and Q12 (doublet Higgs, rho = 1 -- which brings the 125 GeV boson and
+  forbids a bare charged-fermion mass: open tension with DT's 5D mass).
   Bracket: (i) tree level, ~2% radiative corrections (full SM Q_W(Cs) =
   -73.2); (ii) three families are an input in both theories; (iii) DT has
   no doublet pairing nu with e -- the zero mode and the electron are

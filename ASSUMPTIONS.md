@@ -35,7 +35,8 @@ Categories:
 | Q3 | One 4x4 irrep (one sign of kappa) instead of Williams' 8x8 | SHARED-SM (same one choice as Q2) | the same hand assignment | single left-handed zero mode | `weak_chirality_u4.sage` |
 | Q4 | u4 = 0 read as a no-flux boundary at gamma = 0 | DT-SPECIFIC (our reading) | none needed: SM is 4D | makes 5D chirality possible | `weak_chirality_u4.sage` |
 | Q5 | Charged short-range vector field, range hbar/(M_W c) | SHARED-SM | the W boson, M_W (or G_F) input | G_F consistent with the SM; V-A form then automatic | `weak_va_coupling.sage` |
-| Q6 | Neutral weak current: SU(2)_L x U(1)_Y couplings T3 - Q sin^2 thW, doublet Higgs (rho = 1) | SHARED-SM (by IMPORT) | the Z boson + one mixing angle | DT natively has none (nu gravity-only: NC/CC ~ 3e-67 vs 0.31; parity-even: Q_W(Cs) = 0 vs -72.8). With the import, sin^2 thW = 0.2315 fits R_nu, g_V^e, g_A^e, Q_W at tree level. DT supplies none of the structure; its own input, nu chirality, passes the Z width (N_nu = 2.99; Williams' doubled 8x8 -> 6, excluded 367 sigma) | `weak_neutral_current.sage` |
+| Q6 | Neutral weak current: SU(2)_L x U(1)_Y couplings T3 - Q sin^2 thW (one mixing angle) | SHARED-SM (by IMPORT) | the Z boson + one mixing angle | DT natively has none (nu gravity-only: NC/CC ~ 3e-67 vs 0.31; parity-even: Q_W(Cs) = 0 vs -72.8). With the import, sin^2 thW = 0.2315 fits R_nu, g_V^e, g_A^e, Q_W at tree level. DT supplies none of the structure; its own input, nu chirality, passes the Z width (N_nu = 2.99; Williams' doubled 8x8 -> 6, excluded 367 sigma) | `weak_neutral_current.sage` |
+| Q12 | Electroweak symmetry broken by a scalar DOUBLET (Higgs): fixes rho = M_W^2/(M_Z^2 cos^2 thW) = 1 | SHARED-SM (by IMPORT) | the Higgs doublet (scalar content is an SM input; rho = 1 follows from it) | rho_0 = 1.00038(20) measured. Importing it imports the 125 GeV Higgs boson too. OPEN TENSION (not yet tested): once e_L is an SU(2) doublet and e_R a singlet, a bare mass term m psibar psi is not gauge invariant, so DT's own 5D mass-shell origin of fermion mass (Report Eq 105) would have to give way to Yukawa couplings -- or DT must show its mass term evades this | `weak_neutral_current.sage` |
 | Q7 | Particle lambda values (e^{-lambda/r}) | DT-SPECIFIC | none (QED needs none) | hydrogen: lambda_p < ~1.8e-3 fm, Williams' 1 fm excluded (NEGATIVE CANDIDATE); the neutron barrier rests on the same 1 fm | `hydrogen_nonsingular_spectrum.sage`, `neutron_lifetime_tunnelling.sage` |
 | Q8 | Neutron decay rate: effective units of action hbar'_e, hbar'_p (fitted to mu_n, spin) + tunnelling mass | DT-SPECIFIC (SM counterpart: g_A, V_ud measured) | SM: 2 measured inputs give 878 s to <1% | DT: book's choices span 10^-27..10^435 s, none near 878 s; natural (m_e, hbar'_e) pairing needs hbar' only 1.54x Williams' value (16 decades in tau); FITTABLE, not predicted | `neutron_lifetime_tunnelling.sage` |
 | Q9 | Neutron decay emits a light neutral fermion (a neutrino); Williams' no-neutrino p+e reading EXCLUDED | SHARED-SM, SELECTED by data | Pauli 1930: a light neutral particle carries the missing energy | DT internal energy exactly conserved for any Newton-III violation, so p+e gives a 3 keV line at ~782 keV; 6e-8 of measured decays there, mean missing 481 keV | `beta_spectrum_two_body.sage` |
@@ -44,7 +45,7 @@ Categories:
 
 ## Running count
 
-- SHARED (neutral): G1, Q1, Q2/Q3, Q5, Q6, Q9, Q10
+- SHARED (neutral): G1, Q1, Q2/Q3, Q5, Q6, Q9, Q10, Q12
 - SELECTED by data: G3, G4, Q3 (4x4 over 8x8, Z width), Q9, Q10 (G2 upgraded to required)
 - DT-SAVES: G5
 - DT-SPECIFIC: G6, Q4, Q7, Q8, Q11
