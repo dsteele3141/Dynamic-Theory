@@ -40,9 +40,12 @@ VERDICT
      which leave OPPOSITE hands, so as written DT stays non-chiral ([A],[C]).
      Choosing ONE 4x4 irrep -- a single sign, the counterpart of the SM's
      left-doublet assignment -- makes it chiral.
-  STANDING: an OPENING, not a result.  DT can host chirality through u4 = 0
-  at one cost (one sign, as the SM pays), which is better than the generic
-  5D obstacle.  The zero mode is massless in 4D, so the natural candidate is
+  STANDING (assumption ledger: SHARED WITH SM + one DT-SPECIFIC reading).
+  Just as the SM assumes left-handed fermions in doublets (one choice of
+  hand), if DT assumes one 4x4 irrep (one sign of kappa), the zero mode is
+  left-handed, consistent with the SM.  DT-specific: reading u4 = 0 as a
+  no-flux boundary at gamma = 0 -- needed only because DT is 5D; the SM,
+  being 4D, has no counterpart.  Recorded in ASSUMPTIONS.md.  The zero mode is massless in 4D, so the natural candidate is
   the neutrino (left-handed and nearly massless), NOT the electron:
   interpretive, not derived.
   Bracket: (i) reading R3 is ours, not Williams' (he never imposes a

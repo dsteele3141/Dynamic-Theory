@@ -127,10 +127,13 @@ print("""VERDICT
      ~ 2.5e-3 fm -- i.e. re-adding the W boson.  (Curiously, that is the
      same scale as the hydrogen bound lambda_p < 1.8e-3 fm in
      hydrogen_nonsingular_spectrum.sage; noted, not used.)
-  STANDING: FORM free, STRENGTH missing.  The chirality opening yields the
-  right STRUCTURE of the weak interaction, but DT supplies no vertex of the
-  right strength; a charged short-range field would have to be ADDED (as
-  the SM adds the W).  A GAP, not a falsification.
+  STANDING (assumption ledger: SHARED WITH SM).  FORM follows; STRENGTH is
+  an input.  Just as the SM assumes a charged vector boson W with
+  M_W ~ 80 GeV (equivalently G_F), if DT assumes a charged short-range
+  vector field of range hbar/(M_W c), the weak strength is consistent with
+  the SM -- and the V-A form then comes for free from [A],[B].  Not a
+  DT-specific defect: an assumption the SM also makes, recorded in
+  ASSUMPTIONS.md.
   Bracket: (i) the zero-mode neutrino is OUR identification; Williams'
   neutrino is the helicity-0 phi_4 wave quantum (weak_parity [D]), which
   faces the same strength problem; (ii) DT's beta decay is the breakup of a

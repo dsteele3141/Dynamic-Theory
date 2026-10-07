@@ -167,7 +167,9 @@ print("""VERDICT
      purely left-handed.
   4. The one place gamma^5 enters DT -- as the fifth Dirac matrix ([E]) -- is
      either removable or yields an EDM-type term, not V-A.
-  STANDING: an INPUT, as in the Standard Model -- not a DT-specific defect.
+  STANDING (assumption ledger: SHARED WITH SM).  Just as the SM assumes
+  parity violation (left-handed doublets), if DT assumes it the result is
+  consistent with the SM -- not a DT-specific defect.
   The SM does not derive parity violation either: it ASSIGNS left-handed
   fermions to SU(2) doublets because Wu and Goldhaber demanded it (V-A was
   fitted, not predicted).  So DT, like the SM, must take chirality from
