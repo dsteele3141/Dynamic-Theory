@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 17:26:33
+Run: 2026-10-07 17:34:21
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 74  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 75  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -330,6 +330,10 @@ weyl_lambda_reading.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 weyl_lambda_reading.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+weyl_vector_mass.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weyl_vector_mass.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 yangmills_field_structure.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 yangmills_field_structure.sage
@@ -340,6 +344,6 @@ yangmills_field_structure.sage
   [OK  ] signature consistent: all 14 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 175    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 177    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
