@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 19:49:14
+Run: 2026-10-07 20:21:28
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 84  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 85  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -242,6 +242,10 @@ highz_residual_diagnostic.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 highz_residual_diagnostic.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+hydrogen_nonsingular_spectrum.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+hydrogen_nonsingular_spectrum.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 k_nuclide_anchor.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 k_nuclide_anchor.sage
@@ -384,7 +388,7 @@ yangmills_field_structure.sage
   [OK  ] signature consistent: all 18 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 199    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 201    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
 
