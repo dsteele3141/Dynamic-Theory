@@ -58,7 +58,7 @@ lake env lean AxiomCheck.lean        # writes/compares the footprint
 
 Runs `collectAxioms` over every `def`/`theorem` under the `DTWilliams` namespace
 and flags any `sorryAx` or any axiom outside Lean's three standard axioms.
-Current footprint (see `AxiomCheck.out.txt`): **269 declarations, 0 sorry,
+Current footprint (see `AxiomCheck.out.txt`): **300 declarations, 0 sorry,
 {propext, Classical.choice, Quot.sound} only — PASS**.
 
 ## Sage — run & lint

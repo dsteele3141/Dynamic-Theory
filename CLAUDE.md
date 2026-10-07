@@ -54,13 +54,16 @@ python3 linter.py               # Sage convention linter (pure Python)
 | command | expected |
 |---|---|
 | `lake build` | succeeds, no `sorry` |
-| `lake env lean AxiomCheck.lean` | 269 declarations, 0 `sorry`, exactly `propext`, `Classical.choice`, `Quot.sound` (Lean's standard axioms, not assumptions of the theory) |
+| `lake env lean AxiomCheck.lean` | 300 declarations, 0 `sorry`, exactly `propext`, `Classical.choice`, `Quot.sound` (Lean's standard axioms, not assumptions of the theory) |
 | `python3 linter.py` | 158 OK / 0 WARN / 0 FAIL |
 
 Versions: lean4 `v4.34.1`, Mathlib `v4.34.1` (rev
 `d13f23b723b8a846827a245b89c10fc7d3f11612`), Physlib rev `53dfa9d`, SageMath 10.9. Everything else is
 pinned in `lake-manifest.json`. The ~9 GB `.lake/` is git-ignored. `PhyslibCompat.lean` (default target)
-checks that Physlib and the DT layer coexist. 269 vs the earlier 273: the 4
+checks that Physlib and the DT layer coexist. `Layer2/Lean/PhyslibBridge.lean`
+proves DT's 5D metric = Physlib `minkowskiMatrix` (d=4) and that Physlib's Dirac
+gammas (γ⁰..γ³, iγ⁵) realise DT's 5D Dirac ansatz (+31 decls → 300).
+Pre-bridge 269 vs the earlier 273: the 4
 auto-generated `deriving Fintype` helpers no longer exist under v4.34.1.
 
 ## Lake / Lean constraints (load-bearing - do not break)

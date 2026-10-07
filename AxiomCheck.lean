@@ -36,6 +36,7 @@ import Layer2.Lean.T2_4_ForceDensity
 import Layer2.Lean.T2_7_DiracFactorisation
 import Layer2.Lean.T2_7_PositivityRoute
 import Layer2.Lean.T2_8_DiracWithFields
+import Layer2.Lean.PhyslibBridge
 import Layer3.Lean.T2_9_SpinStates
 import Layer3.Lean.T2_10_London
 import Layer3.Lean.NSM_SU3_Circulant
