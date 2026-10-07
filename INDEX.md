@@ -131,6 +131,7 @@ relations, and the two notation collisions (gauge a0 vs MOND a0; u4 vs u^4).
 | Topic | Script | Result |
 |-------|--------|--------|
 | GR on a 4D surface (Book Eqs 1.34-1.39 / 10.1-10.9) | `Layer3/Sage/gr_on_4d_surface.sage` | Gauss-Codazzi reduction 5D -> 4D on the mass hypersurface. u4 = 0 for all free motion <=> extrinsic curvature K = 0; then 5D Einstein-type equations restrict EXACTLY to 4D Einstein, with T_a4 = 0 and T_44 = (eps/2) T^a_a as constraints (dust: -rho c^2/2, as in C12). Williams identifies rather than derives this step; the script derives it under two stated conditions. K != 0 adds induced sources (Ricci-flat example with a cosmological term). |
+| Einstein equations recovered on the surface (Book Eq 1.38 / 10.8) | `Layer3/Sage/einstein_equations_recovery.sage` | Makes Williams' identification G = C T exact. [1] u4 = 0 -> J^4 = 0 -> the surface source (matter + Maxwell + massless scalar A_4) is conserved; [2] restricted Lovelock: only a(R_ab - R g_ab/2) + Lambda g_ab is divergence-free; [3] Gauss-Bonnet is allowed in 5D but drops out of the 4D surface equations when K = 0 (survives only in the 44 constraint); [4] Newtonian limit: Psi = Phi derived, kappa = 8 pi G/c^4. Premises: local, second-order, metric-only field equations; Lovelock's theorem imported; Lambda open (DT would set 0). |
 
 > Figure generators are named `plot_*.sage` (`plot_dark_energy_hubble.sage`,
 > `plot_planetary_orbits.sage`). They emit PNGs into `sage-results/` and are

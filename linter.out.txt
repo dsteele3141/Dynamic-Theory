@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 16:33:52
+Run: 2026-10-07 16:58:29
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 71  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 72  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -184,6 +184,11 @@ earth_magnetic_moment.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 earth_magnetic_moment.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+einstein_equations_recovery.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+einstein_equations_recovery.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:96 signature list [1,-1,-1,-1,-1]: spacelike mass.
 electrogravitic_wave_polarization.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 electrogravitic_wave_polarization.sage
@@ -324,9 +329,9 @@ yangmills_field_structure.sage
 
 ### (corpus)
 (cross-file)
-  [OK  ] signature consistent: all 13 g44 definition(s) spacelike (g44 < 0).
+  [OK  ] signature consistent: all 14 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 168    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 171    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
