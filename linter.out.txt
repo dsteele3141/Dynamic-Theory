@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 21:35:18
+Run: 2026-10-07 21:42:54
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 94  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 95  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -304,6 +304,11 @@ neutron_lifetime_tunnelling.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 neutron_lifetime_tunnelling.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+noflux_boundary_derivation.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+noflux_boundary_derivation.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:47 signature list [1,-1,-1,-1,-1]: spacelike mass.
 nonsingular_black_holes.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 nonsingular_black_holes.sage
@@ -423,10 +428,10 @@ yangmills_field_structure.sage
 
 ### (corpus)
 (cross-file)
-  [OK  ] signature consistent: all 20 g44 definition(s) spacelike (g44 < 0).
+  [OK  ] signature consistent: all 21 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 221    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 224    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
 

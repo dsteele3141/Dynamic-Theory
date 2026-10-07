@@ -42,7 +42,7 @@ its structure supports, plus shared assumptions, fits the data.
 | Q1 | 5D Dirac equation (adopted ansatz, Report Eq 106) | SHARED-SM | SM postulates the Dirac equation | Clifford algebra, Pauli moment | `dirac_algebra.sage` |
 | Q2 | Parity violation / one hand | SHARED-SM | SM assigns left-handed doublets | consistent with Wu, Goldhaber | `weak_parity.sage` |
 | Q3 | One 4x4 irrep (one sign of kappa) instead of Williams' 8x8 | SHARED-SM (same one choice as Q2) | the same hand assignment | single left-handed zero mode | `weak_chirality_u4.sage` |
-| Q4 | u4 = 0 read as a no-flux boundary at gamma = 0 | DT-SPECIFIC (our reading) | none needed: SM is 4D | makes 5D chirality possible | `weak_chirality_u4.sage` |
+| Q4 | u4 = 0 read as a no-flux boundary at gamma = 0 | DERIVED (was DT-SPECIFIC) | none needed: SM is 4D | J^4 is the Dirac form of u4 (Heisenberg: dy/dt = alpha^4); on the half-line gamma >= 0 conservation of mass AND unitarity each force J^4(0) = 0; 4D Lorentz invariance leaves only the two CHIRAL boundary conditions; the hand is the one remaining sign (Q3). Rests on x^4 = gamma/a0 read as a half-line with a physical edge, and a local BC | `weak_chirality_u4.sage`, `noflux_boundary_derivation.sage` |
 | Q5 | Charged short-range vector field, range hbar/(M_W c) | SHARED-SM | the W boson, M_W (or G_F) input | G_F consistent with the SM; V-A form then automatic | `weak_va_coupling.sage` |
 | Q6 | Neutral weak current: SU(2)_L x U(1)_Y couplings T3 - Q sin^2 thW (one mixing angle) | SHARED-SM (by IMPORT) | the Z boson + one mixing angle | DT natively has none (nu gravity-only: NC/CC ~ 3e-67 vs 0.31; parity-even: Q_W(Cs) = 0 vs -72.8). With the import, sin^2 thW = 0.2315 fits R_nu, g_V^e, g_A^e, Q_W at tree level. DT supplies none of the structure; its own input, nu chirality, passes the Z width (N_nu = 2.99; Williams' doubled 8x8 -> 6, excluded 367 sigma) | `weak_neutral_current.sage` |
 | Q12 | Electroweak symmetry broken by a scalar DOUBLET (Higgs): fixes rho = M_W^2/(M_Z^2 cos^2 thW) = 1 | SHARED-SM (by IMPORT) | the Higgs doublet (scalar content is an SM input; rho = 1 follows from it) | rho_0 = 1.00038(20) measured. Importing it imports the 125 GeV Higgs boson too. Bare-mass tension TESTED -> Q13 | `weak_neutral_current.sage` |
@@ -60,5 +60,6 @@ its structure supports, plus shared assumptions, fits the data.
 - SHARED (neutral): G1, Q1, Q2/Q3, Q5, Q6, Q9, Q10, Q12, Q13, Q14, Q15
 - SELECTED by data: G3, G4, Q3 (4x4 over 8x8, Z width), Q9, Q10 (G2 upgraded to required)
 - DT-SAVES: G5
-- DT-SPECIFIC (counts against): Q4
+- DT-SPECIFIC (counts against): none (Q4 derived)
+- DERIVED (was an assumption): Q4
 - WILLIAMS DISCREPANCY (noted, data-selected reading adopted): G6, Q7, Q8, Q11 (and Williams' readings in Q3, Q9, Q10)
