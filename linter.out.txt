@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 20:21:28
+Run: 2026-10-07 20:26:18
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 85  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 86  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -366,6 +366,10 @@ weak_field_poisson.out.txt
 weak_field_poisson.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
   [OK  ]:89 signature: g44 = -1 (spacelike mass).
+weak_parity.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+weak_parity.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
 weyl_ghilencea_comparison.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 weyl_ghilencea_comparison.sage
@@ -388,7 +392,7 @@ yangmills_field_structure.sage
   [OK  ] signature consistent: all 18 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 201    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 203    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
 
