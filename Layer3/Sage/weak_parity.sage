@@ -167,18 +167,20 @@ print("""VERDICT
      purely left-handed.
   4. The one place gamma^5 enters DT -- as the fifth Dirac matrix ([E]) -- is
      either removable or yields an EDM-type term, not V-A.
-  STANDING: a STRUCTURAL GAP, not a falsification.  DT's weak sector reaches
-  the Yang-Mills FORM (yangmills_field_structure.sage) but is mirror-
-  symmetric, while Nature's weak interaction is maximally not.  A parity-
-  violating ingredient (a chiral coupling, gamma^mu(1-gamma^5)) would have to
-  be ADDED; nothing in the three laws or the restrictive assumptions
-  supplies it.
+  STANDING: an INPUT, as in the Standard Model -- not a DT-specific defect.
+  The SM does not derive parity violation either: it ASSIGNS left-handed
+  fermions to SU(2) doublets because Wu and Goldhaber demanded it (V-A was
+  fitted, not predicted).  So DT, like the SM, must take chirality from
+  experiment.  The DT-specific point is that its 5D form makes that input
+  NON-TRIVIAL: in 5D gamma^5 is used up as the fifth Dirac matrix, so 5D
+  fermions carry no handedness (the Kaluza-Klein chirality problem, Witten
+  1981).  Whether DT's own restriction u4 = 0 can supply it is tested in
+  weak_chirality_u4.sage.
   Bracket (criminal bar): the arithmetic is decisive, the SCOPE is not.
-  Defeaters: (i) Williams never claims parity violation, so this is a GAP in
-  coverage, not a wrong prediction he made; (ii) the 5D Dirac sector is an
-  independent postulate and could be extended chirally (that would be new
-  physics added, not derived); (iii) the neutrino identification (Ch.11) is
-  interpretive in the source.
+  Defeaters: (i) Williams never claims parity violation, so this is a gap
+  in coverage, not a wrong prediction he made; (ii) the 5D Dirac sector is
+  an adopted ansatz and could be extended chirally; (iii) the neutrino
+  identification (Ch.11) is interpretive in the source.
 """ % nsig)
 print("=" * 74)
 print("ALL ASSERTIONS PASSED")
