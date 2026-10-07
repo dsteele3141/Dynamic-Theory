@@ -58,8 +58,32 @@ its structure supports, plus shared assumptions, fits the data.
 ## Running count
 
 - SHARED (neutral): G1, Q1, Q2/Q3, Q5, Q6, Q9, Q10, Q12, Q13, Q14, Q15
-- SELECTED by data: G3, G4, Q3 (4x4 over 8x8, Z width), Q9, Q10 (G2 upgraded to required)
+- SELECTED by data: G3, G4, Q3 (the hand only; 8x8 restored as a lepton doublet), Q9, Q10 (G2 upgraded to required)
 - DT-SAVES: G5
 - DT-SPECIFIC (counts against): none (Q4 derived)
 - DERIVED (was an assumption): Q4
 - WILLIAMS DISCREPANCY (noted, data-selected reading adopted): G6, Q7, Q8, Q11 (and Williams' readings in Q3, Q9, Q10)
+
+## SM inputs: postulated by the SM vs supplied by DT (2026-10-07)
+
+Recovery under u4 = 0 (charge sector). This table compares each SM input with what DT
+supplies for it. Under the shared-assumption rule, DT adopting an SM postulate costs it
+nothing; it just carries over the SM's own limitation.
+
+| SM input | SM | DT | Script |
+|---|---|---|---|
+| Chirality (left-handed doublets) | postulated by hand | DERIVED: the no-flux edge, given unitarity and 4D Lorentz invariance; the hand stays a choice |  |
+| Charge quantisation | partly explained by anomaly cancellation, given the field content | DERIVED: q = Ze, independent of field content | Layer 3 (Report) |
+| Form of the internal symmetry | postulated | DERIVED: exactly u(N) on N zero modes, with nothing larger | ,  |
+| Weak doublet (N = 2), \|Y\| = 1/2 | postulated | DERIVED from Williams' 8x8; which member is neutral is SELECTED |  |
+| Odd N_c, fractional quark charge | follow from SM anomaly consistency (Witten) | the same argument, plus q = Ze turning confinement into a selection rule |  |
+| N_c = 3, three families | postulated | SELECTED by data |  |
+| Gauging (Yang-Mills), Higgs, Yukawas, couplings | postulated | ADOPTED, exactly as the SM does | Q5, Q6, Q15 |
+
+What DT adds beyond the SM: chirality, q = Ze independent of field content, and the
+ceiling on the internal symmetry. Odd N_c and anomaly-fixed charges are SM-internal, so
+they are not counted as DT gains. What DT pays instead: the three laws, the 5D Dirac
+postulate, and the literal half-line reading of x4 = gamma/a0.
+
+Open check: whether the adopted gauge fields sit consistently on the 5D edge, i.e. what
+their A_4 component does at gamma = 0. Everything above is at free-field and tree level.
