@@ -37,6 +37,11 @@
 # the best fit sits at the ansatz edge. "Lambda small" follows only once the drift
 # rate is fixed independently (xi ~ 0.23); Gdot/G would fix it.
 #
+# NOTE ON "Lambda = 0". Weyl's constant reading REQUIRES lambda != 0 (else no
+# Einstein term), so Lambda exactly 0 is not a DT option. Below, "Lambda = 0" is
+# the reference point for the LIMIT Lambda -> 0: any |Lambda| << 1e-53 m^-2 gives
+# a fit indistinguishable from it, so it stands for "negligible Lambda".
+#
 # HONEST BRACKET. The Lambda coupling is a LEADING-ORDER static-patch ansatz
 # (gravitational redshift of the Lambda term composed with DT's drift redshift);
 # Williams gives no Lambda term in his redshift law. Lambda's lensing / areal-
@@ -201,6 +206,8 @@ ok("L = 0 reproduces pantheon_systematic_covariance (full-cov chi2 47.1 at xi=0.
    abs(full.chi2(shape(full.z, 0.230, 0.0)) - 47.1) < 0.1)
 print("    unit: Lambda = %.3e * L  m^-2   (H0 = 70 km/s/Mpc)" % UNIT)
 print("    Planck-2018 Lambda = %.2e m^-2  <->  L = %.3f" % (LAM_OBS, LAM_OBS / UNIT))
+print("    NB 'Lambda = 0' below = the limit Lambda -> 0 (negligible Lambda);")
+print("       exactly 0 is excluded by Weyl's constant reading (lambda != 0).")
 
 # [1]-[3] profiles (xi >= 0 profiled out exactly) ----------------------------
 cases = [

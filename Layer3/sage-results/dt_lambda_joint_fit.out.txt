@@ -10,6 +10,8 @@ JOINT FIT: DT drift (xi) + cosmological constant Lambda -- Pantheon SN-Ia
   [PASS] L = 0 reproduces pantheon_systematic_covariance (full-cov chi2 47.1 at xi=0.230)
     unit: Lambda = 3.436e-52 * L  m^-2   (H0 = 70 km/s/Mpc)
     Planck-2018 Lambda = 1.10e-52 m^-2  <->  L = 0.320
+    NB 'Lambda = 0' below = the limit Lambda -> 0 (negligible Lambda);
+       exactly 0 is excluded by Weyl's constant reading (lambda != 0).
 
 [1] FULL covariance, all 40 bins (primary)
     L      Lambda[m^-2]   best xi   chi2
