@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-07 20:48:35
+Run: 2026-10-07 20:53:48
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 89  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 90  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -163,6 +163,10 @@ T2_9_spin_states.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 T2_9_spin_states.sage
   [OK  ] dirac: corrected complex A-matrix [[0,iI],[-iI,0]] present.
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+beta_spectrum_two_body.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+beta_spectrum_two_body.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
 black_hole_ringdown.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
@@ -405,7 +409,7 @@ yangmills_field_structure.sage
   [OK  ] signature consistent: all 19 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 210    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 212    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
 

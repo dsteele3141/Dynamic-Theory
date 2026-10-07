@@ -38,10 +38,11 @@ Categories:
 | Q6 | Neutral weak current | SHARED-SM (not yet tested) | the Z boson | open | - |
 | Q7 | Particle lambda values (e^{-lambda/r}) | DT-SPECIFIC | none (QED needs none) | hydrogen: lambda_p < ~1.8e-3 fm, Williams' 1 fm excluded (NEGATIVE CANDIDATE); the neutron barrier rests on the same 1 fm | `hydrogen_nonsingular_spectrum.sage`, `neutron_lifetime_tunnelling.sage` |
 | Q8 | Neutron decay rate: effective units of action hbar'_e, hbar'_p (fitted to mu_n, spin) + tunnelling mass | DT-SPECIFIC (SM counterpart: g_A, V_ud measured) | SM: 2 measured inputs give 878 s to <1% | DT: book's choices span 10^-27..10^435 s, none near 878 s; natural (m_e, hbar'_e) pairing needs hbar' only 1.54x Williams' value (16 decades in tau); FITTABLE, not predicted | `neutron_lifetime_tunnelling.sage` |
+| Q9 | Neutron decay emits DT's phi_4 quantum (a neutrino); Williams' no-neutrino p+e reading EXCLUDED | SHARED-SM, SELECTED by data | Pauli 1930: a light neutral particle carries the missing energy | DT internal energy exactly conserved for any Newton-III violation, so p+e gives a 3 keV line at ~782 keV; 6e-8 of measured decays there, mean missing 481 keV; with the phi_4 quantum the spectrum follows the SM's (open: helicity Q2/Q3, strength Q5) | `beta_spectrum_two_body.sage` |
 
 ## Running count
 
-- SHARED (neutral): G1, Q1, Q2/Q3, Q5, Q6
-- SELECTED by data: G3, G4 (G2 upgraded to required)
+- SHARED (neutral): G1, Q1, Q2/Q3, Q5, Q6, Q9
+- SELECTED by data: G3, G4, Q9 (G2 upgraded to required)
 - DT-SAVES: G5
 - DT-SPECIFIC: G6, Q4, Q7, Q8
