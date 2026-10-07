@@ -22,7 +22,8 @@ T1.9 Weyl variational rewrite: structural checks, no EH overclaim
 Summary:
   Verified here: F=dA identities, one concrete Maxwell EL solution, and
   FLRW Einstein-tensor consistency/order checks.
-  Not derived here: the general Einstein-Hilbert variation
-  delta INT R sqrt(-g) -> G_{mu nu}. That remains a trusted external
-  mathematical dependency, not an unresolved physics dispute.
+  Not derived in this script: the Einstein-Hilbert variation
+  delta INT R sqrt(-g) -> G_{mu nu}. Derived for DT's own action (Eq 67)
+  in Layer3/Sage/einstein_from_dt_action.sage (metric families + an
+  off-diagonal instance); the fully general identity is standard (Weyl 1918).
 ======================================================================

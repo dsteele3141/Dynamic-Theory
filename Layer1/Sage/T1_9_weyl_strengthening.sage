@@ -18,18 +18,24 @@
 #       operator for any A (not just a known solution). In Lorenz gauge
 #       (div A = 0) it reduces to the wave equation box A^nu = 0.
 #
-#   (B) THE lambda-CONSTRAINT TERM, -lambda(1/2 - 6 phi_i phi^i).  The original
-#       script did not touch this — yet it is the DYNAMIC-THEORY-specific piece
-#       (the unity-scale-factor / gauge normalisation). We give its two
-#       Euler-Lagrange contributions explicitly:
-#         * EL w.r.t. lambda  =>  the constraint  phi_i phi^i = 1/12;
-#         * EL w.r.t. phi_k   =>  a source  12 lambda phi^k  added to the gauge
-#                                 (Maxwell) field equation.
+#   (B) THE lambda TERM, -lambda(1/2 - 6 phi_i phi^i).  Its Euler-Lagrange
+#       content depends on what lambda is (the Report does not say):
+#         * EL w.r.t. phi_k   =>  12 lambda phi^k in the gauge field equation
+#                                 (holds on EITHER reading);
+#         * MULTIPLIER reading (this script's original reading, SUPERSEDED
+#           2026-10-07): EL w.r.t. lambda => phi_i phi^i = 1/12.
+#         * CONSTANT reading (Weyl's procedure, which the Report cites): lambda
+#           is the natural-gauge value R~ = -lambda, NOT varied; there is no
+#           norm constraint, -lambda/2 is a cosmological constant (|Lambda| =
+#           lambda/4 != 0) and 12 lambda phi^k is a Proca-type mass term.
+#           Layer3/Sage/weyl_lambda_reading.sage shows varying lambda properly
+#           gives R~ = -lambda, not the constraint.  weyl_vector_mass.sage shows
+#           the mass is Planck-scale: the real (integrable) vector vanishes on
+#           shell, and the imaginary EM phase cannot be this phi (Weyl 1929).
 #
-# OUT OF SCOPE (unchanged, stated honestly): the Einstein-Hilbert variation
-#   delta INT R sqrt(-g) -> G_{mu nu} is NOT derived here (no symbolic variational
-#   calculus for the general metric); per Williams it is the standard Weyl-1918
-#   result. This pass strengthens the EM sector and the DT constraint only.
+# EINSTEIN-HILBERT VARIATION: not derived in this script; derived for DT's own
+#   action (Report Eq 67) in Layer3/Sage/einstein_from_dt_action.sage.  This
+#   pass strengthens the EM sector and the lambda term only.
 # ============================================================================
 
 # Output is captured via stdout redirection by the runner.
@@ -87,7 +93,7 @@ out('')
 # (B) The lambda-constraint term -lambda(1/2 - 6 phi_i phi^i): its EL content
 # ----------------------------------------------------------------------------
 out('-' * 70)
-out('(B) lambda-constraint term  -lambda(1/2 - 6 phi_i phi^i)  (DT-specific)')
+out('(B) lambda term  -lambda(1/2 - 6 phi_i phi^i)  (DT-specific)')
 out('-' * 70)
 
 var('lam s phi0 phi1 phi2 phi3')
@@ -95,12 +101,14 @@ phi = [phi0, phi1, phi2, phi3]                       # gauge vector phi_i (lower
 phisq = sum(eta[i] * phi[i]^2 for i in range(4))     # phi_i phi^i = eta^{ij} phi_i phi_j
 Lc = -lam * (1/2 - 6 * phisq)
 
-# EL w.r.t. the multiplier lambda  ->  the constraint
+# MULTIPLIER reading (superseded): EL w.r.t. lambda -> the constraint
 dLc_dlam = diff(Lc, lam).simplify_full()
-out('  dLc/dlambda = %s        (= -(1/2 - 6 phi_i phi^i))' % dLc_dlam)
+out('  [multiplier reading, SUPERSEDED] dLc/dlambda = %s' % dLc_dlam)
 constraint_sol = solve(1/2 - 6 * s == 0, s)          # s stands for phi_i phi^i
-out('  EL(lambda) = 0  =>  phi_i phi^i = %s   (unity-scale-factor normalisation)'
+out('  [multiplier reading, SUPERSEDED] EL(lambda) = 0 => phi_i phi^i = %s'
     % constraint_sol[0].rhs())
+out('  [constant reading, Weyl] lambda is not varied: no norm constraint;')
+out('    the -lambda/2 piece is a cosmological constant (weyl_lambda_reading).')
 assert constraint_sol[0].rhs() == QQ(1)/12
 
 # EL w.r.t. phi_k  ->  the source term entering the gauge (Maxwell) field eq
@@ -116,8 +124,9 @@ out('  dLc/dphi_k = %s' % src)
 out('  dLc/dphi_k = 12 lambda phi^k  (source added to the gauge field eq): %s   [%s]'
     % (ok_source, 'VERIFIED' if ok_source else 'FAIL'))
 assert ok_source
-out('  => the constraint (i) pins the gauge-vector norm phi_i phi^i = 1/12, and')
-out('     (ii) sources the Maxwell EL:  A * div_mu F^{mu nu} + 12 lambda phi^nu = 0.')
+out('  => on either reading 12 lambda phi^k enters the gauge field equation:')
+out('     A * div_mu F^{mu nu} + 12 lambda phi^nu = 0 -- on the constant (Weyl)')
+out('     reading a Proca-type mass, Planck-scale (weyl_vector_mass).')
 out('')
 
 # ----------------------------------------------------------------------------
@@ -125,12 +134,13 @@ out('=' * 70)
 out('T1.9 STRENGTHENING SUMMARY:')
 out('  (A) Maxwell EL generalised from one plane wave to ARBITRARY A:')
 out('      div_mu F^{mu nu} = box A^nu - d^nu(div A)  [VERIFIED, general]')
-out('  (B) lambda-constraint (previously untouched) given explicit EL content:')
-out('      EL(lambda) => phi^2 = 1/12 ; EL(phi_k) => source 12 lambda phi^k [VERIFIED]')
+out('  (B) lambda term given explicit EL content:')
+out('      EL(phi_k) => 12 lambda phi^k (either reading)            [VERIFIED]')
+out('      EL(lambda) => phi^2 = 1/12 only on the SUPERSEDED multiplier reading;')
+out('      on Weyl\'s constant reading: Lambda != 0 and a Proca-type mass.')
 out('')
-out('  Still cited, not derived (out of scope): the Einstein-Hilbert variation')
-out('  delta INT R sqrt(-g) -> G_{mu nu} (standard Weyl-1918; no symbolic')
-out('  variational calculus for the general metric here).')
+out('  Einstein-Hilbert variation: not derived here; derived for DT\'s own')
+out('  action (Eq 67) in Layer3/Sage/einstein_from_dt_action.sage.')
 out('=' * 70)
 
 # (result captured via stdout redirection by the runner)

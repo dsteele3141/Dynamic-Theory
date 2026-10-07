@@ -6,8 +6,11 @@
 #   Supplementary_Material.pdf - §S1, Appendix A [C9].
 #
 # Verifies F=dA, a concrete Maxwell solution, and FLRW Einstein-tensor
-# consistency. The Einstein-Hilbert variation is labelled as cited, not
-# derived here.
+# consistency. The Einstein-Hilbert variation is not derived in THIS script;
+# it is derived for DT's own action (Report Eq 67) in
+# Layer3/Sage/einstein_from_dt_action.sage (4D and 5D metric families plus an
+# off-diagonal instance), and weyl_lambda_reading.sage / weyl_vector_mass.sage
+# settle the lambda term and the gauge vector (2026-10-07).
 
 from sage.all import *
 import os
@@ -102,7 +105,8 @@ ok("div_mu G^{mu nu}=0 on FLRW", divG_zero)
 print("\nSummary:")
 print("  Verified here: F=dA identities, one concrete Maxwell EL solution, and")
 print("  FLRW Einstein-tensor consistency/order checks.")
-print("  Not derived here: the general Einstein-Hilbert variation")
-print("  delta INT R sqrt(-g) -> G_{mu nu}. That remains a trusted external")
-print("  mathematical dependency, not an unresolved physics dispute.")
+print("  Not derived in this script: the Einstein-Hilbert variation")
+print("  delta INT R sqrt(-g) -> G_{mu nu}. Derived for DT's own action (Eq 67)")
+print("  in Layer3/Sage/einstein_from_dt_action.sage (metric families + an")
+print("  off-diagonal instance); the fully general identity is standard (Weyl 1918).")
 print("=" * 70)
