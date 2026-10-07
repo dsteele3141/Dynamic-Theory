@@ -80,7 +80,7 @@ forms, hard-coded-verdict anti-patterns, Sage-API regressions, the
 stdout-capture output convention, and that each script's result is
 traceback/Error/FAIL-free; it also checks the Cadabra cross-checks in
 `Layer{N}/Cadabra/` (run with `cadabra2 file.cdb > ../cadabra-results/file.out.txt`).
-Current state (see `linter.out.txt`): **190 OK, 0 WARN, 0 FAIL — CLEAN**. Figure-generator scripts (`plot_*.sage`)
+Current state (see `linter.out.txt`): **192 OK, 0 WARN, 0 FAIL — CLEAN**. Figure-generator scripts (`plot_*.sage`)
 emit PNGs into `sage-results/` and are skipped by the linter.
 
 ## Provenance
