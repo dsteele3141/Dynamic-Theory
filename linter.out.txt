@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-08 15:58:27
+Run: 2026-10-08 16:24:16
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 101  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 102  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -171,6 +171,10 @@ beta_spectrum_two_body.sage
 black_hole_ringdown.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 black_hole_ringdown.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+blackett_coupling_bodies.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+blackett_coupling_bodies.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
 charge_quantisation_prediction.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
@@ -458,6 +462,6 @@ yangmills_field_structure.sage
   [OK  ] signature consistent: all 24 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 239    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 241    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================

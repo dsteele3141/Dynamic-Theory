@@ -34,6 +34,7 @@ its structure supports, plus shared assumptions, fits the data.
 | G4 | GR strong-field reading, not e^{-lambda/r} as a metric | SELECTED (ringdown, EHT) | GR's Kerr | matches LIGO/EHT | `black_hole_ringdown.sage` |
 | G5 | Lorentzian signature | DT-SAVES | GR assumes it | forced by the stability Hessian (T1.6) | Layer 1, `T1_6` |
 | G6 | tau-dot_0 (dark-matter floor) | WILLIAMS DISCREPANCY (his tau-dot_0 ~ 5e5 excluded by consistency; tau-dot_0 -> 0, the GR limit, adopted: dark matter then unexplained, as in GR) | none | shape right, size 1e-3..1e-7 (FLAG) | `gr_limit_domain.sage` |
+| G7 | Williams' magnetic moment of a neutral spinning body, mu = (beta/2) L, compared with magnetometer data | WILLIAMS DISCREPANCY (magnetometer reading excluded); gravitomagnetic reading SELECTED (= GR frame dragging, recovered) | GR: Lense-Thirring field G J/(2 c^2 r^3) | Blackett's 1947 law with beta_B = 1/sqrt(4 pi). Earth to ~10% only with beta = sqrt(eps0 G) (Eq 10.19 value); the Coulomb->Newton ratio is sqrt(4 pi eps0 G) (Eq 10.53), off by 3.5x: an internal slip. As a magnetometer field: Moon >280x, Mars >1000x (no dynamo to cancel), ms pulsars ~1e7, solar/geomagnetic reversals forbid a fixed spin-aligned part. As the source says (5D gravitational field), with the self-consistent beta it is the gravitomagnetic dipole: recovery, no prediction | `blackett_coupling_bodies.sage` |
 
 ## Quantum / weak sector (Route 3, charge sector)
 
@@ -64,7 +65,7 @@ its structure supports, plus shared assumptions, fits the data.
 - DT-SAVES: G5
 - DT-SPECIFIC (counts against): none (Q4 derived). DT-SPECIFIC but DECOUPLED (no cost to recovery; a free parameter of the unobserved partner sector): Q17
 - DERIVED (was an assumption): Q4
-- WILLIAMS DISCREPANCY (noted, data-selected reading adopted): G6, Q7, Q8, Q11 (and Williams' readings in Q3, Q9, Q10)
+- WILLIAMS DISCREPANCY (noted, data-selected reading adopted): G6, G7, Q7, Q8, Q11 (and Williams' readings in Q3, Q9, Q10)
 
 ## SM inputs: postulated by the SM vs supplied by DT (2026-10-07)
 
