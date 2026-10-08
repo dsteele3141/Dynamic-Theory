@@ -5,7 +5,7 @@
 #   rotation curves, the MOND scale).  Solar-system inputs (IMPORTED, not
 #   re-derived): Mercury perihelion from MESSENGER ranging (Park et al.,
 #   AJ 153 (2017) 121: beta-1 = (-2.7 +- 3.9)e-5); Gdot/G from lunar laser
-#   ranging (Hofmann, Mueller & Biskupek, A&A 613 (2018) A30, ~1e-13 /yr --
+#   ranging (Hofmann & Mueller, CQG 35 (2018) 035015: (7.1 +- 7.6)e-14 /yr --
 #   a GR-framework reduction, NOT re-derived through DT's drifting units).
 # Builds on dark_matter_rotation_curves.sage, G_variation_constraints.sage,
 #   black_hole_ringdown.sage (strong-field fork), matter_source_tab.sage.
