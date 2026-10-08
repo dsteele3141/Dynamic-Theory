@@ -62,7 +62,7 @@ its structure supports, plus shared assumptions, fits the data.
 - SHARED (neutral): G1, Q1, Q2/Q3, Q5, Q6, Q9, Q10, Q12, Q13, Q14, Q15, Q16
 - SELECTED by data: G3, G4, Q3 (the hand only; 8x8 restored as a lepton doublet), Q9, Q10 (G2 upgraded to required)
 - DT-SAVES: G5
-- DT-SPECIFIC (counts against): none (Q4 derived)
+- DT-SPECIFIC (counts against): none (Q4 derived). DT-SPECIFIC but DECOUPLED (no cost to recovery; a free parameter of the unobserved partner sector): Q17
 - DERIVED (was an assumption): Q4
 - WILLIAMS DISCREPANCY (noted, data-selected reading adopted): G6, Q7, Q8, Q11 (and Williams' readings in Q3, Q9, Q10)
 
