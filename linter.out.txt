@@ -1,8 +1,8 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-08 14:40:44
+Run: 2026-10-08 14:49:27
 Scanned: /home/dsteele/lean/Dynamic-Theory
-Sage scripts: 99  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
+Sage scripts: 100  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
 
@@ -229,6 +229,11 @@ gateway_london_quantisation.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 gateway_london_quantisation.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
+gauge_fields_halfline.out.txt
+  [OK  ] runtime: no traceback/Error/FAIL in result output.
+gauge_fields_halfline.sage
+  [OK  ] path: stdout-capture convention (no self-managed output path).
+  [OK  ]:116 signature list [1,-1,-1,-1,-1]: spacelike mass.
 gr_limit_domain.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 gr_limit_domain.sage
@@ -446,9 +451,9 @@ yangmills_field_structure.sage
 
 ### (corpus)
 (cross-file)
-  [OK  ] signature consistent: all 23 g44 definition(s) spacelike (g44 < 0).
+  [OK  ] signature consistent: all 24 g44 definition(s) spacelike (g44 < 0).
 
 ========================================================================
-SUMMARY    OK: 234    INFO: 0    WARN: 0    FAIL: 0
+SUMMARY    OK: 237    INFO: 0    WARN: 0    FAIL: 0
 RESULT: CLEAN -- no inconsistencies detected.
 ========================================================================
