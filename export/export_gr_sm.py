@@ -229,6 +229,10 @@ def main():
           "Do not edit: change the source repository and regenerate.\n" % head)
     if "--link-lake" in sys.argv:
         link_lake(tgt)
+    # linter.out.txt is part of the published record; regenerate it on every export.
+    subprocess.run(["python3", "linter.py"], cwd=tgt, check=True, stdout=subprocess.DEVNULL)
+    if "RESULT: CLEAN" not in open(os.path.join(tgt, "linter.out.txt"), encoding="utf-8").read():
+        die("linter not CLEAN in the exported copy; see linter.out.txt")
     n = {k: sum(f.endswith(k) for f in files) for k in (".sage", ".lean", ".cdb")}
     print("exported to %s: %d Sage, %d Lean, %d Cadabra (source @ %s)"
           % (tgt, n[".sage"], n[".lean"], n[".cdb"], head))
