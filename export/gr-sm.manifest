@@ -49,7 +49,7 @@ Layer2/Lean/T2_8_DiracWithFields.lean
 Layer2/Cadabra/dirac_with_fields.cdb
 Layer2/Sage/dirac_repn_and_moment_check.sage
 
-## Layer boundary and Layer 3 inputs: quantum condition, 4D surface, a0 from shock data, non-singular potential, u4 = 0 (manuscript Sec. 2.3, 7)
+## Layer boundary and Layer 3 inputs: quantum condition, u4 = 0, 4D surface, weak field, a0 from shock data (manuscript Sec. 2.3, 3, 7)
 Layer3/Sage/gateway_london_quantisation.sage
 Layer3/Lean/T2_10_London.lean
 Layer3/Sage/T2_11_hypersurface_metric.sage
@@ -57,15 +57,9 @@ Layer3/Sage/T2_14_schwarzschild_5D_sage.sage
 Layer3/Sage/T2_14_schwarzschild_5D_sympy.sage
 Layer3/Sage/T2_12_viscous_stress.sage
 Layer3/Sage/T2_13_shock_viscosity.sage
-Layer3/Sage/T2_6_self_energy_sage.sage
-Layer3/Sage/T2_6_self_energy_sympy.sage
-Layer3/Sage/T2_5_gauge_pressure.sage
 Layer3/Sage/mass_sector_gauge_vs_curvature.sage
 Layer3/Sage/u4_rest_mass_nonconservation.sage
 Layer3/Sage/weak_field_poisson.sage
-Layer3/Sage/k_nuclide_anchor.sage
-Layer3/Sage/self_energy_assembly_factors.sage
-Layer3/Sage/v0_source_law.sage
 
 ## Recovery of general relativity (manuscript Sec. 3)
 Layer3/Sage/gr_on_4d_surface.sage
