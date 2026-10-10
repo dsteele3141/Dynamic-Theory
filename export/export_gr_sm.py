@@ -21,6 +21,8 @@ ROOT_FILES = ["lean-toolchain", "lake-manifest.json", "Basic.lean", "PhyslibComp
               "LICENSE", ".gitignore", "ASSUMPTIONS.md", "linter.py"]
 RESULTS = {"Sage": "sage-results", "Lean": "lean-results", "Cadabra": "cadabra-results"}
 TITLE = "Dynamic Theory: General Relativity and the Standard Model"
+SI_SECTION = {"F": "S2", "G": "S3", "S": "S4", "P": "S5"}   # code index is Sec. S6
+POINTER = "Supplementary_Material.pdf"                      # full-SI pointer, replaced
 
 
 def die(msg):
@@ -28,7 +30,8 @@ def die(msg):
 
 
 def read_manifest():
-    sections, cur = [], None
+    """Sections [(heading, [path])], the flat path list, and {path: [tag]}."""
+    sections, cur, tags = [], None, {}
     for raw in open(MANIFEST, encoding="utf-8"):
         line = raw.strip()
         if line.startswith("## "):
@@ -37,14 +40,54 @@ def read_manifest():
         elif line and not line.startswith("#"):
             if cur is None:
                 die("entry before first section: " + line)
-            cur[1].append(line)
+            path, *rest = line.split()
+            if path.endswith((".sage", ".lean", ".cdb")):
+                if len(rest) != 1 or not re.fullmatch(r"[FGSP]\d+(,[FGSP]\d+)*", rest[0]):
+                    die("script without a valid SI step tag: " + line)
+                tags[path] = rest[0].split(",")
+            elif rest:
+                die("data file with a tag: " + line)
+            cur[1].append(path)
     files = [f for _, fs in sections for f in fs]
     missing = [f for f in files if not os.path.isfile(os.path.join(SRC, f))]
     if missing:
         die("missing in source:\n  " + "\n  ".join(missing))
     if len(set(files)) != len(files):
         die("duplicate manifest entries")
-    return sections, files
+    return sections, files, tags
+
+
+def pointer(tags):
+    secs = sorted({SI_SECTION[t[0]] for t in tags})
+    return "Supplementary Materials: step%s %s, Sec. %s (code index: Sec. S6)." % (
+        "s" if len(tags) > 1 else "", ", ".join("[%s]" % t for t in tags), ", ".join(secs))
+
+
+def retag(tgt, rel, tags):
+    """Point the header of an exported script at its step in the short SI.
+
+    The source headers cite the full stand-alone SI ([Cn] tags); the restricted
+    repo accompanies the short SI, so the pointer is rewritten in the copy only.
+    """
+    path = os.path.join(tgt, rel)
+    lines = open(path, encoding="utf-8").read().split("\n")
+    hits = [i for i, l in enumerate(lines) if POINTER in l]
+    if len(hits) > 1:
+        die("more than one SI pointer in " + rel)
+    if hits:
+        i = hits[0]
+        lead = "# " if lines[i].lstrip().startswith("#") else "  "
+        lines[i] = lead + pointer(tags)
+        if i and "Full derivation, context and provenance" in lines[i - 1]:
+            del lines[i - 1]
+    elif rel.endswith(".sage"):
+        rules = [i for i, l in enumerate(lines[:40]) if l.startswith("# ---")]
+        if len(rules) < 2:
+            die("no header block to tag in " + rel)
+        lines.insert(rules[1], "# " + pointer(tags))
+    else:
+        die("no SI pointer to rewrite in " + rel)
+    write(tgt, rel, "\n".join(lines))
 
 
 def module(path):
@@ -163,12 +206,14 @@ def main():
     tgt = os.path.abspath(os.path.expanduser(args[0] if args else "~/lean/Dynamic-Theory-GR-SM"))
     if os.path.commonpath([tgt, SRC]) == SRC:
         die("target must lie outside the source repository")
-    sections, files = read_manifest()
+    sections, files, tags = read_manifest()
     mods = lean_closure([f for f in files if f.endswith(".lean")])
     prepare_target(tgt)
     for f in files:
         for g in [f] + companions(f):
             copy(g, tgt)
+    for f, t in tags.items():
+        retag(tgt, f, t)
     for f in ROOT_FILES:
         copy(f, tgt)
     gen_lean(tgt, mods)
