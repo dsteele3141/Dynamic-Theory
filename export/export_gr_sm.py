@@ -169,8 +169,8 @@ def gen_lean(tgt, mods):
 
 def gen_readme(tgt, sections, files):
     L = ["# " + TITLE, "",
-         "Code accompanying the manuscript *Dynamic Theory: recovery of the gravitational",
-         "and particle sectors*. It contains only the derivations",
+         "Code accompanying the manuscript *Recovery of the gravitational and particle",
+         "sectors in Dynamic Theory*. It contains only the derivations",
          "and checks that the manuscript relies on.", "",
          "## Tools", "",
          "- **SageMath** (`Layer*/Sage/*.sage`): assertion-driven derivations; every check",
