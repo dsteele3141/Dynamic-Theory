@@ -20,7 +20,7 @@ KEEP = {".git", ".lake"}
 ROOT_FILES = ["lean-toolchain", "lake-manifest.json", "Basic.lean", "PhyslibCompat.lean",
               "LICENSE", ".gitignore", "ASSUMPTIONS.md", "linter.py"]
 RESULTS = {"Sage": "sage-results", "Lean": "lean-results", "Cadabra": "cadabra-results"}
-TITLE = "Dynamic Theory: General Relativity and the Standard Model"
+TITLE = "Dynamic Theory: the gravitational and particle sectors"
 SI_SECTION = {"F": "S2", "G": "S3", "S": "S4", "P": "S5"}   # code index is Sec. S6
 POINTER = "Supplementary_Material.pdf"                      # full-SI pointer, replaced
 
@@ -169,8 +169,8 @@ def gen_lean(tgt, mods):
 
 def gen_readme(tgt, sections, files):
     L = ["# " + TITLE, "",
-         "Code accompanying the manuscript *Dynamic Theory: recovery of General Relativity",
-         "and the Standard Model from conservation of mass*. It contains only the derivations",
+         "Code accompanying the manuscript *Dynamic Theory: recovery of the gravitational",
+         "and particle sectors*. It contains only the derivations",
          "and checks that the manuscript relies on.", "",
          "## Tools", "",
          "- **SageMath** (`Layer*/Sage/*.sage`): assertion-driven derivations; every check",
