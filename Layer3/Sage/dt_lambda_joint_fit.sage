@@ -85,7 +85,7 @@ NALL = len(DATA)
 # --- systematic covariance (same file as pantheon_systematic_covariance) ----
 HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else "."
 vals = None
-for p in [os.path.join(HERE, "pantheon_sys_DS17f.txt"), "Layer3/Sage/pantheon_sys_DS17f.txt",
+for p in [os.path.join(HERE, "pantheon_sys_DS17f.txt"), "Sage/pantheon_sys_DS17f.txt", "Layer3/Sage/pantheon_sys_DS17f.txt",
           "pantheon_sys_DS17f.txt"]:
     try:
         toks = open(p).read().split()

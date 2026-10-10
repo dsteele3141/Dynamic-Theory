@@ -1,0 +1,112 @@
+# Manifest for the restricted repository "Dynamic Theory: GR and SM".
+# Holds ONLY what the Physica Scripta manuscript relies on, plus dependencies.
+# The restricted repo is GENERATED from this list by export/export_gr_sm.py;
+# never edit the generated copy. Each .sage brings its sage-results/*.out.txt,
+# each .lean its lean-results/*.out.txt (if any), each .cdb its cadabra-results.
+# "## " lines are section headings, reused in the generated README.
+
+## Layer 1: the three laws, stability metric, Lorentzian signature, Weyl connection (manuscript Sec. 2.1)
+Layer1/Sage/T1_1-3_integrating_factor.sage
+Layer1/Lean/T1_1_IntegratingFactor.lean
+Layer1/Lean/T1_1_Universality.lean
+Layer1/Lean/T1_2_AbsoluteVelocity.lean
+Layer1/Lean/T1_3_Entropy.lean
+Layer1/Sage/T1_4_maxwell_relations.sage
+Layer1/Lean/T1_4_MaxwellRelations.lean
+Layer1/Sage/T1_10_equilibrium.sage
+Layer1/Lean/T1_10_Equilibrium.lean
+Layer1/Sage/T1_5_stability_conditions.sage
+Layer1/Lean/T1_5_Sylvester.lean
+Layer1/Sage/T1_6_stability_metric.sage
+Layer1/Lean/T1_6_StabilityMetric.lean
+Layer1/Lean/T1_6_SignatureNecessity.lean
+Layer1/Lean/T1_6_SignatureInertia.lean
+Layer1/Sage/T1_6_general_lorentzian_necessity.sage
+Layer1/Lean/T1_7_8_Connection.lean
+Layer1/Sage/T1_9_weyl_variational.sage
+Layer1/Cadabra/maxwell_variation.cdb
+Layer1/Sage/T1_8_conformal_gauge.sage
+Layer1/Sage/T1_8_weyl_integrability.sage
+Layer1/Sage/T1_9_weyl_strengthening.sage
+
+## Layer 2: the 5D manifold, five-force, field equations, 5D Dirac ansatz (manuscript Sec. 2.2, 4.1)
+Layer2/Sage/T2_1_5D_minkowski.sage
+Layer2/Lean/T2_1_Minkowski5D.lean
+Layer2/Lean/PhyslibBridge.lean
+Layer2/Sage/setup.sage
+Layer2/Sage/christoffel_connection.sage
+Layer2/Sage/bianchi_maxwell.sage
+Layer2/Sage/energy_momentum_tensor.sage
+Layer2/Lean/T2_3_EnergyMomentum.lean
+Layer2/Sage/force_density.sage
+Layer2/Lean/T2_4_ForceDensity.lean
+Layer2/Cadabra/force_density.cdb
+Layer2/Sage/dirac_algebra.sage
+Layer2/Lean/T2_7_DiracFactorisation.lean
+Layer2/Lean/T2_7_PositivityRoute.lean
+Layer2/Sage/dirac_with_fields.sage
+Layer2/Lean/T2_8_DiracWithFields.lean
+Layer2/Cadabra/dirac_with_fields.cdb
+Layer2/Sage/dirac_repn_and_moment_check.sage
+
+## Layer boundary and Layer 3 inputs: quantum condition, 4D surface, a0 from shock data, non-singular potential, u4 = 0 (manuscript Sec. 2.3, 7)
+Layer3/Sage/gateway_london_quantisation.sage
+Layer3/Lean/T2_10_London.lean
+Layer3/Sage/T2_11_hypersurface_metric.sage
+Layer3/Sage/T2_14_schwarzschild_5D_sage.sage
+Layer3/Sage/T2_14_schwarzschild_5D_sympy.sage
+Layer3/Sage/T2_12_viscous_stress.sage
+Layer3/Sage/T2_13_shock_viscosity.sage
+Layer3/Sage/T2_6_self_energy_sage.sage
+Layer3/Sage/T2_6_self_energy_sympy.sage
+Layer3/Sage/T2_5_gauge_pressure.sage
+Layer3/Sage/mass_sector_gauge_vs_curvature.sage
+Layer3/Sage/u4_rest_mass_nonconservation.sage
+Layer3/Sage/weak_field_poisson.sage
+Layer3/Sage/k_nuclide_anchor.sage
+Layer3/Sage/self_energy_assembly_factors.sage
+Layer3/Sage/v0_source_law.sage
+
+## Recovery of general relativity (manuscript Sec. 3)
+Layer3/Sage/gr_on_4d_surface.sage
+Layer3/Sage/einstein_equations_recovery.sage
+Layer3/Sage/einstein_from_dt_action.sage
+Layer3/Sage/weyl_lambda_reading.sage
+Layer3/Sage/weyl_vector_mass.sage
+Layer3/Sage/weyl_ghilencea_comparison.sage
+Layer3/Sage/kk_radion_g44.sage
+Layer3/Sage/test_body_motion.sage
+Layer3/Sage/matter_source_tab.sage
+Layer3/Sage/gravitational_radiation.sage
+Layer3/Sage/exact_ppwave_lift.sage
+Layer3/Sage/black_hole_ringdown.sage
+Layer3/Sage/gr_limit_domain.sage
+
+## Recovery of the Standard Model (manuscript Sec. 4)
+Layer3/Sage/T2_9_spin_states.sage
+Layer3/Lean/T2_9_SpinStates.lean
+Layer3/Sage/weak_parity.sage
+Layer3/Sage/weak_chirality_u4.sage
+Layer3/Sage/noflux_boundary_derivation.sage
+Layer3/Sage/weak_va_coupling.sage
+Layer3/Sage/su2_from_5d.sage
+Layer3/Sage/weak_neutral_current.sage
+Layer3/Sage/mass_term_su2.sage
+Layer3/Sage/su3_larger_rep.sage
+Layer3/Sage/strong_sector_su3.sage
+Layer3/Sage/gauge_fields_halfline.sage
+Layer3/Sage/beta_spectrum_two_body.sage
+Layer3/Sage/neutrino_helicity.sage
+Layer3/Sage/neutron_lifetime_tunnelling.sage
+Layer3/Sage/hydrogen_nonsingular_spectrum.sage
+
+## Predictions and bounds from departures from the restrictive assumptions (manuscript Sec. 6)
+Layer3/Sage/charge_quantisation_prediction.sage
+Layer3/Sage/heavy_massaxis_partners.sage
+Layer3/Sage/blackett_coupling_bodies.sage
+Layer3/Sage/T2_2_charge_conservation.sage
+Layer3/Sage/u4_relaxation_bounds.sage
+Layer3/Sage/pantheon_dark_energy_fit.sage
+Layer3/Sage/dt_lambda_joint_fit.sage
+Layer3/Sage/pantheon_sys_DS17f.txt
+Layer3/Sage/hbar_potential_clocks.sage
