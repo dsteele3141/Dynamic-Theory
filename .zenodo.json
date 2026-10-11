@@ -9,5 +9,5 @@
       "orcid": "0000-0002-9822-8753"
     }
   ],
-  "description": "Verification corpus for the Dynamic Theory of Pharis E. Williams (LA-8370-MS, 1980). Two verification layers, Lean 4 / Mathlib / Physlib proofs and assertion-driven SageMath / SymPy scripts, organised by the three-layer reading of the Chapter-1 flow chart, with run logs and a per-layer index. The code behind the article \"Recovery of the gravitational and particle sectors in Dynamic Theory\" is the restricted companion repository Dynamic-Theory-GR-SM, generated from this one."
+  "description": "Verification corpus for the Dynamic Theory of Pharis E. Williams (LA-8370-MS, 1980). Two verification layers, Lean 4 / Mathlib / Physlib proofs and assertion-driven SageMath / SymPy scripts, organised in three layers that divide the Chapter-1 flow chart, with run logs and a per-layer index. The code behind the article \"Recovery of the gravitational and particle sectors in Dynamic Theory\" is the restricted companion repository Dynamic-Theory-GR-SM, generated from this one."
 }
