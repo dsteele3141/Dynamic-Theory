@@ -129,7 +129,7 @@ ok("A1: EL_k = Q^-1/2 [gamma(g a + Gamma uu)_k + u_k dgamma/ds - Q d_k gamma]"
    " - (gamma u_k/2) Q^-3/2 dQ/ds, for all k, general metric", allok)
 print("    At arc-length (Q = 1, dQ/ds = 0) EL = 0 reads")
 print("      gamma f_k = d_k gamma - u_k dgamma/ds,  f_k = (g a + Gamma uu)_k")
-print("    and dgamma/ds = a0 u4 (q4 = gamma/a0) gives Eq 62 / manuscript Eq 6.")
+print("    and dgamma/ds = a0 u4 (q4 = gamma/a0) gives report Eq 62.")
 
 # ---------------------------------------------------------------------------
 print("\n[B] The u4 term is the space-time-matter fifth force")
