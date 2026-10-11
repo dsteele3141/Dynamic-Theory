@@ -1,3 +1,5 @@
+SUPERSEDED by nontransverse_pressure_rederivation.sage: the falsification below was mis-scoped and does not stand.
+
 ======================================================================
 ELECTROGRAVITIC (longitudinal) WAVE -- a frequency-dependent radiation
 pressure, followed from the optical fit outward

@@ -13,6 +13,8 @@
 
 from sage.all import *
 
+print("SUPERSEDED by gr_limit_domain.sage: right shape, but ~1e-3 of the observed size on the natural reading; Tully-Fisher not derived.\n")
+
 
 def ok(label, cond):
     cond = bool(cond)

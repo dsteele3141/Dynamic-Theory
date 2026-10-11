@@ -104,9 +104,9 @@ name; several are negative or inconclusive results, recorded as such.
 | `Layer3/Sage/local_gdot_escape_candidates.sage` | candidate escapes from the local `Gdot/G` bound |
 | `Layer3/Sage/G_variation_constraints.sage` | the imported `Gdot/G` constraints |
 | `Layer3/Sage/density_screening_nogo.sage` | the density-screening escape, and why it fails |
-| `Layer3/Sage/nonsingular_cosmology_cmb.sage` | non-singular cosmology and the CMB |
+| `Layer3/Sage/nonsingular_cosmology_cmb.sage` (part (2) qualified; see `nontransverse_pressure_rederivation.sage`) | non-singular cosmology and the CMB |
 | `Layer3/Sage/nonsingular_black_holes.sage` | singularity removal in the mass sector |
-| `Layer3/Sage/electrogravitic_wave_polarization.sage` | polarization of the 5D wave |
+| `Layer3/Sage/electrogravitic_wave_polarization.sage` (superseded; see `nontransverse_pressure_rederivation.sage`) | polarization of the 5D wave |
 | `Layer3/Sage/nontransverse_pressure_rederivation.sage` | radiation pressure of the non-transverse mode, re-derived |
 | `Layer3/Sage/quantized_orbits.sage` | the gravitational Bohr ladder |
 | `Layer3/Sage/moon_system_quantisation.sage` | the same ladder applied to a satellite system |

@@ -99,10 +99,11 @@ cited only where the report is insufficient.
 
 The `[Cn]` and `§Sn` pointers in the script headers refer to the stand-alone
 Supplementary Materials document; `INDEX.md` maps each code to its files.
-Two early book-sourced results were later revised and are marked in their headers
-and in `INDEX.md`: the dark-matter rotation curves (superseded by
-`gr_limit_domain.sage`) and the Earth magnetic moment (withdrawn; see
-`blackett_coupling_bodies.sage`).
+Three early book-sourced results were later revised and are marked in their
+headers, run logs and `INDEX.md`: the dark-matter rotation curves (superseded by
+`gr_limit_domain.sage`), the Earth magnetic moment (withdrawn; see
+`blackett_coupling_bodies.sage`) and the 5D-wave radiation-pressure falsification
+(mis-scoped; see `nontransverse_pressure_rederivation.sage`).
 
 ## Use of AI tools
 

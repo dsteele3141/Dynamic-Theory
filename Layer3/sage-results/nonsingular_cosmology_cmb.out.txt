@@ -1,3 +1,5 @@
+NOTE: the script-36 falsification used in part (2) was mis-scoped (nontransverse_pressure_rederivation.sage); part (2) is a tension, not a falsification.
+
 ======================================================================
 NON-SINGULAR COSMOLOGY (no Big Bang singularity) -- and the CMB it owes
 ======================================================================

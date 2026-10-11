@@ -1,4 +1,10 @@
 #!/usr/bin/env sage
+# SUPERSEDED (2026-07-03) by nontransverse_pressure_rederivation.sage: the mode is
+# non-transverse, not longitudinal (a term Williams declined), carries no magnetic
+# field and a scalar V4 dropped here, and the source gives two ratios of opposite
+# CMB sign. The falsification below was mis-scoped; it does not stand. Kept as the
+# record of the original claim; see INDEX.md.
+#
 # --------------------------------------------------------------------------
 # SOURCE: P. E. Williams, "The Dynamic Theory" (DT.tex) Ch.11 "Five Dimensional
 #   Waves" (Eqs 11.24, 11.74-11.130) and the "What's New" sections "Five
@@ -39,6 +45,8 @@
 # ============================================================================
 
 from sage.all import *
+
+print("SUPERSEDED by nontransverse_pressure_rederivation.sage: the falsification below was mis-scoped and does not stand.\n")
 
 
 def ok(label, cond):

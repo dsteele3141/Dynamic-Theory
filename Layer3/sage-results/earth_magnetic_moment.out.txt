@@ -1,3 +1,5 @@
+WITHDRAWN (see blackett_coupling_bodies.sage): the match uses beta = sqrt(eps0 G); Coulomb->Newton needs sqrt(4 pi eps0 G).
+
 ======================================================================
 EARTH MAGNETIC MOMENT -- parameter-free Layer-3 (mass-sector) postdiction
 ======================================================================

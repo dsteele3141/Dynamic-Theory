@@ -1,4 +1,8 @@
 #!/usr/bin/env sage
+# NOTE (2026-07-03): the script-36 falsification this relies on was mis-scoped
+# (nontransverse_pressure_rederivation.sage). The non-singular geometry stands;
+# the CMB attribution remains a softer tension, not a falsification.
+#
 # --------------------------------------------------------------------------
 # SOURCE: P. E. Williams, "The Dynamic Theory" (DT.tex) Ch.10 "Gauge
 #   Gravitational Fields" (cosmology of the non-singular potential, Eqs
@@ -35,6 +39,8 @@
 # ============================================================================
 
 from sage.all import *
+
+print("NOTE: the script-36 falsification used in part (2) was mis-scoped (nontransverse_pressure_rederivation.sage); part (2) is a tension, not a falsification.\n")
 
 
 def ok(label, cond):

@@ -1,3 +1,5 @@
+SUPERSEDED by gr_limit_domain.sage: right shape, but ~1e-3 of the observed size on the natural reading; Tully-Fisher not derived.
+
 ======================================================================
 DARK MATTER / ROTATION CURVES -- DT time-dependent gravity vs MOND & data
 ======================================================================

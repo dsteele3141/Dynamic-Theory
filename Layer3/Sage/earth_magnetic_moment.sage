@@ -14,6 +14,8 @@
 
 from sage.all import *
 
+print("WITHDRAWN (see blackett_coupling_bodies.sage): the match uses beta = sqrt(eps0 G); Coulomb->Newton needs sqrt(4 pi eps0 G).\n")
+
 
 def ok(label, cond):
     cond = bool(cond)
