@@ -13,7 +13,7 @@ the subset in
 is generated from this repository and carries the same scripts. Use that
 repository to reproduce the article.
 
-Organised by the three-layer reading of the Chapter-1 flow chart of the report:
+Organised in three layers that divide the Chapter-1 flow chart of the report:
 
 - **Layer 1** — Foundations of the space–time–matter geometry (the three laws,
   integrating factor, stability metric, Weyl geometry, Lorentzian signature).
