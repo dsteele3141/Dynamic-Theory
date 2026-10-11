@@ -196,7 +196,7 @@ def gen_readme(tgt, sections, files, tags, desc):
          "- **Cadabra2** (`Layer*/Cadabra/*.cdb`): independent tensor-algebra cross-checks;",
          "  output in `Layer*/cadabra-results/`.",
          ] if any(f.endswith(".cdb") for f in files) else []) + [
-         "- **Lean 4 + Mathlib + PhysLib** (`Layer*/Lean/*.lean`): machine-checked theorems.",
+         "- **Lean 4 + Mathlib + Physlib** (`Layer*/Lean/*.lean`): machine-checked theorems.",
          "  `AxiomCheck.lean` reports the axiom footprint of every `DTWilliams` declaration.", "",
          "## Running", "",
          "```",
