@@ -106,8 +106,8 @@ and in `INDEX.md`: the dark-matter rotation curves (superseded by
 
 ## Use of AI tools
 
-Given the scale of the verification, AI coding tools (Claude Code) were used to
-draft the SageMath and Lean implementations. Every Sage script is assertion-driven
-and every Lean proof is certified by the compiler, so the results are established by
-re-execution. The author reviewed all implementations and results, and is
+Given the scale of the verification, AI coding tools were used: Claude Code to
+draft the SageMath and Lean implementations, and Codex for independent review.
+Every Sage script is assertion-driven and every Lean proof is certified by the
+compiler, so the results are established by re-execution. The author reviewed all implementations and results, and is
 responsible for the content.
