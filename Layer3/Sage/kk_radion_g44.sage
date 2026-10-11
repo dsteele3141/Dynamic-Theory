@@ -10,7 +10,7 @@
 # Observational bound: Bertotti, Iess & Tortora, Nature 425 (2003) 374
 #   (Cassini): gamma - 1 = (2.1 +/- 2.3) x 10^-5.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, §6.1 (layer boundary), Appendix A.
+#   Supplementary Materials (stand-alone document) -- §S3, §6.1 (layer boundary), Appendix A.
 # --------------------------------------------------------------------------
 
 # ============================================================================

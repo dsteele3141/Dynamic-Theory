@@ -10,7 +10,7 @@
 #   General Theory of Relativity."  The Weyl connection is the one DT derives
 #   (T1.8; Report eqs 36-37, the W(p) term of T1.8).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S1 (T1.9), §S3, §6.1, Appendix A.
+#   Supplementary Materials (stand-alone document) -- §S1 (T1.9), §S3, §6.1, Appendix A.
 # Companions: einstein_equations_recovery.sage (conservation, Lovelock
 #   uniqueness, kappa = 8 pi G), gr_on_4d_surface.sage (u4 = 0 <=> K = 0).
 # --------------------------------------------------------------------------

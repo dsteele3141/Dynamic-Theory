@@ -1,11 +1,15 @@
 #!/usr/bin/env sage
+# SUPERSEDED (2026-10-07) by gr_limit_domain.sage: the flat floor is derived, but on
+# the natural reading it is ~1e-3 of the observed size, and the Tully-Fisher scaling
+# is not derived. Kept as the record of the original claim; see INDEX.md.
+#
 # Dark matter / rotation curves: DT's time-dependent gravitational field
 # reproduces MOND -- flat curves, the a = a_N(1 + r/r_c) law, the baryonic
 # Tully-Fisher relation v^4 = G M a0, and the a0 ~ c H0 scale.
 #
 # Source: P. E. Williams, "The Dynamic Theory", Ch. 3 Eqs (3.24)-(3.36), pp.68-70.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A.2 (Book corpus, script 23, B-M4).
+#   Supplementary Materials (stand-alone document) — §S3, Appendix A.2 (Book corpus, script 23, B-M4).
 
 from sage.all import *
 

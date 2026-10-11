@@ -2,7 +2,7 @@
 
 See `ASSUMPTIONS.md` for the assumption ledger (DT vs SM/GR, shared / DT-specific / selected / DT-saves).
 
-Maps the reference codes used in the Supplementary Material to the file(s) in this repository. `[Cn]` codes (Appendix A) restart per layer; Layer-3 **book-extension** scripts (Appendix A.2) are tagged by the §7 block (`B-Cn` charge/particle, `B-Mn` mass/gravity) they support. Lean modules carry the proofs; Sage scripts give symbolic cross-checks/illustrations.
+Maps the reference codes used in the stand-alone Supplementary Materials to the file(s) in this repository. `[Cn]` codes (Appendix A) restart per layer; Layer-3 **book-extension** scripts (Appendix A.2) are tagged by the §7 block (`B-Cn` charge/particle, `B-Mn` mass/gravity) they support. Lean modules carry the proofs; Sage scripts give symbolic cross-checks/illustrations.
 
 
 ## Layer 1 — Foundations: Space–Time–Matter Geometry
@@ -67,16 +67,16 @@ Maps the reference codes used in the Supplementary Material to the file(s) in th
 | B-C3 | `Layer3/Sage/lowZ_masses_vs_SEMF.sage` |
 | B-C4 | `Layer3/Sage/P1_radiation_pressure_a0.sage` |
 | B-C3 | `Layer3/Sage/nuclear_model_recovered.sage` |
-| B-M1 | `Layer3/Sage/earth_magnetic_moment.sage` |
+| B-M1 | `Layer3/Sage/earth_magnetic_moment.sage` (withdrawn; see `blackett_coupling_bodies.sage`) |
 | B-M2 | `Layer3/Sage/force_ratio.sage` |
 | B-M3 | `Layer3/Sage/perihelion_advance.sage` |
-| B-M4 | `Layer3/Sage/dark_matter_rotation_curves.sage` |
+| B-M4 | `Layer3/Sage/dark_matter_rotation_curves.sage` (superseded; see `gr_limit_domain.sage`) |
 
 ### Layer 3 — Constants and provenance (exploratory)
 
 Scripts that trace where the theory's two numerical constants come from. They are
 assertion-driven and linted like the rest, but they establish provenance rather
-than a `[Cn]` claim, so the Supplementary Material cites them by name.
+than a `[Cn]` claim, so the Supplementary Materials cites them by name.
 
 | Script | What it settles |
 |--------|-----------------|
@@ -89,7 +89,7 @@ than a `[Cn]` claim, so the Supplementary Material cites them by name.
 
 Book-sourced results outside the numbered `B-Cn`/`B-Mn` blocks: the secular
 gravitational time-dependence and its consequences, plus structural checks on
-waves, orbits and singularity removal. Discussed in the Supplementary Material by
+waves, orbits and singularity removal. Discussed in the Supplementary Materials by
 name; several are negative or inconclusive results, recorded as such.
 
 | Script | Subject |

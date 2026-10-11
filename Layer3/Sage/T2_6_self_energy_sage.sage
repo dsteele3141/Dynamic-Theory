@@ -3,7 +3,7 @@
 #
 # Source: Williams LA-8370-MS (1980), Section III, pages 103-110, eqs (79)-(104).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A [C7].
+#   Supplementary Materials (stand-alone document) — §S3, Appendix A [C7].
 #
 # ============================================================================
 # Claim: classical/4D EM gives a DIVERGENT self-energy, but the 5D Dynamic Theory

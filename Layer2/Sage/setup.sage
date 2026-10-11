@@ -3,7 +3,7 @@
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S2, Appendix A [C2].
+#   Supplementary Materials (stand-alone document) — §S2, Appendix A [C2].
 #
 # Stands up the SageManifolds pseudo-Riemannian tensor-calculus layer
 # (Christoffel, Ricci, Einstein tensor) needed for the curvature items, and

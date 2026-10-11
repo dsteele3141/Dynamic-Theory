@@ -1,11 +1,19 @@
-# Dynamic Theory — machine-verified supplementary code
+# Dynamic Theory — machine-verified code
 
-Machine-verification code and results for Pharis E. Williams' **Dynamic Theory**
-(DT). Key equations and derivations were transcribed from the report *The
-Dynamic Theory: A New View of Space, Time, and Matter* (LA-8370-MS, LASL, 1980)
-into Lean and Sage and independently verified here; the later book is consulted
-only as a secondary reference. Organised by the three-layer reading of Williams'
-Chapter-1 flow chart:
+Machine-verification code and results for the **Dynamic Theory** (DT) of Pharis E.
+Williams. Key equations and derivations were transcribed from the report *The
+Dynamic Theory: A New View of Space, Time, and Matter* (LA-8370-MS, 1980) into Lean
+and Sage and independently verified here; the later book is consulted only as a
+secondary reference.
+
+**Relation to the article.** This is the full working corpus. The code behind the
+article *Recovery of the gravitational and particle sectors in Dynamic Theory* is
+the subset in
+[Dynamic-Theory-GR-SM](https://github.com/dsteele3141/Dynamic-Theory-GR-SM), which
+is generated from this repository and carries the same scripts. Use that
+repository to reproduce the article.
+
+Organised by the three-layer reading of the Chapter-1 flow chart of the report:
 
 - **Layer 1** — Foundations of the space–time–matter geometry (the three laws,
   integrating factor, stability metric, Weyl geometry, Lorentzian signature).
@@ -80,7 +88,7 @@ forms, hard-coded-verdict anti-patterns, Sage-API regressions, the
 stdout-capture output convention, and that each script's result is
 traceback/Error/FAIL-free; it also checks the Cadabra cross-checks in
 `Layer{N}/Cadabra/` (run with `cadabra2 file.cdb > ../cadabra-results/file.out.txt`).
-Current state (see `linter.out.txt`): **199 OK, 0 WARN, 0 FAIL — CLEAN**. Figure-generator scripts (`plot_*.sage`)
+Current state (see `linter.out.txt`): **243 OK, 0 WARN, 0 FAIL — CLEAN**. Figure-generator scripts (`plot_*.sage`)
 emit PNGs into `sage-results/` and are skipped by the linter.
 
 ## Provenance
@@ -88,3 +96,18 @@ emit PNGs into `sage-results/` and are skipped by the linter.
 Every module/script carries a `SOURCE (primary)` header citing LA-8370-MS; the
 later book (*The Dynamic Theory: A New View of Space-Time-Matter*, 2011) is
 cited only where the report is insufficient.
+
+The `[Cn]` and `§Sn` pointers in the script headers refer to the stand-alone
+Supplementary Materials document; `INDEX.md` maps each code to its files.
+Two early book-sourced results were later revised and are marked in their headers
+and in `INDEX.md`: the dark-matter rotation curves (superseded by
+`gr_limit_domain.sage`) and the Earth magnetic moment (withdrawn; see
+`blackett_coupling_bodies.sage`).
+
+## Use of AI tools
+
+Given the scale of the verification, AI coding tools (Claude Code) were used to
+draft the SageMath and Lean implementations. Every Sage script is assertion-driven
+and every Lean proof is certified by the compiler, so the results are established by
+re-execution. The author reviewed all implementations and results, and is
+responsible for the content.

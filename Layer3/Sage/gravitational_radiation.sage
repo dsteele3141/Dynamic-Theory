@@ -15,7 +15,7 @@
 #   (GW170817: -3e-15 < (c_gw - c)/c < +7e-16); GW150914, PRL 116 (2016)
 #   061102 (binary black hole, no electromagnetic counterpart).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, §6.1 (layer boundary), Appendix A.
+#   Supplementary Materials (stand-alone document) -- §S3, §6.1 (layer boundary), Appendix A.
 # --------------------------------------------------------------------------
 
 # ============================================================================

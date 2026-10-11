@@ -9,7 +9,7 @@
 # Builds on gravitational_radiation.sage (linear mode count) and
 #   kk_radion_g44.sage (the g_44 restriction).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, Appendix A.
+#   Supplementary Materials (stand-alone document) -- §S3, Appendix A.
 # --------------------------------------------------------------------------
 
 # ============================================================================

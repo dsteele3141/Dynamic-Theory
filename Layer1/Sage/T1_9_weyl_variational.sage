@@ -3,7 +3,7 @@
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), eqs (38)-(39).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf - §S1, Appendix A [C9].
+#   Supplementary Materials (stand-alone document) - §S1, Appendix A [C9].
 #
 # Verifies F=dA, a concrete Maxwell solution, and FLRW Einstein-tensor
 # consistency. The Einstein-Hilbert variation is not derived in THIS script;

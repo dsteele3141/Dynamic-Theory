@@ -5,7 +5,7 @@
 #   developed in the book rather than the Report; the underpinning Weyl
 #   connection identity is LA-8370-MS (LASL, 1980), Eq (33).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S2, Appendix A [C9].
+#   Supplementary Materials (stand-alone document) — §S2, Appendix A [C9].
 
 from sage.all import *
 

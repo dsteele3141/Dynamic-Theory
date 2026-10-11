@@ -3,7 +3,7 @@
 #
 # Source: Williams LA-8370-MS (1980), Section III, pages 89-92, eqs (71)-(77).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A [C9].
+#   Supplementary Materials (stand-alone document) — §S3, Appendix A [C9].
 #
 # ============================================================================
 # The seven Maxwell-type equations (68),(70) are verified separately.

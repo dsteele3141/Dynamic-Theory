@@ -7,7 +7,7 @@
 #   field equations".  u4 = dy4/dt = 0 (Eq 1.36/10.6) is conservation of mass.
 #   The force law used is DT's (Report eqs 66-67; force density C5).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, §6.1 (layer boundary), Appendix A.
+#   Supplementary Materials (stand-alone document) -- §S3, §6.1 (layer boundary), Appendix A.
 # Companion: gr_on_4d_surface.sage (u4 = 0 <=> K = 0, Gauss-Codazzi).
 # --------------------------------------------------------------------------
 

@@ -5,7 +5,7 @@
 #   Eq-68d gauge sign (+ -> -) follows Williams' acknowledgement of the reversal
 #   found by Dr. Dan Ross.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S2, Appendix A [C3].
+#   Supplementary Materials (stand-alone document) — §S2, Appendix A [C3].
 
 from sage.all import *
 

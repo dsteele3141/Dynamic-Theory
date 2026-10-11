@@ -4,7 +4,7 @@
 #
 #  Source: P. E. Williams, LA-8370-MS (LASL, 1980), eqs (116), (117), (119).
 #  Full derivation, context and provenance:
-#    Supplementary_Material.pdf -- §S2, Appendix A [C8].
+#    Supplementary Materials (stand-alone document) -- §S2, Appendix A [C8].
 #
 #  Independent second engine for Layer2/Sage/dirac_with_fields.sage.  The Sage
 #  script checks the Clifford split (Eq 117) on explicit 8x8 matrices, but its

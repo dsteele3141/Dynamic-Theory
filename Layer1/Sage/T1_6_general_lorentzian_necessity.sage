@@ -2,7 +2,7 @@
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), stability form 5.47.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf - §S1, Appendix A [C12].
+#   Supplementary Materials (stand-alone document) - §S1, Appendix A [C12].
 from sage.all import *
 
 # The Sage companion to the T1.6 signature-necessity Lean trio. Those modules

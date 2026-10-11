@@ -12,7 +12,7 @@
 # Data: Bertotti, Iess & Tortora, Nature 425 (2003) 374; planetary-ephemeris
 #   bound |beta_PPN - 1| < ~1e-4 (Mercury perihelion).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, §6.1 (layer boundary), Appendix A.
+#   Supplementary Materials (stand-alone document) -- §S3, §6.1 (layer boundary), Appendix A.
 # --------------------------------------------------------------------------
 
 # ============================================================================

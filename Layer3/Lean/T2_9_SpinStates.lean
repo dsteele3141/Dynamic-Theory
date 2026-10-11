@@ -3,7 +3,7 @@
 
   Source: Williams LA-8370-MS (1980), pages 125-128.
   Full derivation, context and provenance:
-  Supplementary_Material.pdf — §S3, Appendix A [C6].
+  Supplementary Materials (stand-alone document) — §S3, Appendix A [C6].
 
   Note: doubled units (+1, -1, -3) represent source half-integers (+1/2, -1/2, -3/2).
 -/

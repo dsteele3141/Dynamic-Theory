@@ -3,7 +3,7 @@
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), eq 37.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf - §S1, Appendix A [C10].
+#   Supplementary Materials (stand-alone document) - §S1, Appendix A [C10].
 #
 # Weyl objection residual check: the conformal gauge introduces NO real
 # (observable) rescaling of physical lengths.

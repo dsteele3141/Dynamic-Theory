@@ -5,7 +5,7 @@
 #   of Time"), building on the Report-scoped T1.6 result (Eqs 16-19). The arrow
 #   synthesis is book-primary; the underlying signature/metric is Report-scoped.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf - §S1 (Appendix A.2, script 38).
+#   Supplementary Materials (stand-alone document) - §S1 (Appendix A.2, script 38).
 #
 # PLACEMENT: this is a LAYER-1 / FOUNDATIONAL topic (the arrow of time lives at
 #   the 2nd law + stability metric, above the L1->L2 junction); conceptually it

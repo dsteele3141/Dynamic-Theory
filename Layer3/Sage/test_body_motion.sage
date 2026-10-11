@@ -12,7 +12,7 @@
 #   induced-matter Kaluza-Klein theory (Mashhoon, Wesson & Liu, Gen. Rel.
 #   Grav. 30 (1998) 555; Wesson, "Space-Time-Matter", World Scientific 1999).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S2 [C1], §6.1 (layer boundary), Appendix A.
+#   Supplementary Materials (stand-alone document) -- §S2 [C1], §6.1 (layer boundary), Appendix A.
 # --------------------------------------------------------------------------
 
 # ============================================================================

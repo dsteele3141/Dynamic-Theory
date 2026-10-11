@@ -3,7 +3,7 @@
 #
 # Source: Williams LA-8370-MS (LASL, 1980), eqs 99, 103-104.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A [C7].
+#   Supplementary Materials (stand-alone document) — §S3, Appendix A [C7].
 
 from sage.all import *
 

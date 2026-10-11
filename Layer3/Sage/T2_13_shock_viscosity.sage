@@ -3,7 +3,7 @@
 #
 # Source: Williams LA-8370-MS (1980), Section III, pages 146-150.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A [C5].
+#   Supplementary Materials (stand-alone document) — §S3, Appendix A [C5].
 #
 # ============================================================================
 # T2.12 showed the hypersurface geometry contributes a

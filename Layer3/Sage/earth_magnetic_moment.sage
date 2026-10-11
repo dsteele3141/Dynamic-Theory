@@ -1,11 +1,16 @@
 #!/usr/bin/env sage
+# WITHDRAWN (2026-10-08) by blackett_coupling_bodies.sage: the match uses
+# beta = sqrt(eps0 G), but Coulomb->Newton needs sqrt(4 pi eps0 G) (Earth off 3.5x);
+# read as the 5D gravitational field it is GR frame dragging. Kept as the record of
+# the original claim; see INDEX.md.
+#
 # Earth's magnetic moment: a spinning neutral mass carries mu = (beta/2) I omega
 # with beta = sqrt(eps0 G), a parameter-free postdiction (no a0, no fit) within
 # ~6-15% of the measured dipole.
 #
 # Source: P. E. Williams, "The Dynamic Theory", Ch. 10 Eqs (10.19)+, pp.294-295.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A.2 (Book corpus, script 20, B-M1).
+#   Supplementary Materials (stand-alone document) — §S3, Appendix A.2 (Book corpus, script 20, B-M1).
 
 from sage.all import *
 

@@ -3,7 +3,7 @@
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section II.D, eqs (38)-(39).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf - §S1, Appendix A [C10].
+#   Supplementary Materials (stand-alone document) - §S1, Appendix A [C10].
 #
 # PURPOSE
 #   T1_9_weyl_variational.sage verified the Euler-Lagrange STRUCTURE of eq 39

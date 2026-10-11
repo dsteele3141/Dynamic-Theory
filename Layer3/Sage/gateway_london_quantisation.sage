@@ -4,7 +4,7 @@
 #
 # Source: Williams LA-8370-MS (1980), Section II.F, pages 64-72, eqs (55)-(57).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A [C1].
+#   Supplementary Materials (stand-alone document) — §S3, Appendix A [C1].
 
 from sage.all import *
 

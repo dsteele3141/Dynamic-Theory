@@ -3,7 +3,7 @@
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), eq 65; T2.10.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf - §S1, Appendix A [C10].
+#   Supplementary Materials (stand-alone document) - §S1, Appendix A [C10].
 #
 # The Dynamic Theory is a Weyl theory (T1.8), so Einstein's 1918 objection
 # applies prima facie: in Weyl geometry length transports as

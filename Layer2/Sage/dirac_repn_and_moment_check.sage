@@ -5,7 +5,7 @@
 #   ("The Dynamic Theory") eqs 6.28, 6.33 are cited where the Report is compared
 #   against the book transcription.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S2, Appendix A [C10].
+#   Supplementary Materials (stand-alone document) — §S2, Appendix A [C10].
 
 from sage.all import *
 

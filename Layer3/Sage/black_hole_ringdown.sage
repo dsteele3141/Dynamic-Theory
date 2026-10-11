@@ -14,7 +14,7 @@
 #   064030 (Kerr QNM fit); Event Horizon Telescope, ApJL 875 (2019) L1 and
 #   ApJL 930 (2022) L12 (M87*, Sgr A* rings consistent with Kerr shadows).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, Appendix A.
+#   Supplementary Materials (stand-alone document) -- §S3, Appendix A.
 # --------------------------------------------------------------------------
 
 # ============================================================================

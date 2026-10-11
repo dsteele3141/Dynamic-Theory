@@ -2,7 +2,7 @@
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), Eqs 2-6.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf - §S1, Appendix A [C1].
+#   Supplementary Materials (stand-alone document) - §S1, Appendix A [C1].
 from sage.all import *
 
 # Symbolic DEMONSTRATION of T1.1-T1.3, not an independent derivation:

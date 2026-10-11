@@ -22,7 +22,7 @@ ROOT_FILES = ["lean-toolchain", "lake-manifest.json", "Basic.lean", "PhyslibComp
 RESULTS = {"Sage": "sage-results", "Lean": "lean-results", "Cadabra": "cadabra-results"}
 TITLE = "Dynamic Theory: the gravitational and particle sectors"
 SI_SECTION = {"F": "S2", "G": "S3", "S": "S4", "P": "S5"}   # code index is Sec. S6
-POINTER = "Supplementary_Material.pdf"                      # full-SI pointer, replaced
+POINTER = "Supplementary Materials (stand-alone document)"                      # full-SI pointer, replaced
 
 
 def die(msg):

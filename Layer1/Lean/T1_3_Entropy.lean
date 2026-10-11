@@ -3,7 +3,7 @@
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), §II, eq (6) and the Clausius theorem.
   Full derivation, context and provenance:
-  Supplementary_Material.pdf — §S1, Appendix A [C4].
+  Supplementary Materials (stand-alone document) — §S1, Appendix A [C4].
 -/
 
 import Mathlib.Tactic

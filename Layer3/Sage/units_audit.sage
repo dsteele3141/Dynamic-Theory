@@ -15,7 +15,7 @@
 # (3.33)-(3.35), (12.53), Ch.7 (a0 shock fit). Uses only dimensions, no values
 # beyond the dimensionless force ratio.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A.
+#   Supplementary Materials (stand-alone document) — §S3, Appendix A.
 
 from sage.all import *
 from sympy import S as sS, sqrt as ssqrt

@@ -4,7 +4,7 @@
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section III.C, eqs (105), (108).
   Full derivation, context and provenance:
-  Supplementary_Material.pdf — §S2, Appendix A [C7].
+  Supplementary Materials (stand-alone document) — §S2, Appendix A [C7].
 -/
 
 import Mathlib

@@ -3,7 +3,7 @@
 
   Source: P. E. Williams, LA-8370-MS (LASL, 1980), §II, eqs (3)–(5).
   Full derivation, context and provenance:
-  Supplementary_Material.pdf — §S1, Appendix A [C1].
+  Supplementary Materials (stand-alone document) — §S1, Appendix A [C1].
 -/
 
 import Mathlib.Tactic

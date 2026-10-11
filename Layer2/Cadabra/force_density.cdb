@@ -3,7 +3,7 @@
 #
 #  Source: P. E. Williams, LA-8370-MS (LASL, 1980), Section III, eq (70).
 #  Full derivation, context and provenance:
-#    Supplementary_Material.pdf -- §S2, Appendix A [C5].
+#    Supplementary Materials (stand-alone document) -- §S2, Appendix A [C5].
 #
 #  Independent second engine for Layer2/Sage/force_density.sage.  The Sage
 #  script checks Div(T) = F.J component by component in an explicit 5D chart.

@@ -2,7 +2,7 @@
 #
 # Source: P. E. Williams, LA-8370-MS (LASL, 1980), Eqs 14-15.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf - §S1, Appendix A [C7].
+#   Supplementary Materials (stand-alone document) - §S1, Appendix A [C7].
 from sage.all import *
 #
 # Source error (Eq 14): manuscript prints the second-order Taylor coefficients

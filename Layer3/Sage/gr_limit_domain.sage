@@ -10,7 +10,7 @@
 # Builds on earlier rotation-curve and G-variation checks (full repository),
 #   black_hole_ringdown.sage (strong-field fork), matter_source_tab.sage.
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf -- §S3, Appendix A.
+#   Supplementary Materials (stand-alone document) -- §S3, Appendix A.
 # --------------------------------------------------------------------------
 
 # ============================================================================

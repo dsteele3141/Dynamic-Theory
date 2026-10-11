@@ -4,7 +4,7 @@
 #
 # Source: P. E. Williams, "The Dynamic Theory" (2009), Ch. 2 Eqs (2.33)-(2.37).
 # Full derivation, context and provenance:
-#   Supplementary_Material.pdf — §S3, Appendix A.2 (Book corpus, script 12, B-C1/C2).
+#   Supplementary Materials (stand-alone document) — §S3, Appendix A.2 (Book corpus, script 12, B-C1/C2).
 
 from sage.all import *
 
