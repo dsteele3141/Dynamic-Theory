@@ -167,11 +167,28 @@ def gen_lean(tgt, mods):
     write(tgt, "lakefile.lean", lake)
 
 
+DATA_NOTES = {"pantheon_sys_DS17f.txt": " (data, not a script: Pantheon DS17f systematic covariance,"
+              " Scolnic et al. 2018, https://github.com/dscolnic/Pantheon)"}
+
+
 def gen_readme(tgt, sections, files):
     L = ["# " + TITLE, "",
          "Code accompanying the manuscript *Recovery of the gravitational and particle",
          "sectors in Dynamic Theory*. It contains only the derivations",
          "and checks that the manuscript relies on.", "",
+         "## How to read this", "",
+         "- `Layer2/` holds the five-dimensional foundations: the 5D metric, the five-force,",
+         "  the 5D Dirac ansatz and its coupling to fields.",
+         "- `Layer3/` holds the four-dimensional sectors reached under conservation of mass",
+         "  (u4 = 0) and the quantum condition: general relativity, the Standard Model, the",
+         "  comparison with data, and the predictions and bounds.",
+         "- The three laws themselves are adopted, as in the manuscript, and are not coded here.",
+         "- The Lean files check algebraic steps and the consistency of the adopted ansatz",
+         "  (for example, that the 5D Dirac factorisation has a matrix realisation and none",
+         "  in a commutative ring). They do not test the physics; comparison with experiment",
+         "  is done in the Sage scripts.",
+         "- Each script header names the manuscript step it supports, as a tag such as `[G3]`,",
+         "  with the corresponding section of the Supplementary Materials.", "",
          "## Tools", "",
          "- **SageMath** (`Layer*/Sage/*.sage`): assertion-driven derivations; every check",
          "  prints PASS or the script stops. Stored output in `Layer*/sage-results/`.",
@@ -192,7 +209,8 @@ def gen_readme(tgt, sections, files):
          "## Contents"]
     for head, files in sections:
         L += ["", "### " + head, ""]
-        L += ["- `%s`" % f for f in files]
+        L += ["- `%s`" % f + (DATA_NOTES.get(os.path.basename(f), "") if f.endswith(".txt") else "")
+              for f in files]
     L += ["", "## Licence", "", "See `LICENSE`.", ""]
     write(tgt, "README.md", "\n".join(L))
 

@@ -21,7 +21,7 @@ Layer2/Lean/T2_7_PositivityRoute.lean                F3
 Layer2/Sage/dirac_with_fields.sage                   F3
 Layer2/Lean/T2_8_DiracWithFields.lean                F3
 
-## Layer boundary and Layer 3 inputs: quantum condition, u4 = 0, 4D surface, weak field (manuscript Sec. 2.3, 3)
+## Conservation of mass, quantum condition, 4D surface, weak field (manuscript Sec. 2.3, 3)
 Layer3/Sage/gateway_london_quantisation.sage         F4
 Layer3/Lean/T2_10_London.lean                        F4
 Layer3/Sage/T2_11_hypersurface_metric.sage           F6
@@ -59,7 +59,7 @@ Layer3/Sage/neutrino_helicity.sage                   S7
 Layer3/Sage/neutron_lifetime_tunnelling.sage         S8
 Layer3/Sage/hydrogen_nonsingular_spectrum.sage       S8
 
-## Predictions and bounds from departures from the restrictive assumptions (manuscript Sec. 6)
+## Predictions and bounds from departures from conservation of mass and the quantum condition (manuscript Sec. 6)
 Layer3/Sage/charge_quantisation_prediction.sage      P1
 Layer3/Sage/heavy_massaxis_partners.sage             P2
 Layer3/Sage/blackett_coupling_bodies.sage            P3

@@ -8,7 +8,7 @@
 # --------------------------------------------------------------------------
 
 # ============================================================================
-# 27_pantheon_dark_energy_fit.sage              [A]  (assertion-hardened)
+# pantheon_dark_energy_fit.sage                 [A]  (assertion-hardened)
 #
 # THE LIVE, FALSIFIABLE TEST: does DT (log-redshift distance + evolving candle)
 # fit the REAL SN-Ia Hubble diagram as well as LambdaCDM, and far better than a
@@ -24,7 +24,7 @@
 #   shape_DT(z,xi)  = 5 log10[(1+z) ln(1+z)]  +  (15/4) xi ln(1+z)/ln10
 #                     \___ DT redshift distance (Eq 3.6) ___/  \__ evolving candle __/
 #
-# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage 27_pantheon_dark_energy_fit.sage
+# RUN: /home/dsteele/miniconda3/envs/sage/bin/sage pantheon_dark_energy_fit.sage
 # ============================================================================
 
 from sage.all import *

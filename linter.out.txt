@@ -1,7 +1,7 @@
 ========================================================================
 DYNAMIC THEORY -- SAGE LINTER  (linter.py)
-Run: 2026-10-08 16:41:12
-Scanned: /home/dsteele/lean/Dynamic-Theory
+Run: 2026-10-11 11:17:24
+Scanned: Dynamic-Theory (repository root)
 Sage scripts: 103  (across Layer1, Layer2, Layer3; 2 plot_* skipped)
 Cadabra cross-checks: 3
 ========================================================================
@@ -59,7 +59,7 @@ T2_1_5D_minkowski.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 T2_1_5D_minkowski.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
-  [OK  ]:42 signature: g44 = -1 (spacelike mass).
+  [OK  ]:41 signature: g44 = -1 (spacelike mass).
 bianchi_maxwell.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 bianchi_maxwell.sage
@@ -253,8 +253,8 @@ gravitational_radiation.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 gravitational_radiation.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
-  [OK  ]:197 signature list [1,-1,-1,-1,-1]: spacelike mass.
-  [OK  ]:231 signature list [1,-1,-1,-1,-1]: spacelike mass.
+  [OK  ]:196 signature list [1,-1,-1,-1,-1]: spacelike mass.
+  [OK  ]:230 signature list [1,-1,-1,-1,-1]: spacelike mass.
 hbar_potential_clocks.out.txt
   [OK  ] runtime: no traceback/Error/FAIL in result output.
 hbar_potential_clocks.sage
@@ -461,7 +461,7 @@ yangmills_field_structure.out.txt
 yangmills_field_structure.sage
   [OK  ] path: stdout-capture convention (no self-managed output path).
 
-### (corpus)
+### (repository)
 (cross-file)
   [OK  ] signature consistent: all 24 g44 definition(s) spacelike (g44 < 0).
 
